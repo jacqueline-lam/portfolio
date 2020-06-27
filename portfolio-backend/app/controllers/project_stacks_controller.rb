@@ -1,0 +1,2 @@
+class ProjectStacksController < ApplicationController
+end

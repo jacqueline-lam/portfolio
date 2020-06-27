@@ -1,0 +1,2 @@
+class ProjectStack < ApplicationRecord
+end
