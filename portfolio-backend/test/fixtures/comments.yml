@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  author: MyString
+  email: MyString
+  content: MyText
+  data: 2020-06-27 13:21:58
+
+two:
+  project_id: 1
+  author: MyString
+  email: MyString
+  content: MyText
+  data: 2020-06-27 13:21:58
