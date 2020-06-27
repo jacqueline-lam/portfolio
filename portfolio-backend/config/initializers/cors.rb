@@ -7,6 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
+    # server that your front-end is running on
+    # allow any origin to make request to API
     origins '*'
 
     resource '*',
