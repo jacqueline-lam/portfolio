@@ -2229,3 +2229,313 @@ Processing by Api::V1::ProjectsController#index as */*
 Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 6.9ms | Allocations: 10448)
 
 
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:16:31 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3028)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:26:32 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3013)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:26:44 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1675)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:30:29 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-06-28 16:30:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:32:12 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:32:14 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:32:47 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:32:51 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:33:54 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1691)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:35:01 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:35:18 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:35:27 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:36:24 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/1" for ::1 at 2020-06-28 16:38:00 -0400
+Processing by Api::V1::ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projects_controller.rb:8:in `show'
+Completed 404 Not Found in 25ms (ActiveRecord: 13.0ms | Allocations: 3237)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=1):
+  
+app/controllers/api/v1/projects_controller.rb:8:in `show'
+Started GET "/api/v1/projects/6" for ::1 at 2020-06-28 16:38:09 -0400
+Processing by Api::V1::ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projects_controller.rb:8:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 659)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=6):
+  
+app/controllers/api/v1/projects_controller.rb:8:in `show'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Started GET "/api/v1/projects/19" for ::1 at 2020-06-28 16:39:15 -0400
+Processing by Api::V1::ProjectsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (8.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (19) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projects_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 9.2ms | Allocations: 2642)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "projects".* FROM "projects" WHERE (19) LIMIT $1
+                                                   ^
+):
+  
+app/controllers/api/v1/projects_controller.rb:8:in `show'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:51:23 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1686)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:51:31 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:51:43 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 21.8ms | ActiveRecord: 7.0ms | Allocations: 9642)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:53:58 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms | Allocations: 71620)
+
+
+  
+NameError (undefined local variable or method `comments' for #<Api::V1::ProjectsController:0x00007fa8c3d24038>):
+  
+app/controllers/api/v1/projects_controller.rb:5:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:54:18 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/controllers/api/v1/projects_controller.rb:4:in `index'
+Completed 200 OK in 102ms (Views: 0.1ms | ActiveRecord: 9.9ms | Allocations: 20001)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:55:17 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3013)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:55:35 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3012)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:56:18 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:56:18 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:57:35 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+  
+NameError (uninitialized constant Api::V1::ProjectsController::ProjectSerializer):
+  
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 16:59:56 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 68ms (Views: 0.2ms | ActiveRecord: 10.7ms | Allocations: 21645)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 17:01:26 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 65ms (Views: 0.1ms | ActiveRecord: 10.9ms | Allocations: 18122)
+
+
