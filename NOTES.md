@@ -21,3 +21,13 @@ belongs_to :project
 /blogs
 
 # EXTERNAL APIs
+
+### Themes:
+- Foodie
+- Loves climbing
+- Digital marketer
+- Visual (with many pics)
+
+
+### Features
+- Filter projects by stack
