@@ -1,24 +1,24 @@
 class Api::V1::CommentsController < ApplicationController
-  before_action :get_comment, only: [:show, :destroy]
   before_action :get_project, only: [:index, :create]
+  before_action :get_comment, only: [:show, :destroy]
   # api/v1/projects/:id/comments
 
   def index
-    comments = project.comments
+    comments = @project.comments
     render json: comments
   end
 
   def show
     # comment = project.comments.find_by(params[:id])
-    render json: comment
+    render json: @comment
   end
 
   def create
-    comment = project.comments.build(comment_params)
+    comment = @project.comments.build(comment_params)
 
     if comment.save
       # render json: CommentSerializer.new(comment).instance_to_serialized_json
-      render json: comment
+      render json: @comment
     else
       render json: { message: 'Error: Failed to add comment.'}
     end
@@ -29,17 +29,17 @@ class Api::V1::CommentsController < ApplicationController
 
   def destroy
     # comment = Comment.find(params[:id])
-    comment.destroy
+    @comment.destroy
   end
 
   private
 
   def get_project
-    project ||= Project.find(params[:project_id])
+    @project ||= Project.find(params[:project_id])
   end
 
   def get_comment
-    comment ||= Comment.find(params[:id])
+    @comment ||= Comment.find(params[:id])
   end
 
   def comment_params

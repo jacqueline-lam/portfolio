@@ -5,7 +5,7 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def show
-    project = Project.find_by(params[:id])
+    project = Project.find(params[:id])
     render json: ProjectSerializer.new(project).to_serialized_json
   end
 end
