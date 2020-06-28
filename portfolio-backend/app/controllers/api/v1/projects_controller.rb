@@ -1,11 +1,11 @@
 class Api::V1::ProjectsController < ApplicationController
   def index
     projects = Project.all
-    render json: projects
+    render json: ProjectSerializer.new(projects).to_serialized_json
   end
 
   def show
     project = Project.find(params[:id])
-    render json: comment
+    render json: ProjectSerializer.new(projects).to_serialized_json
   end
 end
