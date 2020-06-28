@@ -46,16 +46,21 @@ project_data = [
     site_url: "https://rubygems.org/gems/rain_jackets",
     demo_video: "https://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing",
     stacks: ['Ruby', 'Nokogiri'],
-    comments: {author: ''},
+    comments: [
+      {
+        author: "Nick",
+        email: "nick@gmail.com",
+        content: "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"
+      }
+    ]
   }
   # Project 2
-  {}
 ]
 
 puts "Creating projects..."
 
 project_data.each do |data|
-  project = Project.new(
+  project = Project.create(
     name: data[:name]
     description: data[:description]
     image_url: data[:image_url]
@@ -65,9 +70,8 @@ project_data.each do |data|
     demo_vid: data[:demo_vid]
   )
 
-
   stack_names = data[:stacks]
-  puts "Adding #{stack_names} styles to problem #{project.id}..."
+  puts "Adding #{stack_names} styles to project - #{project.name}..."
   # retutn array of stacks instances for each project
   stacks_with_these_names = tack_names.map { |name| Stack.find_by(name: name) }
 
@@ -78,31 +82,16 @@ project_data.each do |data|
     ps.stack_id = stack.id
     ps.save!
   end
-end
 
-
-
-recipe_data.each do |recipe_item|
-  # Initialize new recipe object
-  recipe = Recipe.new(
-    name: recipe_item[:name],
-    category: recipe_item[:category],
-    directions: recipe_item[:directions],
-    image_url: recipe_item[:image_url],
-    servings: recipe_item[:servings],
-    time: recipe_item[:time],
-  )
-  save_queue << recipe
-
-  # Initialize the RecipeIngredient join table objects
-  recipe_item[:ingredients].each do |ingredient_data|
-    ri = RecipeIngredient.new(
-      recipe: recipe,
-      ingredient: ingredient_data[:item],
-      amount: ingredient_data[:amount],
-      preparation_method: ingredient_data[:preparation_method],
-      substituted_ingredient_id: ingredient_data[:substituted_ingredient_id]
-    )
-    save_queue << ri
+  # Create Comment
+  puts "Adding comments for project - #{project.name}..."
+  comment_data = project_data[:comments]
+  comment_data.each do |comment|
+    c = Comment.new
+    c.project_id = project.id
+    c.author = comment[:author]
+    c.email = comment[:email]
+    c.content = comment[:content]
+    c.save!
   end
 end
