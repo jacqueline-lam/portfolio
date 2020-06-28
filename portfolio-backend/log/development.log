@@ -2743,3 +2743,46 @@ Processing by Api::V1::ProjectsController#index as */*
 Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 19.5ms | Allocations: 4927)
 
 
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-28 17:27:02 -0400
+Processing by Api::V1::CommentsController#index as */*
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+  [1m[36mComment Load (25.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/controllers/api/v1/comments_controller.rb:8:in `index'
+Completed 200 OK in 136ms (Views: 29.4ms | ActiveRecord: 38.1ms | Allocations: 14416)
+
+
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-28 17:27:07 -0400
+Processing by Api::V1::CommentsController#index as */*
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+  [1m[36mComment Load (6.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/controllers/api/v1/comments_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.0ms | ActiveRecord: 6.6ms | Allocations: 1703)
+
+
+Started GET "/api/v1/projects/19/comments/6" for ::1 at 2020-06-28 17:27:29 -0400
+Processing by Api::V1::CommentsController#show as */*
+  Parameters: {"project_id"=>"19", "id"=>"6"}
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:42:in `get_comment'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 890)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-28 17:27:42 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (3.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 8.8ms | Allocations: 4996)
+
+
