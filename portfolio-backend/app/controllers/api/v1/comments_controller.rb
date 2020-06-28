@@ -1,5 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
-  before_action :set_project
+  before_action :get_comment, only: [:show, :destroy]
+  before_action :get_project, only: [:index, :create]
   # api/v1/projects/:id/comments
 
   def index
@@ -7,8 +8,12 @@ class Api::V1::CommentsController < ApplicationController
     render json: comments
   end
 
+  def show
+    # comment = project.comments.find_by(params[:id])
+    render json: comment
+  end
+
   def create
-    # project = Project.find_by(id: comment_params[:project_id])
     comment = project.comments.build(comment_params)
 
     if comment.save
@@ -19,23 +24,22 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
-  def show
-    comment = Comment.find(params[:id])
-    render json: comment
-  end
-
   # def update
   # end
 
   def destroy
-    comment = Comment.find(params[:id])
+    # comment = Comment.find(params[:id])
     comment.destroy
   end
 
   private
 
-  def set_project
+  def get_project
     project ||= Project.find(params[:project_id])
+  end
+
+  def get_comment
+    comment ||= Comment.find(params[:id])
   end
 
   def comment_params
