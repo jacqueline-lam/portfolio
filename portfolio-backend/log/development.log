@@ -2786,3 +2786,18 @@ Processing by Api::V1::ProjectsController#index as */*
 Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 8.8ms | Allocations: 4996)
 
 
+Started GET "/api/v1/projects/" for ::1 at 2020-06-28 17:42:26 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (5.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (2.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (119.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (9.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 1072ms (Views: 0.2ms | ActiveRecord: 139.0ms | Allocations: 5050)
+
+
