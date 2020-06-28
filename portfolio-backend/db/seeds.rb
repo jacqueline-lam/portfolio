@@ -51,7 +51,8 @@ project_data = [
     image_url: "http://drive.google.com/file/d/1WwtgDcBwrXa-tJ1pXbyBwBBkClDNdvst/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/rain_jackets",
     site_url: "http://rubygems.org/gems/rain_jackets",
-    demo_video: "http://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing",
+    blog_url: "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4",
+    demo_vid: "http://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing",
     stacks: ['Ruby', 'Nokogiri'],
     comments: {
       author: "Nick",
@@ -66,7 +67,8 @@ project_data = [
     description: "Bolderer is a Sinatra-powered web application that I created for aspiring boulderers. Climbers can keep track of the problems that they have climbed and check out other users' climbing progress as well.",
     image_url: "http://drive.google.com/file/d/1J4Eg6fbWHeaVA4J54vFu-j-FVMBqNCGo/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/bolderer_sinatra_app",
-    demo_video: "http://drive.google.com/file/d/1GlKuRM7RIYx4CLuGKLJ_fp43F8y29nrF/view?usp=sharing",
+    blog_url: "http://dev.to/jacquelinelam/sinatra-web-app-mvc-sessions-and-routes-52on",
+    demo_vid: "http://drive.google.com/file/d/1GlKuRM7RIYx4CLuGKLJ_fp43F8y29nrF/view?usp=sharing",
     stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'RESTful API', 'Ruby', 'Sinatra', 'SQLite3']
   },
   # Project 3
@@ -75,7 +77,8 @@ project_data = [
     description: "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system.",
     image_url: "http://drive.google.com/file/d/13uMA34M2ChZVLgmy-c2CRdzqZN7d7gIg/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/rails-bolderer-app",
-    demo_video: "http://drive.google.com/file/d/1tSOdYo51wKh6nx6Vg7YiWOxRaRKmlDzB/view?usp=sharing",
+    blog_url: "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i",
+    demo_vid: "http://drive.google.com/file/d/1tSOdYo51wKh6nx6Vg7YiWOxRaRKmlDzB/view?usp=sharing",
     stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3']
   },
 
@@ -87,7 +90,8 @@ project_data = [
     The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface.",
     image_url: "http://drive.google.com/file/d/1YgYPEPUDikTL9hAitaLERqQPkB7IKF7E/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/umami-pantry",
-    demo_video: "http://drive.google.com/file/d/1P-kd38Q4OGIlEyix6Wuk1JdTDAp3pAuW/view?usp=sharing",
+    blog_url: "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke",
+    demo_vid: "http://drive.google.com/file/d/1P-kd38Q4OGIlEyix6Wuk1JdTDAp3pAuW/view?usp=sharing",
     stacks: ['ActiveRecord', 'Bootstrap', 'CRUD', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails']
   }
 ]

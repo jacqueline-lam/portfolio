@@ -1,0 +1,3 @@
+class ProjectSerializer
+
+end
