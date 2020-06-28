@@ -1,13 +1,14 @@
 class Api::V1::CommentsController < ApplicationController
   before_action :set_project
+  # api/v1/projects/:id/comments
 
   def index
-    comments = project.
+    comments = project.comments
     render json: comments
   end
 
   def create
-    project = Project.find_by(id: comment_params[:project_id])
+    # project = Project.find_by(id: comment_params[:project_id])
     comment = project.comments.build(comment_params)
 
     if comment.save
