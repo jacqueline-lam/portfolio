@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  // add in api before every route
+  # add in api before every route
   namespace :api do
     namespace :v1 do
       resources :comments

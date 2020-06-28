@@ -22,7 +22,7 @@ stacks = [
   "CRUD",
   "HTML & CSS",
   "Fetch API",
-  "Javascript",
+  "JavaScript",
   "MVC",
   "Nokogiri",
   "Omniauth",
@@ -53,14 +53,13 @@ project_data = [
     site_url: "http://rubygems.org/gems/rain_jackets",
     demo_video: "http://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing",
     stacks: ['Ruby', 'Nokogiri'],
-    comments: [
-      {
-        author: "Nick",
-        email: "nick@gmail.com",
-        content: "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"
-      }
-    ]
-  }
+    comments: {
+      author: "Nick",
+      email: "nick@gmail.com",
+      content: "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"
+    }
+  },
+
   # Project 2
   {
     name: "Sinatra-based Bouldering Log App",
@@ -68,30 +67,28 @@ project_data = [
     image_url: "http://drive.google.com/file/d/1J4Eg6fbWHeaVA4J54vFu-j-FVMBqNCGo/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/bolderer_sinatra_app",
     demo_video: "http://drive.google.com/file/d/1GlKuRM7RIYx4CLuGKLJ_fp43F8y29nrF/view?usp=sharing",
-    stacks: ['ActiveRecord', 'Boostrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'RESTful API', 'Ruby', 'Sinatra', 'SQLite3'],
-  }
-
+    stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'RESTful API', 'Ruby', 'Sinatra', 'SQLite3']
+  },
   # Project 3
   {
     name: "Ruby on Rails Bouldering Tracker (Improved Domain)",
-    description: "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system."
+    description: "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system.",
     image_url: "http://drive.google.com/file/d/13uMA34M2ChZVLgmy-c2CRdzqZN7d7gIg/view?usp=sharing",
     github_url: "http://github.com/jacqueline-lam/rails-bolderer-app",
     demo_video: "http://drive.google.com/file/d/1tSOdYo51wKh6nx6Vg7YiWOxRaRKmlDzB/view?usp=sharing",
-    stacks: ['ActiveRecord', 'Boostrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3'],
-  }
+    stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3']
+  },
 
   # Project 4
   {
     name: "Re-thinking a Recipe Manager During COVID Lockdown",
     description: "Umami Pantry is a single page application that shows matching recipes for selected pantry ingredients. It is designed to encourage freestyle homecooking with easy-to-substitute ingredients.
 
-    The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface."
-
+    The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface.",
     image_url: "http://drive.google.com/file/d/1YgYPEPUDikTL9hAitaLERqQPkB7IKF7E/view?usp=sharing",
-    github_url: "",
+    github_url: "http://github.com/jacqueline-lam/umami-pantry",
     demo_video: "http://drive.google.com/file/d/1P-kd38Q4OGIlEyix6Wuk1JdTDAp3pAuW/view?usp=sharing",
-    stacks: ['ActiveRecord', 'Boostrap', 'CRUD', 'Fetch API' 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails'],
+    stacks: ['ActiveRecord', 'Bootstrap', 'CRUD', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails']
   }
 ]
 
@@ -99,12 +96,12 @@ puts "Creating projects..."
 
 project_data.each do |data|
   project = Project.create(
-    name: data[:name]
-    description: data[:description]
-    image_url: data[:image_url]
-    github_url: data[:github_url]
-    site_url: data[:site_url]
-    blog_url: data[:blog_url]
+    name: data[:name],
+    description: data[:description],
+    image_url: data[:image_url],
+    github_url: data[:github_url],
+    site_url: data[:site_url],
+    blog_url: data[:blog_url],
     demo_vid: data[:demo_vid]
   )
 
@@ -123,13 +120,15 @@ project_data.each do |data|
 
   # Create Comment
   puts "Adding comments for project - #{project.name}..."
-  comment_data = project_data[:comments]
-  comment_data.each do |comment|
+  comment_data = data[:comments]
+  unless comment_data.nil?
     c = Comment.new
     c.project_id = project.id
-    c.author = comment[:author]
-    c.email = comment[:email]
-    c.content = comment[:content]
+    comment_data.each do |key, value|
+      c[key] = value
+      # c.email = comment[:email]
+      # c.content = comment[:content]
+    end
     c.save!
   end
 end
