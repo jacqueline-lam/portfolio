@@ -2708,3 +2708,38 @@ Processing by Api::V1::ProjectsController#show as HTML
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1782)
 
 
+Started GET "/api/v1/projects/19" for ::1 at 2020-06-28 17:18:08 -0400
+Processing by Api::V1::ProjectsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projects_controller.rb:8:in `show'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 68ms (Views: 0.1ms | ActiveRecord: 8.6ms | Allocations: 14991)
+
+
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-28 17:18:13 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/controllers/api/v1/comments_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 1733)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-28 17:21:30 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (17.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 19.5ms | Allocations: 4927)
+
+
