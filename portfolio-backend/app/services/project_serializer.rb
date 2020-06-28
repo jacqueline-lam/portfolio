@@ -14,6 +14,7 @@ class ProjectSerializer
       },
       except: [:created_at, :updated_at]
     }
+    # call to_json on this instance variable
     @project_collection.to_json(options)
   end
 
