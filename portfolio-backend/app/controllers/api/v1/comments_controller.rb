@@ -1,12 +1,9 @@
 class Api::V1::CommentsController < ApplicationController
-  def index
-    comments = Comment.all
-    render json: comments
-  end
+  before_action :set_project
 
-  def show
-    comment = Comment.find(params[:id])
-    render json: comment
+  def index
+    comments = project.
+    render json: comments
   end
 
   def create
@@ -21,6 +18,11 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
+  def show
+    comment = Comment.find(params[:id])
+    render json: comment
+  end
+
   # def update
   # end
 
@@ -30,6 +32,10 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   private
+
+  def set_project
+    project ||= Project.find(params[:project_id])
+  end
 
   def comment_params
     params.require(:comment).permit(:author, :email, :content, :project_id)
