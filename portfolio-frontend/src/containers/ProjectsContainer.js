@@ -12,4 +12,18 @@ class ProjectsContainer extends Component {
   }
 }
 
-export default connect()(ProjectsContainer)
+//passing in the state from the Redux store
+const mapStateToProps = state => {
+  return {
+    projects: state.projects,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchProjects: () => dispatch(fetchProjects())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer)
