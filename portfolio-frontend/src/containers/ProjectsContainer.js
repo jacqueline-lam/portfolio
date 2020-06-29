@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import Projects from '../components/restaurants/Projects'
 import { connect } from 'react-redux';
-
+import { fetchProjects } from "../actions/fetchProjects";
 class ProjectsContainer extends Component {
+
+  componentDidMount() {
+    console.log(this.props)
+    this.props.fetchProjects()
+  }
+
   render() {
     return (
       <div>
-
+        {this.props.loading ? <h2>Loading...</h2> : <Projects projects={this.props.projects} />}
       </div>
     )
   }
