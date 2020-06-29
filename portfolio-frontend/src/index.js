@@ -1,18 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// any component wrapped in Provider will have access to redux store
+// Any component wrapped in Provider will have access to redux store
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+// Compose combine diff middlewares into 1 - so we can pass in all middleware as one argument in createStore
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import App from './App';
 import projectsReducer from './reducers/projectsReducer'
-// import { devToolsEnhancer } from 'redux-devtools-extension';
+
+// enable Redux DevTools Extension
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Pass reducer into createStore, assigning return value to store
-// configure thunk by passing in thunk as 2nd arg for createStore
-const store = createStore(projectsReducer, applyMiddleware(thunk))
+// configure thunk by passing in thunk as part of the composeEnhancer
+// STORE = where you store data globally
+// REDUCER = responsible for taking in action and deciding what to update about current store
+// and return new version of store
+// ACTIONS will be dispatched to our reducer
+const store = createStore(
+  projectsReducer,
+  composeEnhancers(applyMiddleware(thunk))
+)
 
 ReactDOM.render(
   <Provider store={store}>
