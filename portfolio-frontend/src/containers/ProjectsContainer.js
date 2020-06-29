@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Projects from '../components/restaurants/Projects'
+import Projects from '../components/projects/Projects'
 import { connect } from 'react-redux';
 import { fetchProjects } from "../actions/fetchProjects";
-class ProjectsContainer extends Component {
 
+class ProjectsContainer extends Component {
   componentDidMount() {
     console.log(this.props)
     this.props.fetchProjects()
