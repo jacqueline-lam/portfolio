@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ProjectsContainer from './containers/ProjectsContainer'
 
-class App extends React.Component {
+class App extends Component {
   componentDidMount() {
     // we won't do anything with this data until we get resp back
     // take resp and turn into JS object notation
@@ -14,7 +15,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        App
+        Portfolio
+        <ProjectsContainer />
       </div>
     );
   }

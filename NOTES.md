@@ -48,3 +48,8 @@ the Vue documentation at https://vuejs.org/v2/guide/components.html -->
   :blog-description="blog.description"
   :blog-link="blog.canonical_url"
 ></blog-preview>
+
+
+### "About me"
+* I'm a fullstack software developer based in New York.
+* When I'm not coding, you'll find me climbing at the local bouldering gym or testing new recipes like miso basil pasta!
