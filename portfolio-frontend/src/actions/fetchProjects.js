@@ -16,6 +16,6 @@ export const fetchProjects = () => {
       // grab the actual collection of project objects
       // call dispatch + send project JSON data to your store
       // action dispatched along with a payload of the projects JSON collection
-      .then(respJSON => dispatch({ type: 'ADD_CATS', projects: respJSON }));
+      .then(respJSON => dispatch({ type: 'ADD_PROJECTS', projects: respJSON }));
   }
 }

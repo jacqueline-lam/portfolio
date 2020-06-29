@@ -2816,3 +2816,1430 @@ Processing by Api::V1::ProjectsController#index as */*
 Completed 200 OK in 72ms (Views: 0.2ms | ActiveRecord: 28.9ms | Allocations: 5056)
 
 
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 02:23:02 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (151.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 196ms (Views: 1.3ms | ActiveRecord: 155.0ms | Allocations: 5042)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 02:23:32 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 19]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 20]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 21]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 22]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 4926)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 13:42:31 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1536)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected tIDENTIFIER, expecting '}'
+      except: [:created_at, :updated_at]
+      ^~~~~~
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:15: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:15: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-06-29 13:42:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jackie.lam/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jackie.lam/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.3ms | Allocations: 315)
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 1593)
+
+
+Started GET "/projects" for ::1 at 2020-06-29 13:43:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/projects"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/projects" for ::1 at 2020-06-29 13:43:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/projects"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/projects" for ::1 at 2020-06-29 13:43:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/projects"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1 LIMIT $2[0m  [["project_id", 19], ["LIMIT", 11]]
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (0.5ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProjectStack Load (0.3ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (3.5ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" ORDER BY "stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" ORDER BY "stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" ORDER BY "stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" ORDER BY "stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" ORDER BY "stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (7.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (44.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", "2020-06-29 18:43:46.086418"], ["updated_at", "2020-06-29 18:43:46.086418"]]
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (12.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (1.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Nokogiri"], ["LIMIT", 1]]
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (9.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 23], ["stack_id", 157], ["created_at", "2020-06-29 18:50:47.400879"], ["updated_at", "2020-06-29 18:50:47.400879"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 149], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (2.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 23], ["stack_id", 149], ["created_at", "2020-06-29 18:50:47.421942"], ["updated_at", "2020-06-29 18:50:47.421942"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (0.4ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProjectStack Load (0.3ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (0.3ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mProjectStack Load (0.8ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (0.3ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:03:38 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      }
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:03:56 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1540)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:16: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (73.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_development"[0m
+  [1m[35m (60.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_test"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_test"[0m
+  [1m[35m (262.2ms)[0m  [1m[35mCREATE DATABASE "portfolio_backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (133.9ms)[0m  [1m[35mCREATE DATABASE "portfolio_backend_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "project_id" integer, "author" character varying, "email" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "project_stacks" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "project_stacks" ("id" bigserial primary key, "project_id" integer, "stack_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "description" text, "image_url" character varying, "github_url" character varying, "site_url" character varying, "blog_url" character varying, "demo_vid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "stacks" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "stacks" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200627173503)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200627170914),
+(20200627172157),
+(20200627172447);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-29 19:07:23.213699"], ["updated_at", "2020-06-29 19:07:23.213699"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7baafaa9bf9a449b181cb08ab9ef0b3e31f20319"], ["created_at", "2020-06-29 19:07:23.224222"], ["updated_at", "2020-06-29 19:07:23.224222"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "project_id" integer, "author" character varying, "email" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "project_stacks" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "project_stacks" ("id" bigserial primary key, "project_id" integer, "stack_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "description" text, "image_url" character varying, "github_url" character varying, "site_url" character varying, "blog_url" character varying, "demo_vid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "stacks" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "stacks" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200627173503)[0m
+  [1m[35m (6.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200627170914),
+(20200627172157),
+(20200627172447);
+
+[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-29 19:07:23.357679"], ["updated_at", "2020-06-29 19:07:23.357679"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-29 19:07:23.366184"], ["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7baafaa9bf9a449b181cb08ab9ef0b3e31f20319"], ["created_at", "2020-06-29 19:07:23.375148"], ["updated_at", "2020-06-29 19:07:23.375148"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  [1m[36mProjectStack Load (0.6ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (3.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ActiveRecord"], ["created_at", "2020-06-29 19:07:23.485500"], ["updated_at", "2020-06-29 19:07:23.485500"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BCrypt"], ["created_at", "2020-06-29 19:07:23.499005"], ["updated_at", "2020-06-29 19:07:23.499005"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.5ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bootstrap"], ["created_at", "2020-06-29 19:07:23.504322"], ["updated_at", "2020-06-29 19:07:23.504322"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.4ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "CRUD"], ["created_at", "2020-06-29 19:07:23.517319"], ["updated_at", "2020-06-29 19:07:23.517319"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "HTML & CSS"], ["created_at", "2020-06-29 19:07:23.531945"], ["updated_at", "2020-06-29 19:07:23.531945"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fetch API"], ["created_at", "2020-06-29 19:07:23.542782"], ["updated_at", "2020-06-29 19:07:23.542782"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "JavaScript"], ["created_at", "2020-06-29 19:07:23.546658"], ["updated_at", "2020-06-29 19:07:23.546658"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MVC"], ["created_at", "2020-06-29 19:07:23.563759"], ["updated_at", "2020-06-29 19:07:23.563759"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nokogiri"], ["created_at", "2020-06-29 19:07:23.567796"], ["updated_at", "2020-06-29 19:07:23.567796"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.4ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Omniauth"], ["created_at", "2020-06-29 19:07:23.572964"], ["updated_at", "2020-06-29 19:07:23.572964"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PostgreSQL"], ["created_at", "2020-06-29 19:07:23.577741"], ["updated_at", "2020-06-29 19:07:23.577741"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React.JS"], ["created_at", "2020-06-29 19:07:23.581683"], ["updated_at", "2020-06-29 19:07:23.581683"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.8ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React Router"], ["created_at", "2020-06-29 19:07:23.585190"], ["updated_at", "2020-06-29 19:07:23.585190"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (2.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux"], ["created_at", "2020-06-29 19:07:23.595231"], ["updated_at", "2020-06-29 19:07:23.595231"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux Thunk"], ["created_at", "2020-06-29 19:07:23.601708"], ["updated_at", "2020-06-29 19:07:23.601708"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "RESTful API"], ["created_at", "2020-06-29 19:07:23.612978"], ["updated_at", "2020-06-29 19:07:23.612978"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.6ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2020-06-29 19:07:23.617167"], ["updated_at", "2020-06-29 19:07:23.617167"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby on Rails"], ["created_at", "2020-06-29 19:07:23.624571"], ["updated_at", "2020-06-29 19:07:23.624571"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sinatra"], ["created_at", "2020-06-29 19:07:23.629485"], ["updated_at", "2020-06-29 19:07:23.629485"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "SQLite3"], ["created_at", "2020-06-29 19:07:23.633095"], ["updated_at", "2020-06-29 19:07:23.633095"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "site_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "CLI Data Gem for Indecisive Shoppers"], ["description", "I designed a CLI app that scraped data from the web page Outdoor Gear Lab. It provides shoppers with concise information about a type of product and gives them the option to inquire about the products based on chosen features/ rating catgories!"], ["image_url", "http://drive.google.com/file/d/1WwtgDcBwrXa-tJ1pXbyBwBBkClDNdvst/view?usp=sharing"], ["github_url", "http://github.com/jacqueline-lam/rain_jackets"], ["site_url", "http://rubygems.org/gems/rain_jackets"], ["blog_url", "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4"], ["demo_vid", "http://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing"], ["created_at", "2020-06-29 19:07:23.649111"], ["updated_at", "2020-06-29 19:07:23.649111"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Nokogiri"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 1], ["stack_id", 17], ["created_at", "2020-06-29 19:07:23.702001"], ["updated_at", "2020-06-29 19:07:23.702001"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 1], ["stack_id", 9], ["created_at", "2020-06-29 19:07:23.715094"], ["updated_at", "2020-06-29 19:07:23.715094"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 1], ["author", "Nick"], ["email", "nick@gmail.com"], ["content", "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"], ["created_at", "2020-06-29 19:07:23.750210"], ["updated_at", "2020-06-29 19:07:23.750210"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sinatra-based Bouldering Log App"], ["description", "Bolderer is a Sinatra-powered web application that I created for aspiring boulderers. Climbers can keep track of the problems that they have climbed and check out other users' climbing progress as well."], ["image_url", "http://drive.google.com/file/d/1J4Eg6fbWHeaVA4J54vFu-j-FVMBqNCGo/view?usp=sharing"], ["github_url", "http://github.com/jacqueline-lam/bolderer_sinatra_app"], ["blog_url", "http://dev.to/jacquelinelam/sinatra-web-app-mvc-sessions-and-routes-52on"], ["demo_vid", "http://drive.google.com/file/d/1GlKuRM7RIYx4CLuGKLJ_fp43F8y29nrF/view?usp=sharing"], ["created_at", "2020-06-29 19:07:23.760390"], ["updated_at", "2020-06-29 19:07:23.760390"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Sinatra"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (18.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 1], ["created_at", "2020-06-29 19:07:23.817528"], ["updated_at", "2020-06-29 19:07:23.817528"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 3], ["created_at", "2020-06-29 19:07:23.833504"], ["updated_at", "2020-06-29 19:07:23.833504"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 2], ["created_at", "2020-06-29 19:07:23.846577"], ["updated_at", "2020-06-29 19:07:23.846577"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 4], ["created_at", "2020-06-29 19:07:23.853867"], ["updated_at", "2020-06-29 19:07:23.853867"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (1.6ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 5], ["created_at", "2020-06-29 19:07:23.876571"], ["updated_at", "2020-06-29 19:07:23.876571"]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (7.1ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 8], ["created_at", "2020-06-29 19:07:23.904137"], ["updated_at", "2020-06-29 19:07:23.904137"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 16], ["created_at", "2020-06-29 19:07:23.932739"], ["updated_at", "2020-06-29 19:07:23.932739"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (1.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 17], ["created_at", "2020-06-29 19:07:23.950213"], ["updated_at", "2020-06-29 19:07:23.950213"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (1.0ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 19], ["created_at", "2020-06-29 19:07:23.969788"], ["updated_at", "2020-06-29 19:07:23.969788"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 20], ["created_at", "2020-06-29 19:07:23.983337"], ["updated_at", "2020-06-29 19:07:23.983337"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ruby on Rails Bouldering Tracker (Improved Domain)"], ["description", "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system."], ["image_url", "http://drive.google.com/file/d/13uMA34M2ChZVLgmy-c2CRdzqZN7d7gIg/view?usp=sharing"], ["github_url", "http://github.com/jacqueline-lam/rails-bolderer-app"], ["blog_url", "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i"], ["demo_vid", "http://drive.google.com/file/d/1tSOdYo51wKh6nx6Vg7YiWOxRaRKmlDzB/view?usp=sharing"], ["created_at", "2020-06-29 19:07:23.986922"], ["updated_at", "2020-06-29 19:07:23.986922"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (25.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Omniauth"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 1], ["created_at", "2020-06-29 19:07:24.046665"], ["updated_at", "2020-06-29 19:07:24.046665"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 3], ["created_at", "2020-06-29 19:07:24.071683"], ["updated_at", "2020-06-29 19:07:24.071683"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 2], ["created_at", "2020-06-29 19:07:24.082153"], ["updated_at", "2020-06-29 19:07:24.082153"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 4], ["created_at", "2020-06-29 19:07:24.094344"], ["updated_at", "2020-06-29 19:07:24.094344"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 5], ["created_at", "2020-06-29 19:07:24.101247"], ["updated_at", "2020-06-29 19:07:24.101247"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 8], ["created_at", "2020-06-29 19:07:24.114240"], ["updated_at", "2020-06-29 19:07:24.114240"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 10], ["created_at", "2020-06-29 19:07:24.123224"], ["updated_at", "2020-06-29 19:07:24.123224"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 16], ["created_at", "2020-06-29 19:07:24.131019"], ["updated_at", "2020-06-29 19:07:24.131019"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 17], ["created_at", "2020-06-29 19:07:24.139513"], ["updated_at", "2020-06-29 19:07:24.139513"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 18], ["created_at", "2020-06-29 19:07:24.147179"], ["updated_at", "2020-06-29 19:07:24.147179"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 20], ["created_at", "2020-06-29 19:07:24.165917"], ["updated_at", "2020-06-29 19:07:24.165917"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (2.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Re-thinking a Recipe Manager During COVID Lockdown"], ["description", "Umami Pantry is a single page application that shows matching recipes for selected pantry ingredients. It is designed to encourage freestyle homecooking with easy-to-substitute ingredients.\n\n    The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface."], ["image_url", "http://drive.google.com/file/d/1YgYPEPUDikTL9hAitaLERqQPkB7IKF7E/view?usp=sharing"], ["github_url", "http://github.com/jacqueline-lam/umami-pantry"], ["blog_url", "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke"], ["demo_vid", "http://drive.google.com/file/d/1P-kd38Q4OGIlEyix6Wuk1JdTDAp3pAuW/view?usp=sharing"], ["created_at", "2020-06-29 19:07:24.169354"], ["updated_at", "2020-06-29 19:07:24.169354"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Fetch API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "JavaScript"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "PostgreSQL"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (1.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 1], ["created_at", "2020-06-29 19:07:24.204279"], ["updated_at", "2020-06-29 19:07:24.204279"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 3], ["created_at", "2020-06-29 19:07:24.216751"], ["updated_at", "2020-06-29 19:07:24.216751"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.6ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 4], ["created_at", "2020-06-29 19:07:24.229501"], ["updated_at", "2020-06-29 19:07:24.229501"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 6], ["created_at", "2020-06-29 19:07:24.242621"], ["updated_at", "2020-06-29 19:07:24.242621"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 5], ["created_at", "2020-06-29 19:07:24.250663"], ["updated_at", "2020-06-29 19:07:24.250663"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 7], ["created_at", "2020-06-29 19:07:24.260123"], ["updated_at", "2020-06-29 19:07:24.260123"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 11], ["created_at", "2020-06-29 19:07:24.284474"], ["updated_at", "2020-06-29 19:07:24.284474"]]
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 16], ["created_at", "2020-06-29 19:07:24.308321"], ["updated_at", "2020-06-29 19:07:24.308321"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 17], ["created_at", "2020-06-29 19:07:24.317219"], ["updated_at", "2020-06-29 19:07:24.317219"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 18], ["created_at", "2020-06-29 19:07:24.330032"], ["updated_at", "2020-06-29 19:07:24.330032"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1 LIMIT $2[0m  [["project_id", 1], ["LIMIT", 11]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProjectStack Load (1.3ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProjectStack Load (0.4ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks" ORDER BY "project_stacks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1 LIMIT $2[0m  [["project_id", 1], ["LIMIT", 11]]
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:29:39 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2456)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:30:06 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2022)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:30:23 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 2013)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:31:54 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 18.7ms | Allocations: 34057)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 15:43:13 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2020)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:16:57 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (19.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (5.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 142ms (Views: 0.2ms | ActiveRecord: 31.7ms | Allocations: 29076)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 16:17:07 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 11013)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:18:55 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (104.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 424ms (Views: 0.1ms | ActiveRecord: 118.5ms | Allocations: 11019)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:19:12 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (5.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (78.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (9.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (43.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (52.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (110.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 358ms (Views: 0.1ms | ActiveRecord: 302.5ms | Allocations: 11035)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:19:41 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (24.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (52.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (40.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (7.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (90.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 806ms (Views: 0.1ms | ActiveRecord: 216.3ms | Allocations: 11017)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:20:43 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 4.8ms | Allocations: 11018)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:21:15 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 12.7ms | Allocations: 11015)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:23:08 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (101.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (10.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (8.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 186ms (Views: 0.1ms | ActiveRecord: 123.7ms | Allocations: 11018)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:23:58 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (72.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (5.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (22.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (3.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 137ms (Views: 0.1ms | ActiveRecord: 108.4ms | Allocations: 11015)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-06-29 16:24:37 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (63.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (39.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 420ms (Views: 0.2ms | ActiveRecord: 109.0ms | Allocations: 11015)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:16:20 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ','
+        comments:,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ','
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ','
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:16:27 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2022)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:13: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:16:58 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected ',', expecting =>
+        :comments,
+                 ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:17:12 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:56:23 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (7.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (7.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 124ms (Views: 0.1ms | ActiveRecord: 59.7ms | Allocations: 18857)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:56:47 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected tLABEL
+      include: stacks: {only: [:name]},
+               ^~~~~~~
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting end
+...clude: stacks: {only: [:name]},
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected tLABEL
+app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected tLABEL
+app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:57:11 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 67ms (Views: 0.1ms | ActiveRecord: 18.2ms | Allocations: 21213)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:57:29 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+...ks: {only: [:name]}, :comments},
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:57:46 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting =>
+...de: {{stacks: {only: [:name]}}, :comments},
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected ',', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:58:24 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+...ks: {only: [:name]}, :comments},
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:58:56 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 75ms (Views: 0.2ms | ActiveRecord: 12.0ms | Allocations: 21127)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 18:59:00 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2009)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:01:43 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2007)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected tIDENTIFIER, expecting '}'
+      except: [:created_at, :updated_at]
+      ^~~~~~
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/project_serializer.rb:15: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:01:51 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2007)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected tIVAR, expecting '}'
+    @project_collection.to_json(options)
+    ^~~~~~~~~~~~~~~~~~~):
+  
+app/services/project_serializer.rb:17: syntax error, unexpected tIVAR, expecting '}'
+app/services/project_serializer.rb:17: syntax error, unexpected tIVAR, expecting '}'
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:02:58 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2010)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+...acks: {only: :name}, :comments},
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected '}', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:03:48 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+...acks: {only: :name}, :comments],
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:04:41 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (1.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 125ms (Views: 0.2ms | ActiveRecord: 32.1ms | Allocations: 31243)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:05:31 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+...=> {:only => :name}, :comments],
+...                              ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:12: syntax error, unexpected ']', expecting =>
+app/services/project_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-29 19:06:02 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Completed 404 Not Found in 9ms (ActiveRecord: 5.8ms | Allocations: 1382)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=19):
+  
+app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-29 19:09:39 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Completed 404 Not Found in 12ms (ActiveRecord: 5.7ms | Allocations: 3149)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=19):
+  
+app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-29 19:10:14 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Completed 404 Not Found in 22ms (ActiveRecord: 3.4ms | Allocations: 3160)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=19):
+  
+app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Started GET "/api/v1/projects/19/comments" for ::1 at 2020-06-29 19:10:26 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"project_id"=>"19"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 653)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=19):
+  
+app/controllers/api/v1/comments_controller.rb:38:in `get_project'
+Started GET "/api/v1/projects/19" for ::1 at 2020-06-29 19:10:30 -0400
+Processing by Api::V1::ProjectsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projects_controller.rb:8:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.7ms | Allocations: 672)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=19):
+  
+app/controllers/api/v1/projects_controller.rb:8:in `show'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:10:31 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 211)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:18: syntax error, unexpected =>, expecting ')'
+    (:include => {:questions => {:include => ...
+              ^~):
+  
+app/services/project_serializer.rb:18: syntax error, unexpected =>, expecting ')'
+app/services/project_serializer.rb:18: syntax error, unexpected =>, expecting ')'
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:12:15 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (7.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 134ms (Views: 0.2ms | ActiveRecord: 30.2ms | Allocations: 29857)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:12:57 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 146ms (Views: 0.1ms | ActiveRecord: 39.9ms | Allocations: 29870)
+
+
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:13:20 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:13:24 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:15: syntax error, unexpected '}'
+      },
+      ^
+/Users/jackie.lam/Projects/portfolio/portfolio-backend/app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/project_serializer.rb:15: syntax error, unexpected '}'
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/services/project_serializer.rb:15: syntax error, unexpected '}'
+app/services/project_serializer.rb:17: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/projects_controller.rb:4:in `index'
+Started GET "/api/v1/projects/" for ::1 at 2020-06-29 19:13:29 -0400
+Processing by Api::V1::ProjectsController#index as HTML
+  [1m[36mProject Load (5.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (6.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 113ms (Views: 0.1ms | ActiveRecord: 41.9ms | Allocations: 29922)
+
+

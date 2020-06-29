@@ -9,7 +9,10 @@ class ProjectSerializer
   # get data customized and converted to JSON str
   def to_serialized_json
     options = {
-      include: :comments,
+      include: {
+        stacks: {only: [:name]},
+        comments: {}
+      },
       except: [:created_at, :updated_at]
     }
     # call to_json on this instance variable
