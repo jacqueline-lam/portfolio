@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom CSS */
+img.project-thumbnail {
+  /* width: auto; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 30%;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import Project from './Project'
+import ProjectList from './ProjectList'
 
 const Projects = props => {
   return (
     <div>
-      {props.projects.map(project => <Project key={project.id} project={project} />)}
+      {props.projects.map(project => <ProjectList key={project.id} project={project} />)}
     </div>
   );
 };
