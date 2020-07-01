@@ -7,7 +7,7 @@ class ProjectList extends Component {
     const project = this.props.project
     return (
       <div>
-        <h2 onClick={}>{project.name} </h2>
+        <h2>{project.name}</h2>
         <img className='project-thumbnail' alt='project thumbnail' src={project.image_url} />
         <i>{project.stacks.map(stack => stack.name + '--')}</i>
         <hr />
