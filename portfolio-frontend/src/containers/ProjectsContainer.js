@@ -19,6 +19,7 @@ class ProjectsContainer extends Component {
 }
 
 //passing in the state from the Redux store
+// so we can acccess values in our stores as props
 const mapStateToProps = state => {
   return {
     projects: state.projects,
@@ -26,10 +27,12 @@ const mapStateToProps = state => {
   }
 }
 
+// gives us ability to dispatch new actions to our store directly from this component
 const mapDispatchToProps = dispatch => {
   return {
     fetchProjects: () => dispatch(fetchProjects())
   }
 }
 
+// connect redux store to this component
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer)

@@ -4,7 +4,7 @@ class Project extends Component {
   render() {
     return (
       <div>
-        Comments
+        <p>{project.description}</p>
         {/* <CommentsContainer comments={project.comments} /> */}
       </div >
     )

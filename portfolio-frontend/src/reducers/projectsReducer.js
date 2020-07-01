@@ -15,6 +15,7 @@ const projectsReducer = (state = { projects: [], comments: [], loading: false },
         projects: action.projects,
         loading: false
       }
+
     default:
       return state;
   }
