@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import Projects from '../components/projects/Projects'
+import ProjectFilters from '../components/projects/ProjectFilters'
+import ProjectList from '../components/projects/ProjectList'
 import { connect } from 'react-redux';
 import { fetchProjects } from "../actions/fetchProjects";
+// import { filterProjects } from "../actions/filterProjects";
 
 class ProjectsContainer extends Component {
   componentDidMount() {
@@ -12,7 +14,9 @@ class ProjectsContainer extends Component {
   render() {
     return (
       <div>
-        {this.props.loading ? <h2>Loading...</h2> : <Projects projects={this.props.projects} />}
+        {/* {this.props.loading ? <h2>Loading...</h2> : ( */}
+        <ProjectFilters filterProjects={this.props.filterProjects()} />
+        <ProjectList projects={this.props.projects} />
       </div>
     )
   }
@@ -30,7 +34,8 @@ const mapStateToProps = state => {
 // gives us ability to dispatch new actions to our store directly from this component
 const mapDispatchToProps = dispatch => {
   return {
-    fetchProjects: () => dispatch(fetchProjects())
+    fetchProjects: () => dispatch(fetchProjects()),
+    filterProjects: () => dispatch({ type: "FILTER_PROJECTS", stacks })
   }
 }
 

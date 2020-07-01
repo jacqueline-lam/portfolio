@@ -9,6 +9,7 @@ const projectsReducer = (state = { projects: [], comments: [], loading: false },
         projects: [...state.projects],
         loading: true
       }
+
     case 'ADD_PROJECTS':
       return {
         ...state,
@@ -16,9 +17,16 @@ const projectsReducer = (state = { projects: [], comments: [], loading: false },
         loading: false
       }
 
+    case 'FILTER_PROJECTS':
+      return {
+        ...state,
+        projects: state.projects.filter(proj => proj.stacks.include(action.stack))
+      }
+
     default:
       return state;
   }
 }
+
 
 export default projectsReducer;
