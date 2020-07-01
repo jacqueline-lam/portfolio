@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import CommentsContainer from '../../containers/CommentsContainer'
-import Project from './Project'
+// import Project from './Project'
 
 class ProjectList extends Component {
   render() {

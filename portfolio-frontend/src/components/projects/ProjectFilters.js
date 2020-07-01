@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class projectFilters extends Component {
+class ProjectFilters extends Component {
   state = {
     stacks: ''
   }
@@ -21,6 +21,7 @@ class projectFilters extends Component {
 
   render() {
     return (
+      <div>Test</div>
       // <div>
       //   <form onSubmit={(event) => this.handleOnSubmit(event)}>
       //     <button
@@ -31,17 +32,17 @@ class projectFilters extends Component {
       //   </form>
       // </div>
 
-      <div className="btn-group btn-group-toggle" data-toggle="buttons">
-        <label className="btn btn-primary">
-          <input type="checkbox" checked="" autocomplete="off" /> All
-        </label>
-        <label className="btn btn-primary">
-          <input type="checkbox" autocomplete="off" value="Ruby" /> R
-        </label>
-        <label className="btn btn-primary active">
-          <input type="checkbox" autocomplete="off" value="Rails" /> Rails
-        </label>
-      </div>
+      // <div className="btn-group btn-group-toggle" data-toggle="buttons">
+      //   <label className="btn btn-primary">
+      //     <input type="checkbox" checked="" autocomplete="off" /> All
+      //   </label>
+      //   <label className="btn btn-primary">
+      //     <input type="checkbox" autocomplete="off" value="Ruby" /> R
+      //   </label>
+      //   <label className="btn btn-primary active">
+      //     <input type="checkbox" autocomplete="off" value="Rails" /> Rails
+      //   </label>
+      // </div>
     );
   }
 }

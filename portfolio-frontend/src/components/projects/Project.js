@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Project extends Component {
-  render() {
-    return (
-      <div>
-        <p>{project.description}</p>
-        {/* <CommentsContainer comments={project.comments} /> */}
-      </div >
-    )
-  }
+const Project = ({ project }) => {
+  return (
+    <div>
+      <p>{.project.description}</p>
+      {/* <CommentsContainer comments={project.comments} /> */}
+    </div >
+  )
 }
 export default Project
