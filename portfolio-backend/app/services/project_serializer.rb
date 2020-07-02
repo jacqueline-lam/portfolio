@@ -10,7 +10,7 @@ class ProjectSerializer
   def to_serialized_json
     options = {
       include: {
-        stacks: {only: [:name]},
+        stacks: {only: [:id, :name]},
         comments: {}
       },
       except: [:created_at, :updated_at]

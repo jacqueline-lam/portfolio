@@ -14,9 +14,15 @@ class ProjectsContainer extends Component {
   render() {
     return (
       <div>
-        {/* {this.props.loading ? <h2>Loading...</h2> : ( */}
-        {/* <ProjectFilters filterProjects={this.props.filterProjects()} /> */}
-        <ProjectList projects={this.props.projects} />
+        {
+          this.props.loading ?
+            <h2>Loading...</h2>
+            :
+            < >
+              <ProjectFilters filterProjects={this.props.filterProjects} />
+              <ProjectList projects={this.props.projects} />
+            </ >
+        }
       </div>
     )
   }
@@ -35,7 +41,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchProjects: () => dispatch(fetchProjects()),
-    filterProjects: stacks => dispatch({ type: "FILTER_PROJECTS", stacks })
+    filterProjects: stack => dispatch({ type: "FILTER_PROJECTS", stack })
   }
 }
 
