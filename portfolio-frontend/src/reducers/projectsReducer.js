@@ -36,17 +36,22 @@ const projectsReducer = (state = { projects: [], stacks: [], comments: [], loadi
         loading: false
       }
 
-    case 'FILTER_PROJECTS':
+    case 'ADD_FILTER':
+      debugger
       const filteredProjects = state.projects.filter(proj => {
-        proj.stacks.includes(action.stack)
+        proj.stacks.some(stack => stack.id === action.stackId)
         // proj.stacks.some(s => action.stacks.indexOf(s) !== -1)
       })
 
-      debugger
       return {
         ...state,
-        projects: filteredProjects
+        projects: filteredProjects(action.stackId)
       }
+      action.stackId
+
+    case 'REMOVE_FILTER':
+
+
     default:
       return state;
   }

@@ -1,13 +1,13 @@
-export const addFilter = stack => {
+export const addFilter = stackId => {
   return {
     type: 'ADD_FILTER',
-    stack
+    stackId
   };
 };
 
-export const removeFilter = stack => {
+export const removeFilter = stackId => {
   return {
     type: 'REMOVE_FILTER',
-    stack
+    stackId
   };
 };

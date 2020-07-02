@@ -1,28 +1,31 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+
 import ProjectFilters from '../components/projects/ProjectFilters'
 import ProjectList from '../components/projects/ProjectList'
-import { connect } from 'react-redux';
 import { fetchStacks } from "../actions/fetchStacks";
 import { fetchProjects } from "../actions/fetchProjects";
+import { addFilter, removeFilter } from '../actions/filterProjects';
 // import { filterProjects } from "../actions/filterProjects";
 
 class ProjectsContainer extends Component {
   componentDidMount() {
     console.log(this.props)
-    this.props.fetchStacks()
-    this.props.fetchProjects()
+    fetchStacks()
+    fetchProjects()
   }
 
   render() {
+    const { fetchStacks, fetchProjects, projects, stacks, loading, addFilter, removeFilter } = this.props
     return (
       <div>
         {
-          this.props.loading ?
+          loading ?
             <h2>Loading...</h2>
             :
             < >
-              <ProjectFilters stacks={this.props.stacks} filterProjects={this.props.filterProjects} />
-              <ProjectList projects={this.props.projects} />
+              <ProjectFilters stacks={stacks} addFilter={addFilter} removeFilter={removeFilter} />
+              <ProjectList projects={projects} />
             </ >
         }
       </div>
@@ -45,7 +48,8 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchStacks: () => dispatch(fetchStacks()),
     fetchProjects: () => dispatch(fetchProjects()),
-    filterProjects: stack => dispatch({ type: "FILTER_PROJECTS", stack })
+    addFilter: stackId => dispatch(addFilter(stackId)),
+    removeFilter: stackId => dispatch(removeFilter(stackId))
   }
 }
 
