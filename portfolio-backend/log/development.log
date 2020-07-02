@@ -9893,3 +9893,11 @@ Processing by Api::V1::ProjectsController#index as HTML
 Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 29521)
 
 
+Started GET "/api/v1/projects/http://localhost:3000/api/v1/stacks" for ::1 at 2020-07-02 12:01:09 -0400
+  
+SyntaxError (/Users/jackie.lam/Projects/portfolio/portfolio-backend/config/routes.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+      resources :stacks, only [:index]
+                              ^):
+  
+config/routes.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+config/routes.rb:5: syntax error, unexpected [, expecting do or '{' or '('
