@@ -11,16 +11,21 @@ const projectsReducer = (state = { projects: [], comments: [], loading: false },
       }
 
     case 'ADD_PROJECTS':
+      const reformatProjects = projects => {
+        return projects.map(proj => {
+          return { ...proj, stacks: proj.stacks.map(stack => Object.values(stack)).flat() }
+        })
+      }
       return {
         ...state,
-        projects: action.projects,
+        projects: reformatProjects(action.projects),
         loading: false
       }
 
     case 'FILTER_PROJECTS':
       return {
         ...state,
-        projects: state.projects.filter(proj => proj.stacks.include(action.stack))
+        projects: state.projects.filter(proj => proj.stacks.include())
       }
 
     default:
