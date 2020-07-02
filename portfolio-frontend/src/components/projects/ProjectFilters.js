@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { addFilter, removeFilter } from '../../actions/filterProjects';
 
 class ProjectFilters extends Component {
-  stacks = ["ActiveRecord", "BCrypt", "Bootstrap", "CRUD", "HTML & CSS", "Fetch API", "JavaScript", "MVC", "Nokogiri", "Omniauth", "PostgreSQL", "React.JS", "React Router", "Redux", "Redux Thunk", "RESTful API", "Ruby", "Ruby on Rails", "Sinatra", "SQLite3"]
   state = {
     stack: ''
   }
 
   handleOnClick = event => {
+    console.log(event.target)
     let pressed = (event.target.getAttribute("aria-pressed") === "true");
     const stackClicked = event.target.value
 
     if (!pressed) {
       debugger
-      addFilter(stack)
+      // addFilter(stack)
 
       // this.setState(prevState => ({
       //   stacks: [...prevState.stacks, stackClicked]
@@ -31,13 +31,12 @@ class ProjectFilters extends Component {
       //   this.setState({
       //     stack: ''
       //   })
-      removeFilter(stack)
+      // removeFilter(stack)
       event.target.setAttribute("aria-pressed", "false")
       event.target.classList.remove('active')
     }
     // this.props.filterProjects(this.state.stack);
     this.props.filterProjects(event.target.value)
-
   }
 
   // handleOnSubmit = event => {
@@ -48,13 +47,20 @@ class ProjectFilters extends Component {
   //   });
   // }
 
-  renderStackBtn = (stack, idx) => {
+  renderStackBtn = stack => {
     return (
       // <label className="btn btn-outline-secondary" >
       //   <input type="checkbox" autocomplete="off" value={stack} aria-pressed="false" onClick={this.handleOnClick} /> {stack}
       // </label>
-      <button key={idx} type="button" className="btn btn-outline-primary btn-sm" aria-pressed='false' value={stack} onClick={this.handleOnClick}>
-        {stack}
+      <button
+        key={stack.id}
+        id={stack.id}
+        type="button"
+        className="btn btn-outline-primary btn-sm"
+        aria-pressed='false'
+        value={stack}
+        onClick={this.handleOnClick}>
+        {stack.name}
       </button>
     )
   }
@@ -64,26 +70,14 @@ class ProjectFilters extends Component {
       <div>
         <p>Filter projects by stacks</p>
         <div className="btn-group-toggle" data-toggle="buttons" >
-          {/* <form onSubmit={this.handleOnSubmit}>
-          <fieldset>
-            <label className="btn btn-outline-secondary active">
-              <input type="checkbox" checked="" aria-pressed="true" /> All
-            </label> */}
-          {/* <button type="button" id="allBtn" className="btn btn-outline-primary btn-sm active" aria-pressed="true" >
-          All
-        </button> */}
-          {this.stacks.map((stack, idx) => this.renderStackBtn(stack, idx))}
-          {/* <input type="submit" />
-          </fieldset>
-        </form> */}
-        </div >
+          {this.props.stacks.map(stack => this.renderStackBtn(stack))}
+        </div>
       </div>
     );
   }
 }
 
 // const ProjectFilters = ({ projects }) => {
-//   const stacks = ["ActiveRecord", "BCrypt", "Bootstrap", "CRUD", "HTML & CSS", "Fetch API", "JavaScript", "MVC", "Nokogiri", "Omniauth", "PostgreSQL", "React.JS", "React Router", "Redux", "Redux Thunk", "RESTful API", "Ruby", "Ruby on Rails", "Sinatra", "SQLite3"]
 
 //   // render buttons of stacks
 //   // if a button is clicked, update chosenStacks array in state

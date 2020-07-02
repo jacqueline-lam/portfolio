@@ -21,7 +21,7 @@ class ProjectsContainer extends Component {
             <h2>Loading...</h2>
             :
             < >
-              <ProjectFilters filterProjects={this.props.filterProjects} />
+              <ProjectFilters stacks={this.props.stacks} filterProjects={this.props.filterProjects} />
               <ProjectList projects={this.props.projects} />
             </ >
         }

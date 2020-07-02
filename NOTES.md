@@ -53,3 +53,16 @@ the Vue documentation at https://vuejs.org/v2/guide/components.html -->
 ### "About me"
 * I'm a fullstack software developer based in New York.
 * When I'm not coding, you'll find me climbing at the local bouldering gym or testing new recipes like miso basil pasta!
+
+
+{/* <form onSubmit={this.handleOnSubmit}>
+          <fieldset>
+            <label className="btn btn-outline-secondary active">
+              <input type="checkbox" checked="" aria-pressed="true" /> All
+            </label> */}
+    {/* <button type="button" id="allBtn" className="btn btn-outline-primary btn-sm active" aria-pressed="true" >
+          All
+        </button> */}
+        // <input type="submit" />
+        //   </fieldset>
+        // </form>

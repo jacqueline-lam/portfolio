@@ -25,14 +25,14 @@ const projectsReducer = (state = { projects: [], stacks: [], comments: [], loadi
       }
 
     case 'ADD_PROJECTS':
-      const reformatProjects = projects => {
-        return projects.map(proj => {
-          return { ...proj, stacks: proj.stacks.map(stack => Object.values(stack)).flat() }
-        })
-      }
+      // const reformatProjects = projects => {
+      //   return projects.map(proj => {
+      //     return { ...proj, stacks: proj.stacks.map(stack => Object.values(stack)).flat() }
+      //   })
+      // }
       return {
         ...state,
-        projects: reformatProjects(action.projects),
+        projects: action.projects,
         loading: false
       }
 
