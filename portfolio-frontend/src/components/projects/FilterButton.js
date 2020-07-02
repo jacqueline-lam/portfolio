@@ -37,20 +37,18 @@ class FilterButton extends Component {
   }
 
   render() {
-    const { stack } = this.props.stack
     return (
       // <label className="btn btn-outline-secondary" >
       //   <input type="checkbox" autocomplete="off" value={stack} aria-pressed="false" onClick={this.handleOnClick} /> {stack}
       // </label>
       <button
-        key={stack.id}
-        id={stack.id}
+        id={this.props.stack.id}
         type="button"
         className="btn btn-outline-primary btn-sm"
         aria-pressed='false'
-        value={stack}
+        value={this.props.stack}
         onClick={this.handleOnClick} >
-        {stack.name}
+        {this.props.stack.name}
       </button >
     );
   }

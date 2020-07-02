@@ -11,12 +11,12 @@ import { addFilter, removeFilter } from '../actions/filterProjects';
 class ProjectsContainer extends Component {
   componentDidMount() {
     console.log(this.props)
-    fetchStacks()
-    fetchProjects()
+    this.props.fetchStacks()
+    this.props.fetchProjects()
   }
 
   render() {
-    const { fetchStacks, fetchProjects, projects, stacks, loading, addFilter, removeFilter } = this.props
+    const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter } = this.props
     return (
       <div>
         {
@@ -24,8 +24,8 @@ class ProjectsContainer extends Component {
             <h2>Loading...</h2>
             :
             < >
-              <ProjectFilters stacks={stacks} addFilter={addFilter} removeFilter={removeFilter} />
-              <ProjectList projects={projects} />
+              <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
+              <ProjectList filteredProjects={filteredProjects} />
             </ >
         }
       </div>
@@ -37,8 +37,8 @@ class ProjectsContainer extends Component {
 // so we can acccess values in our stores as props
 const mapStateToProps = state => {
   return {
-    projects: state.projects,
     stacks: state.stacks,
+    filteredProjects: state.filteredProjects,
     loading: state.loading
   }
 }

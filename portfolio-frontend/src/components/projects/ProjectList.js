@@ -3,10 +3,10 @@ import ProjectCard from './ProjectCard'
 // import CommentsContainer from '../../containers/CommentsContainer'
 // import Project from './Project'
 
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ filteredProjects }) => {
   return (
     <div>
-      {projects.map(project => <ProjectCard key={project.id} project={project} />)}
+      {filteredProjects.map(project => <ProjectCard key={project.id} project={project} />)}
     </div>
   )
 }

@@ -20,7 +20,7 @@ class ProjectFilters extends Component {
       <div>
         <p>Filter projects by stacks</p>
         <div className="btn-group-toggle" data-toggle="buttons" >
-          {stacks.map(stack => <FilterButton stack={stack} addFilter={addFilter} removeFilter={removeFilter} />)}
+          {stacks.map((stack, idx) => <FilterButton key={idx} stack={stack} addFilter={addFilter} removeFilter={removeFilter} />)}
         </div>
 
       </div>
