@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 
 import ProjectFilters from '../components/projects/ProjectFilters'
 import ProjectList from '../components/projects/ProjectList'
+import ProjectDetails from '../components/projects/ProjectDetails'
 import { fetchStacks } from "../actions/fetchStacks";
 import { fetchProjects } from "../actions/fetchProjects";
 import { addFilter, removeFilter } from '../actions/filterProjects';
@@ -16,7 +18,7 @@ class ProjectsContainer extends Component {
   }
 
   render() {
-    const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter } = this.props
+    const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
     return (
       <div>
         {
@@ -26,6 +28,9 @@ class ProjectsContainer extends Component {
             < >
               <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
               <ProjectList filteredProjects={filteredProjects} />
+
+              {/* add `match` to the arguments so we can access the path information in `routerProps` that is passed from App.js */}
+              <Route path={`${match.url}/:projectId`} component={ProjectDetails} />
             </ >
         }
       </div>

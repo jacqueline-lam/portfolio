@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
   const projectStacks = project.stacks.map(stack => stack.name).join(' | ');
 
   return (
     <div>
-      <h3><a href="#">{project.name}</a></h3>
+      <Link key={project.id} to={`/projects/${project.id}`}>
+        {project.name}
+      </Link>
+      {/* <h3><a href="#">{project.name}</a></h3> */}
       <img className='project-thumbnail' alt='project thumbnail' src={project.image_url} />
       <i>{projectStacks}</i>
       <hr />
