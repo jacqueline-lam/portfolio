@@ -6,6 +6,7 @@ import 'bootswatch/dist/litera/bootstrap.min.css';
 import { Provider } from 'react-redux';
 // Compose combine diff middlewares into 1 - so we can pass in all middleware as one argument in createStore
 import { createStore, applyMiddleware, compose } from 'redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import thunk from 'redux-thunk';
 
 import App from './App';
@@ -27,7 +28,12 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Route path='/' component={App} />
+      {/* <Route path='/about' component={About} /> */}
+      <Route path='/projects' component={ProjectsContainer} />
+      <Route path='/blog' component={BlogPostsContainer} />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
