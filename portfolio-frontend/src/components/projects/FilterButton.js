@@ -6,26 +6,19 @@ class FilterButton extends Component {
   }
 
   handleOnClick = event => {
-    console.log(event.target)
     let pressed = (event.target.getAttribute("aria-pressed") === "true");
-    const stackClicked = event.target.value
+    const stackClicked = event.target.id
 
     if (!pressed) {
-      this.props.addFilter(event.target.id)
+      this.props.addFilter(stackClicked)
 
-      // this.setState(prevState => ({
-      //   stacks: [...prevState.stacks, stackClicked]
-      // }));
       this.setState({
         selected: true
       });
       event.target.setAttribute("aria-pressed", "true")
       event.target.classList.add('active')
     } else {
-      //   // this.setState(prevState => ({
-      //   //   stacks: prevState.stacks.filter(stack => stack !== stackClicked),
-      //   // }));
-      this.props.removeFilter(event.target.id)
+      this.props.removeFilter(stackClicked)
 
       this.setState({
         selected: false
@@ -33,7 +26,6 @@ class FilterButton extends Component {
       event.target.setAttribute("aria-pressed", "false")
       event.target.classList.remove('active')
     }
-    // this.props.filterProjects(this.state.stack);
   }
 
   render() {
