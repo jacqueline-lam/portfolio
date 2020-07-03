@@ -52,7 +52,7 @@ project_data = [
     github_url: "http://github.com/jacqueline-lam/rain_jackets",
     site_url: "http://rubygems.org/gems/rain_jackets",
     blog_url: "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4",
-    demo_vid: "http://drive.google.com/file/d/1UvR5-3OvvOv34_mZFd87xY5ypTTC_ics/view?usp=sharing",
+    demo_vid: '<iframe width="560" height="315" src="https://www.youtube.com/embed/RLkE5QlbYXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     stacks: ['Ruby', 'Nokogiri'],
     comments: {
       author: "Nick Lam",
