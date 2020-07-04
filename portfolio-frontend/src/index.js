@@ -4,6 +4,7 @@ import './index.css';
 import 'bootswatch/dist/litera/bootstrap.min.css';
 // Any component wrapped in Provider will have access to redux store
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 // Compose combine diff middlewares into 1 - so we can pass in all middleware as one argument in createStore
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -26,8 +27,11 @@ const store = createStore(
 )
 
 ReactDOM.render(
+  // any component in App can now set up routes and links
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

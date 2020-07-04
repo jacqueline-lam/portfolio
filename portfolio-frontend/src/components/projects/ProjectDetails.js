@@ -25,8 +25,12 @@ import { Route } from 'react-router-dom';
 // }
 
 
-const ProjectDetails = ({ project }) => {
+const ProjectDetails = ({ match, projects }) => {
+  console.log(match)
+  const project = projects.find(proj => proj.id.toString() === match.params.projectId)
   const projectStacks = project.stacks.map(stack => stack.name).join(' | ');
+
+  // console.log(projectStacks)
   return (
     <div>
       <h3>{project.name}</h3>
