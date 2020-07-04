@@ -26,13 +26,16 @@ class ProjectsContainer extends Component {
             <h2>Loading...</h2>
             :
             < >
-              <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
-              <ProjectList filteredProjects={filteredProjects} />
-
+              <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} />
+              <Route exact path='/projects' render={routerProps =>
+                <div>
+                  <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
+                  <ProjectList filteredProjects={filteredProjects} match={match} />
+                </div>
+              } />
               {/* add `match` to the arguments so we can access the path information in `routerProps` that is passed from App.js */}
               {/* replace `component` prop with the `render` prop so we can pass the route information to the `ProjectDetails` component*/}
 
-              <Route exact path={`${match.url}/:projectId`} render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} />
             </ >
         }
       </div>

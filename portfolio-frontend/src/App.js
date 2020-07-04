@@ -13,7 +13,7 @@ class App extends Component {
         {/* <Navbar /> */}
         {/* <Route path='/about' component={About} /> */}
         <Route exact path='/' component={Home} />
-        <Route path='/projects' render={routerProps => <ProjectsContainer {...routerProps} />} />
+        < ProjectsContainer />
         {/* <Route path='/blog' component={BlogPostsContainer} /> */}
       </div>
     );
