@@ -1,12 +1,17 @@
 import React from 'react';
 
 const ProjectDetails = ({ match, projects }) => {
-  console.log(match)
-  console.log(projects)
 
   const project = projects.find(proj => proj.id.toString() === match.params.projectId)
   const renderProject = () => {
-    const projectStacks = project.stacks.map(stack => stack.name).join(' | ');
+    const projectStacks = (
+      <ul>
+        {project.stacks.map(stack =>
+          <li key={stack.id}>{stack.name}</li>
+        )}
+      </ul>
+    );
+
     return [
       <div>
         <h3>{project.name}</h3>
