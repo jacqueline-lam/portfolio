@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectDetails from './ProjectDetails'
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
@@ -15,6 +16,7 @@ const ProjectCard = ({ project }) => {
       <hr />
       {/* <iframe src="https://drive.google.com/file/d/1WwtgDcBwrXa-tJ1pXbyBwBBkClDNdvst/preview" width="640" height="480"></iframe> */}
       {/* <CommentsContainer comments={project.comments} /> */}
+      <ProjectDetails project={project} />
     </div >
   );
 };

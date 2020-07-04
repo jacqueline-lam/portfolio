@@ -19,6 +19,7 @@ class ProjectsContainer extends Component {
 
   render() {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
+    console.log(match)
     return (
       <div>
         {
@@ -30,7 +31,8 @@ class ProjectsContainer extends Component {
               <ProjectList filteredProjects={filteredProjects} />
 
               {/* add `match` to the arguments so we can access the path information in `routerProps` that is passed from App.js */}
-              <Route path={`${match.url}/:projectId`} component={ProjectDetails} />
+              {/* replace `component` prop with the `render` prop so we can pass the route information to the `ProjectDetails` component*/}
+              {/* <Route exact path={`${match.url}/:projectId`} render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} /> */}
             </ >
         }
       </div>
