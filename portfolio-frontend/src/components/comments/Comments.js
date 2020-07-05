@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 
+
 class Comments extends Component {
   render() {
     const { projectComments, projectId } = this.props

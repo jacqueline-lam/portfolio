@@ -8,20 +8,26 @@ class CommentInput extends Component {
     date: '',
     content: '',
   }
-  // sets a property of restaurantId on the comment input
+  // sets a property of projectId on the comment input
   // from the parent components id
   handleOnChange = event => {
     this.setState({
-      text: event.target.value,
+      [event.target.name]: event.target.value,
     });
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
-    // this will be nested inside action's 'comment' key
-    this.props.addComment({ content: this.state.content, restaurantId: this.props.restaurantId });
+    const comment = {
+      ...this.state, projectId: this.props.projectId
+    }
+    this.props.addComment(comment);
+    // Update component state to return to default state
     this.setState({
-      text: '',
+      name: '',
+      email: '',
+      date: '',
+      content: '',
     });
   }
 
@@ -30,10 +36,20 @@ class CommentInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <label>Review</label>
+          <label>Name</label>
           <input
             type="text"
-            value={this.state.text}
+            value={this.state.name}
+            onChange={this.handleOnChange} />
+          <label>Email</label>
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.handleOnChange} />
+          <label>Comment here</label>
+          <input
+            type="text"
+            value={this.state.content}
             onChange={this.handleOnChange} />
           <input type="submit" />
         </form>

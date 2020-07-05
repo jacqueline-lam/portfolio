@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 import Card from 'react-bootstrap/Card';
 
 class Comment extends Component {
@@ -9,7 +10,7 @@ class Comment extends Component {
     return (
       <Card>
         <Card.Title>{comment.author}</Card.Title>
-        <Card.Subtitle>{comment.created_at}</Card.Subtitle>
+        <Card.Subtitle><Momment fromNow>{comment.created_at}</Momment></Card.Subtitle>
         <Card.Text>{comment.content}</Card.Text>
         {/* <button onClick={() => deleteComment(comment.id)}> X </button> */}
       </Card >
