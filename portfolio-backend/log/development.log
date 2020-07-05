@@ -17559,3 +17559,1085 @@ Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 14.5ms | Allocations: 138
   [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 4], ["author", "Jess .T"], ["email", "jess.t@gmail.com"], ["content", "Searching recipes for pantry ingredients is an execellent idea and I love the design of the site 😍 Can't wait to see more recipes!"], ["created_at", "2020-07-04 19:43:41.890558"], ["updated_at", "2020-07-04 19:43:41.890558"]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 01:58:54 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 01:58:54 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (61.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 78ms (Views: 0.6ms | ActiveRecord: 61.0ms | Allocations: 2821)
+
+
+  [1m[36mProject Load (35.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 88ms (Views: 0.1ms | ActiveRecord: 43.9ms | Allocations: 13933)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 01:59:00 -0400
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 01:59:00 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (3.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (24.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 24.4ms | Allocations: 7024)
+
+
+  [1m[36mComment Load (10.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (10.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 60ms (Views: 0.2ms | ActiveRecord: 30.9ms | Allocations: 13759)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 01:59:44 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 01:59:44 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3125)
+
+
+  [1m[36mStack Load (3.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 59ms (Views: 0.1ms | ActiveRecord: 10.3ms | Allocations: 13856)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Destroy (6.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (1.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.6ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (4.8ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.6ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.9ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stacks" WHERE "stacks"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProjectStack Load (0.5ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (2.1ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.7ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjectStack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "project_stacks" WHERE "project_stacks"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.4ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ActiveRecord"], ["created_at", "2020-07-05 06:01:19.967753"], ["updated_at", "2020-07-05 06:01:19.967753"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BCrypt"], ["created_at", "2020-07-05 06:01:19.971689"], ["updated_at", "2020-07-05 06:01:19.971689"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bootstrap"], ["created_at", "2020-07-05 06:01:19.975087"], ["updated_at", "2020-07-05 06:01:19.975087"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "CRUD"], ["created_at", "2020-07-05 06:01:19.978199"], ["updated_at", "2020-07-05 06:01:19.978199"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "HTML & CSS"], ["created_at", "2020-07-05 06:01:19.981426"], ["updated_at", "2020-07-05 06:01:19.981426"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.5ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fetch API"], ["created_at", "2020-07-05 06:01:19.984570"], ["updated_at", "2020-07-05 06:01:19.984570"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "JavaScript"], ["created_at", "2020-07-05 06:01:19.988837"], ["updated_at", "2020-07-05 06:01:19.988837"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MVC"], ["created_at", "2020-07-05 06:01:19.993123"], ["updated_at", "2020-07-05 06:01:19.993123"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nokogiri"], ["created_at", "2020-07-05 06:01:19.996756"], ["updated_at", "2020-07-05 06:01:19.996756"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Omniauth"], ["created_at", "2020-07-05 06:01:20.001838"], ["updated_at", "2020-07-05 06:01:20.001838"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PostgreSQL"], ["created_at", "2020-07-05 06:01:20.005388"], ["updated_at", "2020-07-05 06:01:20.005388"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React.JS"], ["created_at", "2020-07-05 06:01:20.008837"], ["updated_at", "2020-07-05 06:01:20.008837"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React Router"], ["created_at", "2020-07-05 06:01:20.011972"], ["updated_at", "2020-07-05 06:01:20.011972"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux"], ["created_at", "2020-07-05 06:01:20.026823"], ["updated_at", "2020-07-05 06:01:20.026823"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux Thunk"], ["created_at", "2020-07-05 06:01:20.030551"], ["updated_at", "2020-07-05 06:01:20.030551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "RESTful API"], ["created_at", "2020-07-05 06:01:20.034524"], ["updated_at", "2020-07-05 06:01:20.034524"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2020-07-05 06:01:20.038181"], ["updated_at", "2020-07-05 06:01:20.038181"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby on Rails"], ["created_at", "2020-07-05 06:01:20.041872"], ["updated_at", "2020-07-05 06:01:20.041872"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sinatra"], ["created_at", "2020-07-05 06:01:20.045395"], ["updated_at", "2020-07-05 06:01:20.045395"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "SQLite3"], ["created_at", "2020-07-05 06:01:20.048791"], ["updated_at", "2020-07-05 06:01:20.048791"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "site_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "CLI Data Gem for Indecisive Shoppers"], ["description", "I designed a CLI app that scraped data from the web page Outdoor Gear Lab. It provides shoppers with concise information about a type of product and gives them the option to inquire about the products based on chosen features/ rating catgories!"], ["image_url", "https://lh3.googleusercontent.com/8tOpxe0Vl9HmVq7xR3eF88f959FvMqEIHpzLI3ANXHCZ63_8JIefE8rCyfYxdR93AIa-QfxlX-Q2hfpLZ27dz5Ub61swLUoY2l7FFnyuAwwk2pAJtAaEDifPnuwJuQn7AkefSAZhp_BOLQo30b2WOorm-Bup6K0d4wmWBM2C2xrtIMkH2qRJ9jbznNp9R2GZ5abRlXkyCcTN6WqgaMb2xmGYULYTyF4P24Qit5ETlXcMYAZsMqxSYTBTlYtwdOYocxIWrAe7LwtDCcPbbh8bDB10dPFy_FbNR0ekLdNNYnwLBhaJGuR1qE13g-12Irhsomi0vyXxVTK7lOzDSqnLYyERmtDOnm_HeTJFeuZbyPa_Bc81JjLsM_Q_Lgkr1D2Sqqq3sFcF1J2JArNqhEhH5sAHxEI0mMBQRGxj2Z3T96GJEaiREje3ifGE3wA8Nie5m5s3C8Sg0O1C_FOO24sRjMY9Mmd6FJVWU0LobREXBjYPPxEffa3hszRMeEyEXimfHa7UTR2UG6n5tXkph38G_z9G_0s6joNnOh3mHHnK5R2Sx68PItQSSuyyZmSEIm_IQgbjUx_F9gh3LQOn6MAMOQGbdoKinUj8gu_j8HIZPfeUpFeIJhSo4xet6xThUTPAQ0ToVc-_Z6c0UQCqBxn0SGowH2tP7WIBlC4Bnjickzez1BimhXsN9A=w1280-h720-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/rain_jackets"], ["site_url", "http://rubygems.org/gems/rain_jackets"], ["blog_url", "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4"], ["demo_vid", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/RLkE5QlbYXo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen />"], ["created_at", "2020-07-05 06:01:20.052342"], ["updated_at", "2020-07-05 06:01:20.052342"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Nokogiri"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 5], ["stack_id", 37], ["created_at", "2020-07-05 06:01:20.077596"], ["updated_at", "2020-07-05 06:01:20.077596"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 5], ["stack_id", 29], ["created_at", "2020-07-05 06:01:20.095631"], ["updated_at", "2020-07-05 06:01:20.095631"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 5], ["author", "Nick Lam"], ["email", "nick@gmail.com"], ["content", "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"], ["created_at", "2020-07-05 06:01:20.134173"], ["updated_at", "2020-07-05 06:01:20.134173"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sinatra-based Bouldering Log App"], ["description", "Bolderer is a Sinatra-powered web application that I created for aspiring boulderers. Climbers can keep track of the problems that they have climbed and check out other users' climbing progress as well."], ["image_url", "https://lh3.googleusercontent.com/nW2_cdMXFfiPTL0yT-hdLEJqHj21g1rOnw4g_dWcEIF_gWCD4U743hBGEuKWIokmYZq66-C9gSRiEEtWJf0_Q8ZXpnqBvkIu-cPzKHja0kij6aJ10Ga38uN3N4Xvx3E5dCmWuLYcT9qEyQK2MQX-qQJPlNKG_NaklUUNi4uhVqYLoP24H4jKkiwO_9wJU2taE7pJep2BvpR3nncXzXbxjBPUBkuiYffyBGCo6dEnaq-5bJswWwvgOwUlLCILr4AIWMsZKhdltNtKd8LV-tHtNGsjq8lgDR3qISU7S3YIwUuShEYr085FiLYYDJHFwWq1Gzk6OmEnEFHXv8yIAgPfJsQaLy0MiSKuz8fsk8ltUNgq0IfTo58pWkBC18_qsC6F30eLBK_D-U8iuXZny82Pzec8ul7T9Hk3tLXrUn84DbBnP85S0TQLwOD1D8wC_7ES6Y3kUbpU0X9SyUvo6XLBVhSzzg-l-9Hr8PzVAkrKDrOihSbaZswb6aCTl7zU7SgMcrLnd0a8wuFJalwfRUwl3noa90BYfmK06p_JijpNvXcH3NzLd1BORW-8TiTfkeM7QfPaqW-_hNEuG1357-OZ9MZ4QqZ45Rk4rBy4JdKgf4-5zH3KcrPHejVxMHgl9sJdj-HleZJz8rf9vRoLFM7QZ0ETNjESEv_SF1v6TaKfwUyrOQI4tzYfCQ=w431-h256-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/bolderer_sinatra_app"], ["blog_url", "http://dev.to/jacquelinelam/sinatra-web-app-mvc-sessions-and-routes-52on"], ["demo_vid", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5xP86-lEm28\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen />"], ["created_at", "2020-07-05 06:01:20.150216"], ["updated_at", "2020-07-05 06:01:20.150216"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (13.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (1.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Sinatra"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 21], ["created_at", "2020-07-05 06:01:20.203678"], ["updated_at", "2020-07-05 06:01:20.203678"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 23], ["created_at", "2020-07-05 06:01:20.229481"], ["updated_at", "2020-07-05 06:01:20.229481"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 22], ["created_at", "2020-07-05 06:01:20.237672"], ["updated_at", "2020-07-05 06:01:20.237672"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 24], ["created_at", "2020-07-05 06:01:20.246726"], ["updated_at", "2020-07-05 06:01:20.246726"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 25], ["created_at", "2020-07-05 06:01:20.254002"], ["updated_at", "2020-07-05 06:01:20.254002"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 28], ["created_at", "2020-07-05 06:01:20.260348"], ["updated_at", "2020-07-05 06:01:20.260348"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 36], ["created_at", "2020-07-05 06:01:20.266921"], ["updated_at", "2020-07-05 06:01:20.266921"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 37], ["created_at", "2020-07-05 06:01:20.273465"], ["updated_at", "2020-07-05 06:01:20.273465"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 39], ["created_at", "2020-07-05 06:01:20.279489"], ["updated_at", "2020-07-05 06:01:20.279489"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 6], ["stack_id", 40], ["created_at", "2020-07-05 06:01:20.285755"], ["updated_at", "2020-07-05 06:01:20.285755"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ruby on Rails Bouldering Tracker (Improved Domain)"], ["description", "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system."], ["image_url", "https://lh3.googleusercontent.com/ZJj2-sMNGVeALHxF-8131mvsNOq_MIwdKeyK11Ak7OnMAWCinkpYDA0G2NX2X814v0_cqfKJ-_vneAM_-zLRC5xhy2J5rCPMk0I9tvaJGHQkh-_3WyvxlZb8fDUgpj5oH99zCyyGlcQ4WZaDG2Q50ChTge5wjCJoDP_IA-KcJgisHYD7q9QicOEFq1WqWswZgdc9fuaCiuoEtY1g4sjqrI3eDaDDebU_F9aAysS7Wbb7SShvUxiDUV7T-ckzkS3Q-99cWQVTbiL2i33_yOCnXiRRAglpBv5duaWZP3hPrjO6bWZzV6yee00ppzfM8Lg8W7NAx1l6XcZz3pvdZAqMHUcCpE2-UBgX_K62a9fNOAvYqzX8KMYPJu2mnXz5P2dWAH0WIm4y7AHSQvtRPKHShTKbtStNRaJgfGnUTjRgH6JrGyZnL62pIeDX-9KVQldJLBaPuj98tmufkXLYWvs5wX2QgSQqDaPUXkTHvhc4Esr0ugVzmPTEfw_k4YtroSEvOc0v_TDJynrDcW0w_ZRrvhhNHLbOxBVJvHSeN3B2nReq5rGMNT6p_Xr8RL1gs1A_1PE7lElK3-blMB-bJOA3h4FObXVBWT_DVCyzGO0Z1mYojdPVng-2QICO-U8870qjh-2lc-0OLzW0DlcgGqhobK4voyKg-hIpIq18E5HWRxH9OZ-xuqCdaw=w2072-h1312-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/rails-bolderer-app"], ["blog_url", "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i"], ["demo_vid", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gKyGpzi5n5w\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen />"], ["created_at", "2020-07-05 06:01:20.288667"], ["updated_at", "2020-07-05 06:01:20.288667"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Omniauth"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 21], ["created_at", "2020-07-05 06:01:20.319727"], ["updated_at", "2020-07-05 06:01:20.319727"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 23], ["created_at", "2020-07-05 06:01:20.326600"], ["updated_at", "2020-07-05 06:01:20.326600"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 22], ["created_at", "2020-07-05 06:01:20.333155"], ["updated_at", "2020-07-05 06:01:20.333155"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 24], ["created_at", "2020-07-05 06:01:20.340230"], ["updated_at", "2020-07-05 06:01:20.340230"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 25], ["created_at", "2020-07-05 06:01:20.346359"], ["updated_at", "2020-07-05 06:01:20.346359"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 28], ["created_at", "2020-07-05 06:01:20.354089"], ["updated_at", "2020-07-05 06:01:20.354089"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 30], ["created_at", "2020-07-05 06:01:20.362419"], ["updated_at", "2020-07-05 06:01:20.362419"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 36], ["created_at", "2020-07-05 06:01:20.370847"], ["updated_at", "2020-07-05 06:01:20.370847"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 37], ["created_at", "2020-07-05 06:01:20.377194"], ["updated_at", "2020-07-05 06:01:20.377194"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 38], ["created_at", "2020-07-05 06:01:20.391237"], ["updated_at", "2020-07-05 06:01:20.391237"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 7], ["stack_id", 40], ["created_at", "2020-07-05 06:01:20.397636"], ["updated_at", "2020-07-05 06:01:20.397636"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Re-thinking a Recipe Manager During COVID Lockdown"], ["description", "Umami Pantry is a single page application that shows matching recipes for selected pantry ingredients. It is designed to encourage freestyle homecooking with easy-to-substitute ingredients.\n\n    The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface."], ["image_url", "https://lh3.googleusercontent.com/tT4gD3Xolx6wVVgt6WCsuHjN8oQcT1z4ChE4JYBPOop3onPchVWWhvfLGHOr8QHhyTvG4T-L1-6Hk1fMK8nAWOQwb6PS-6rTDancTIi2Ya2ypeFmfVjMktXmejpelifZT9Gz9zg6Eawq5voayS545HIO99Otm4aA9UEdypHUl9JQ3EqX291lMzsYqMO2pT_CCqzYPD-OA002qy9X5RqrWroEUGG9-SQKOh-SVL89rfHh96Lz_rj7gMUaXT2Bns-DEJFcaTzIz8MD-Uykmcxjl1U-NsolvsZ6SOZW940ohnV-Vmfhgy4I7a0wuc_uCSBlWVU-QpOnX0cvTfB2egxdlHt9mJv1Xe0u6pmd12XKcUkMCWzMtzDiQH0fKb8dP6C8NzLSg9zKsQfTl_wxrScGzypHRZ7KvfMfyPhAG3o-1HcPee8R234uxA1owbjkagIwzu0idp9RSyKyAbxudJD_BWriJ6oyDEDPG4ns1SsrN-Wh4daUR-LbikgRLyi6cQ0hJvktZY3zjwbmVZ4XPJunPFB-7qwNz5Cs5j9K2CJ9G3_43_FBwQdv3Nq0iqsZj4cuyjRJ8rv2cODQxSfAJzSfwWoSPMCyvR7Moz4K81hloGaINA1pM_h9CbxmFEouMSQjCeHAOu3wBGn8vxzNENtQtaJl65bxqGsyuXnHszlMhGxVcsBm0mxnGg=w2072-h1554-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/umami-pantry"], ["blog_url", "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke"], ["demo_vid", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xL5mj8t-rMM\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen />"], ["created_at", "2020-07-05 06:01:20.400746"], ["updated_at", "2020-07-05 06:01:20.400746"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Fetch API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "JavaScript"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "PostgreSQL"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 21], ["created_at", "2020-07-05 06:01:20.424103"], ["updated_at", "2020-07-05 06:01:20.424103"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 23], ["created_at", "2020-07-05 06:01:20.430205"], ["updated_at", "2020-07-05 06:01:20.430205"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 24], ["created_at", "2020-07-05 06:01:20.439828"], ["updated_at", "2020-07-05 06:01:20.439828"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 26], ["created_at", "2020-07-05 06:01:20.447917"], ["updated_at", "2020-07-05 06:01:20.447917"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 25], ["created_at", "2020-07-05 06:01:20.457860"], ["updated_at", "2020-07-05 06:01:20.457860"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 27], ["created_at", "2020-07-05 06:01:20.464092"], ["updated_at", "2020-07-05 06:01:20.464092"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 31], ["created_at", "2020-07-05 06:01:20.478936"], ["updated_at", "2020-07-05 06:01:20.478936"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 36], ["created_at", "2020-07-05 06:01:20.486230"], ["updated_at", "2020-07-05 06:01:20.486230"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 37], ["created_at", "2020-07-05 06:01:20.492621"], ["updated_at", "2020-07-05 06:01:20.492621"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 8], ["stack_id", 38], ["created_at", "2020-07-05 06:01:20.499374"], ["updated_at", "2020-07-05 06:01:20.499374"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 8], ["author", "Jess .T"], ["email", "jess.t@gmail.com"], ["content", "Searching recipes for pantry ingredients is an execellent idea and I love the design of the site 😍 Can't wait to see more recipes!"], ["created_at", "2020-07-05 06:01:20.504758"], ["updated_at", "2020-07-05 06:01:20.504758"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 02:01:38 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 02:01:38 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (66.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 71ms (Views: 0.1ms | ActiveRecord: 66.5ms | Allocations: 3258)
+
+
+  [1m[36mStack Load (3.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 103ms (Views: 0.2ms | ActiveRecord: 69.1ms | Allocations: 13819)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 02:01:51 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 02:01:51 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (18.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 18.5ms | Allocations: 2616)
+
+
+  [1m[36mProject Load (26.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (7.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 137ms (Views: 0.2ms | ActiveRecord: 40.5ms | Allocations: 13750)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 02:04:18 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 02:04:18 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2470)
+
+
+  [1m[36mProject Load (12.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (4.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (41.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (21.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 205ms (Views: 0.3ms | ActiveRecord: 84.5ms | Allocations: 13738)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 02:04:37 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 02:04:37 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (22.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  [1m[36mProject Load (21.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 22.9ms | Allocations: 3653)
+
+
+  [1m[36mStack Load (3.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (93.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 144ms (Views: 0.2ms | ActiveRecord: 121.5ms | Allocations: 13750)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 02:05:49 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 02:05:49 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mStack Load (2.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3015)
+
+
+  [1m[36mComment Load (10.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (7.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (9.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 6]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 7]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.8ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 8]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 165ms (Views: 0.1ms | ActiveRecord: 36.6ms | Allocations: 14273)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (63.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_development"[0m
+  [1m[35m (61.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "portfolio_backend_test"[0m
+  [1m[35m (278.9ms)[0m  [1m[35mCREATE DATABASE "portfolio_backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (114.3ms)[0m  [1m[35mCREATE DATABASE "portfolio_backend_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "project_id" integer, "author" character varying, "email" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "project_stacks" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "project_stacks" ("id" bigserial primary key, "project_id" integer, "stack_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "description" text, "image_url" character varying, "github_url" character varying, "site_url" character varying, "blog_url" character varying, "demo_vid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stacks" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "stacks" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200627173503)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200627170914),
+(20200627172157),
+(20200627172447);
+
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-05 16:00:57.797994"], ["updated_at", "2020-07-05 16:00:57.797994"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7baafaa9bf9a449b181cb08ab9ef0b3e31f20319"], ["created_at", "2020-07-05 16:00:57.807582"], ["updated_at", "2020-07-05 16:00:57.807582"]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "project_id" integer, "author" character varying, "email" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "project_stacks" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "project_stacks" ("id" bigserial primary key, "project_id" integer, "stack_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "description" text, "image_url" character varying, "github_url" character varying, "site_url" character varying, "blog_url" character varying, "demo_vid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stacks" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "stacks" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200627173503)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200627170914),
+(20200627172157),
+(20200627172447);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-05 16:00:57.931186"], ["updated_at", "2020-07-05 16:00:57.931186"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-05 16:00:57.937728"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7baafaa9bf9a449b181cb08ab9ef0b3e31f20319"], ["created_at", "2020-07-05 16:00:57.943157"], ["updated_at", "2020-07-05 16:00:57.943157"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mStack Load (6.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  [1m[36mProjectStack Load (0.5ms)[0m  [1m[34mSELECT "project_stacks".* FROM "project_stacks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.6ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ActiveRecord"], ["created_at", "2020-07-05 16:00:58.027162"], ["updated_at", "2020-07-05 16:00:58.027162"]]
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BCrypt"], ["created_at", "2020-07-05 16:00:58.044289"], ["updated_at", "2020-07-05 16:00:58.044289"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bootstrap"], ["created_at", "2020-07-05 16:00:58.048780"], ["updated_at", "2020-07-05 16:00:58.048780"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.8ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "CRUD"], ["created_at", "2020-07-05 16:00:58.052837"], ["updated_at", "2020-07-05 16:00:58.052837"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.6ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "HTML & CSS"], ["created_at", "2020-07-05 16:00:58.062617"], ["updated_at", "2020-07-05 16:00:58.062617"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fetch API"], ["created_at", "2020-07-05 16:00:58.079054"], ["updated_at", "2020-07-05 16:00:58.079054"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "JavaScript"], ["created_at", "2020-07-05 16:00:58.083256"], ["updated_at", "2020-07-05 16:00:58.083256"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MVC"], ["created_at", "2020-07-05 16:00:58.087190"], ["updated_at", "2020-07-05 16:00:58.087190"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nokogiri"], ["created_at", "2020-07-05 16:00:58.090880"], ["updated_at", "2020-07-05 16:00:58.090880"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Omniauth"], ["created_at", "2020-07-05 16:00:58.094349"], ["updated_at", "2020-07-05 16:00:58.094349"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PostgreSQL"], ["created_at", "2020-07-05 16:00:58.097828"], ["updated_at", "2020-07-05 16:00:58.097828"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React.JS"], ["created_at", "2020-07-05 16:00:58.101223"], ["updated_at", "2020-07-05 16:00:58.101223"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "React Router"], ["created_at", "2020-07-05 16:00:58.105106"], ["updated_at", "2020-07-05 16:00:58.105106"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux"], ["created_at", "2020-07-05 16:00:58.108683"], ["updated_at", "2020-07-05 16:00:58.108683"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Redux Thunk"], ["created_at", "2020-07-05 16:00:58.112281"], ["updated_at", "2020-07-05 16:00:58.112281"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "RESTful API"], ["created_at", "2020-07-05 16:00:58.116021"], ["updated_at", "2020-07-05 16:00:58.116021"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.3ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2020-07-05 16:00:58.119625"], ["updated_at", "2020-07-05 16:00:58.119625"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby on Rails"], ["created_at", "2020-07-05 16:00:58.123708"], ["updated_at", "2020-07-05 16:00:58.123708"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sinatra"], ["created_at", "2020-07-05 16:00:58.127514"], ["updated_at", "2020-07-05 16:00:58.127514"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStack Create (0.2ms)[0m  [1m[32mINSERT INTO "stacks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "SQLite3"], ["created_at", "2020-07-05 16:00:58.130997"], ["updated_at", "2020-07-05 16:00:58.130997"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "site_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "CLI Data Gem for Indecisive Shoppers"], ["description", "I designed a CLI app that scraped data from the web page Outdoor Gear Lab. It provides shoppers with concise information about a type of product and gives them the option to inquire about the products based on chosen features/ rating catgories!"], ["image_url", "https://lh3.googleusercontent.com/8tOpxe0Vl9HmVq7xR3eF88f959FvMqEIHpzLI3ANXHCZ63_8JIefE8rCyfYxdR93AIa-QfxlX-Q2hfpLZ27dz5Ub61swLUoY2l7FFnyuAwwk2pAJtAaEDifPnuwJuQn7AkefSAZhp_BOLQo30b2WOorm-Bup6K0d4wmWBM2C2xrtIMkH2qRJ9jbznNp9R2GZ5abRlXkyCcTN6WqgaMb2xmGYULYTyF4P24Qit5ETlXcMYAZsMqxSYTBTlYtwdOYocxIWrAe7LwtDCcPbbh8bDB10dPFy_FbNR0ekLdNNYnwLBhaJGuR1qE13g-12Irhsomi0vyXxVTK7lOzDSqnLYyERmtDOnm_HeTJFeuZbyPa_Bc81JjLsM_Q_Lgkr1D2Sqqq3sFcF1J2JArNqhEhH5sAHxEI0mMBQRGxj2Z3T96GJEaiREje3ifGE3wA8Nie5m5s3C8Sg0O1C_FOO24sRjMY9Mmd6FJVWU0LobREXBjYPPxEffa3hszRMeEyEXimfHa7UTR2UG6n5tXkph38G_z9G_0s6joNnOh3mHHnK5R2Sx68PItQSSuyyZmSEIm_IQgbjUx_F9gh3LQOn6MAMOQGbdoKinUj8gu_j8HIZPfeUpFeIJhSo4xet6xThUTPAQ0ToVc-_Z6c0UQCqBxn0SGowH2tP7WIBlC4Bnjickzez1BimhXsN9A=w1280-h720-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/rain_jackets"], ["site_url", "http://rubygems.org/gems/rain_jackets"], ["blog_url", "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4"], ["demo_vid", "https://www.youtube.com/embed/RLkE5QlbYXo"], ["created_at", "2020-07-05 16:00:58.157290"], ["updated_at", "2020-07-05 16:00:58.157290"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Nokogiri"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.6ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 1], ["stack_id", 17], ["created_at", "2020-07-05 16:00:58.198210"], ["updated_at", "2020-07-05 16:00:58.198210"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 1], ["stack_id", 9], ["created_at", "2020-07-05 16:00:58.212913"], ["updated_at", "2020-07-05 16:00:58.212913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 1], ["author", "Nick Lam"], ["email", "nick@gmail.com"], ["content", "Great job on scraping some product data and breaking down the data for making further specific queriries. This can be expanded into a great e-commerce backend project if you can scrape data for other products as well!"], ["created_at", "2020-07-05 16:00:58.229887"], ["updated_at", "2020-07-05 16:00:58.229887"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sinatra-based Bouldering Log App"], ["description", "Bolderer is a Sinatra-powered web application that I created for aspiring boulderers. Climbers can keep track of the problems that they have climbed and check out other users' climbing progress as well."], ["image_url", "https://lh3.googleusercontent.com/nW2_cdMXFfiPTL0yT-hdLEJqHj21g1rOnw4g_dWcEIF_gWCD4U743hBGEuKWIokmYZq66-C9gSRiEEtWJf0_Q8ZXpnqBvkIu-cPzKHja0kij6aJ10Ga38uN3N4Xvx3E5dCmWuLYcT9qEyQK2MQX-qQJPlNKG_NaklUUNi4uhVqYLoP24H4jKkiwO_9wJU2taE7pJep2BvpR3nncXzXbxjBPUBkuiYffyBGCo6dEnaq-5bJswWwvgOwUlLCILr4AIWMsZKhdltNtKd8LV-tHtNGsjq8lgDR3qISU7S3YIwUuShEYr085FiLYYDJHFwWq1Gzk6OmEnEFHXv8yIAgPfJsQaLy0MiSKuz8fsk8ltUNgq0IfTo58pWkBC18_qsC6F30eLBK_D-U8iuXZny82Pzec8ul7T9Hk3tLXrUn84DbBnP85S0TQLwOD1D8wC_7ES6Y3kUbpU0X9SyUvo6XLBVhSzzg-l-9Hr8PzVAkrKDrOihSbaZswb6aCTl7zU7SgMcrLnd0a8wuFJalwfRUwl3noa90BYfmK06p_JijpNvXcH3NzLd1BORW-8TiTfkeM7QfPaqW-_hNEuG1357-OZ9MZ4QqZ45Rk4rBy4JdKgf4-5zH3KcrPHejVxMHgl9sJdj-HleZJz8rf9vRoLFM7QZ0ETNjESEv_SF1v6TaKfwUyrOQI4tzYfCQ=w431-h256-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/bolderer_sinatra_app"], ["blog_url", "http://dev.to/jacquelinelam/sinatra-web-app-mvc-sessions-and-routes-52on"], ["demo_vid", "https://www.youtube.com/embed/5xP86-lEm28"], ["created_at", "2020-07-05 16:00:58.233149"], ["updated_at", "2020-07-05 16:00:58.233149"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Sinatra"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 1], ["created_at", "2020-07-05 16:00:58.254905"], ["updated_at", "2020-07-05 16:00:58.254905"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 3], ["created_at", "2020-07-05 16:00:58.266594"], ["updated_at", "2020-07-05 16:00:58.266594"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 2], ["created_at", "2020-07-05 16:00:58.296243"], ["updated_at", "2020-07-05 16:00:58.296243"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 4], ["created_at", "2020-07-05 16:00:58.304306"], ["updated_at", "2020-07-05 16:00:58.304306"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 5], ["created_at", "2020-07-05 16:00:58.311869"], ["updated_at", "2020-07-05 16:00:58.311869"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 8], ["created_at", "2020-07-05 16:00:58.318878"], ["updated_at", "2020-07-05 16:00:58.318878"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 16], ["created_at", "2020-07-05 16:00:58.326561"], ["updated_at", "2020-07-05 16:00:58.326561"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 17], ["created_at", "2020-07-05 16:00:58.333553"], ["updated_at", "2020-07-05 16:00:58.333553"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 19], ["created_at", "2020-07-05 16:00:58.341124"], ["updated_at", "2020-07-05 16:00:58.341124"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 2], ["stack_id", 20], ["created_at", "2020-07-05 16:00:58.348469"], ["updated_at", "2020-07-05 16:00:58.348469"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ruby on Rails Bouldering Tracker (Improved Domain)"], ["description", "The bolderer web application is an improved version of the Sinatra Bolderer project. Users can now  browse problems set in the indoor climbing gym by different filters, keep track of their sends, and check out other climbers who have sent the same problems. User authentication is also improved with more user validation and 3rd party authentication system."], ["image_url", "https://lh3.googleusercontent.com/ZJj2-sMNGVeALHxF-8131mvsNOq_MIwdKeyK11Ak7OnMAWCinkpYDA0G2NX2X814v0_cqfKJ-_vneAM_-zLRC5xhy2J5rCPMk0I9tvaJGHQkh-_3WyvxlZb8fDUgpj5oH99zCyyGlcQ4WZaDG2Q50ChTge5wjCJoDP_IA-KcJgisHYD7q9QicOEFq1WqWswZgdc9fuaCiuoEtY1g4sjqrI3eDaDDebU_F9aAysS7Wbb7SShvUxiDUV7T-ckzkS3Q-99cWQVTbiL2i33_yOCnXiRRAglpBv5duaWZP3hPrjO6bWZzV6yee00ppzfM8Lg8W7NAx1l6XcZz3pvdZAqMHUcCpE2-UBgX_K62a9fNOAvYqzX8KMYPJu2mnXz5P2dWAH0WIm4y7AHSQvtRPKHShTKbtStNRaJgfGnUTjRgH6JrGyZnL62pIeDX-9KVQldJLBaPuj98tmufkXLYWvs5wX2QgSQqDaPUXkTHvhc4Esr0ugVzmPTEfw_k4YtroSEvOc0v_TDJynrDcW0w_ZRrvhhNHLbOxBVJvHSeN3B2nReq5rGMNT6p_Xr8RL1gs1A_1PE7lElK3-blMB-bJOA3h4FObXVBWT_DVCyzGO0Z1mYojdPVng-2QICO-U8870qjh-2lc-0OLzW0DlcgGqhobK4voyKg-hIpIq18E5HWRxH9OZ-xuqCdaw=w2072-h1312-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/rails-bolderer-app"], ["blog_url", "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i"], ["demo_vid", "https://www.youtube.com/embed/gKyGpzi5n5w"], ["created_at", "2020-07-05 16:00:58.351357"], ["updated_at", "2020-07-05 16:00:58.351357"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "BCrypt"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "MVC"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Omniauth"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "SQLite3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 1], ["created_at", "2020-07-05 16:00:58.392911"], ["updated_at", "2020-07-05 16:00:58.392911"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 3], ["created_at", "2020-07-05 16:00:58.400482"], ["updated_at", "2020-07-05 16:00:58.400482"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 2], ["created_at", "2020-07-05 16:00:58.407717"], ["updated_at", "2020-07-05 16:00:58.407717"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 4], ["created_at", "2020-07-05 16:00:58.414748"], ["updated_at", "2020-07-05 16:00:58.414748"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 5], ["created_at", "2020-07-05 16:00:58.422841"], ["updated_at", "2020-07-05 16:00:58.422841"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 8], ["created_at", "2020-07-05 16:00:58.429668"], ["updated_at", "2020-07-05 16:00:58.429668"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 10], ["created_at", "2020-07-05 16:00:58.436153"], ["updated_at", "2020-07-05 16:00:58.436153"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 16], ["created_at", "2020-07-05 16:00:58.443676"], ["updated_at", "2020-07-05 16:00:58.443676"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 17], ["created_at", "2020-07-05 16:00:58.450338"], ["updated_at", "2020-07-05 16:00:58.450338"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 18], ["created_at", "2020-07-05 16:00:58.466536"], ["updated_at", "2020-07-05 16:00:58.466536"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 3], ["stack_id", 20], ["created_at", "2020-07-05 16:00:58.474151"], ["updated_at", "2020-07-05 16:00:58.474151"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "image_url", "github_url", "blog_url", "demo_vid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Re-thinking a Recipe Manager During COVID Lockdown"], ["description", "Umami Pantry is a single page application that shows matching recipes for selected pantry ingredients. It is designed to encourage freestyle homecooking with easy-to-substitute ingredients.\n\n    The app is composed of backend rails API and front-end modular JS clients, which use asynchronous Javascript to make HTTP requests to the API to get/ post data and render them to the user interface."], ["image_url", "https://lh3.googleusercontent.com/tT4gD3Xolx6wVVgt6WCsuHjN8oQcT1z4ChE4JYBPOop3onPchVWWhvfLGHOr8QHhyTvG4T-L1-6Hk1fMK8nAWOQwb6PS-6rTDancTIi2Ya2ypeFmfVjMktXmejpelifZT9Gz9zg6Eawq5voayS545HIO99Otm4aA9UEdypHUl9JQ3EqX291lMzsYqMO2pT_CCqzYPD-OA002qy9X5RqrWroEUGG9-SQKOh-SVL89rfHh96Lz_rj7gMUaXT2Bns-DEJFcaTzIz8MD-Uykmcxjl1U-NsolvsZ6SOZW940ohnV-Vmfhgy4I7a0wuc_uCSBlWVU-QpOnX0cvTfB2egxdlHt9mJv1Xe0u6pmd12XKcUkMCWzMtzDiQH0fKb8dP6C8NzLSg9zKsQfTl_wxrScGzypHRZ7KvfMfyPhAG3o-1HcPee8R234uxA1owbjkagIwzu0idp9RSyKyAbxudJD_BWriJ6oyDEDPG4ns1SsrN-Wh4daUR-LbikgRLyi6cQ0hJvktZY3zjwbmVZ4XPJunPFB-7qwNz5Cs5j9K2CJ9G3_43_FBwQdv3Nq0iqsZj4cuyjRJ8rv2cODQxSfAJzSfwWoSPMCyvR7Moz4K81hloGaINA1pM_h9CbxmFEouMSQjCeHAOu3wBGn8vxzNENtQtaJl65bxqGsyuXnHszlMhGxVcsBm0mxnGg=w2072-h1554-no?authuser=0"], ["github_url", "http://github.com/jacqueline-lam/umami-pantry"], ["blog_url", "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke"], ["demo_vid", "https://www.youtube.com/embed/xL5mj8t-rMM"], ["created_at", "2020-07-05 16:00:58.477685"], ["updated_at", "2020-07-05 16:00:58.477685"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "ActiveRecord"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Bootstrap"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "CRUD"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Fetch API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "HTML & CSS"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "JavaScript"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "PostgreSQL"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "RESTful API"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby"], ["LIMIT", 1]]
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."name" = $1 LIMIT $2[0m  [["name", "Ruby on Rails"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 1], ["created_at", "2020-07-05 16:00:58.499250"], ["updated_at", "2020-07-05 16:00:58.499250"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 3], ["created_at", "2020-07-05 16:00:58.509682"], ["updated_at", "2020-07-05 16:00:58.509682"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 4], ["created_at", "2020-07-05 16:00:58.517536"], ["updated_at", "2020-07-05 16:00:58.517536"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 6], ["created_at", "2020-07-05 16:00:58.524602"], ["updated_at", "2020-07-05 16:00:58.524602"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.4ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 5], ["created_at", "2020-07-05 16:00:58.533213"], ["updated_at", "2020-07-05 16:00:58.533213"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 7], ["created_at", "2020-07-05 16:00:58.548563"], ["updated_at", "2020-07-05 16:00:58.548563"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.5ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 11], ["created_at", "2020-07-05 16:00:58.558130"], ["updated_at", "2020-07-05 16:00:58.558130"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 16], ["created_at", "2020-07-05 16:00:58.565835"], ["updated_at", "2020-07-05 16:00:58.565835"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.3ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 17], ["created_at", "2020-07-05 16:00:58.577316"], ["updated_at", "2020-07-05 16:00:58.577316"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" WHERE "stacks"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProjectStack Create (0.2ms)[0m  [1m[32mINSERT INTO "project_stacks" ("project_id", "stack_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_id", 4], ["stack_id", 18], ["created_at", "2020-07-05 16:00:58.584588"], ["updated_at", "2020-07-05 16:00:58.584588"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("project_id", "author", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["project_id", 4], ["author", "Jess .T"], ["email", "jess.t@gmail.com"], ["content", "Searching recipes for pantry ingredients is an execellent idea and I love the design of the site 😍 Can't wait to see more recipes!"], ["created_at", "2020-07-05 16:00:58.590596"], ["updated_at", "2020-07-05 16:00:58.590596"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/projects" for ::1 at 2020-07-05 12:01:14 -0400
+Started GET "/api/v1/stacks" for ::1 at 2020-07-05 12:01:14 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mProject Load (9.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (30.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 0.4ms | ActiveRecord: 30.0ms | Allocations: 4198)
+
+
+  [1m[36mComment Load (87.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (6.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (3.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (4.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 232ms (Views: 0.1ms | ActiveRecord: 117.8ms | Allocations: 14574)
+
+

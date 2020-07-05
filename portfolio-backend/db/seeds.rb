@@ -52,7 +52,7 @@ project_data = [
     github_url: "http://github.com/jacqueline-lam/rain_jackets",
     site_url: "http://rubygems.org/gems/rain_jackets",
     blog_url: "http://dev.to/jacquelinelam/building-my-first-project-cli-data-gem-50m4",
-    demo_vid: '<iframe width="560" height="315" src="https://www.youtube.com/embed/RLkE5QlbYXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    demo_vid: "https://www.youtube.com/embed/RLkE5QlbYXo",
     stacks: ['Ruby', 'Nokogiri'],
     comments: {
       author: "Nick Lam",
@@ -68,7 +68,7 @@ project_data = [
     image_url: "https://lh3.googleusercontent.com/nW2_cdMXFfiPTL0yT-hdLEJqHj21g1rOnw4g_dWcEIF_gWCD4U743hBGEuKWIokmYZq66-C9gSRiEEtWJf0_Q8ZXpnqBvkIu-cPzKHja0kij6aJ10Ga38uN3N4Xvx3E5dCmWuLYcT9qEyQK2MQX-qQJPlNKG_NaklUUNi4uhVqYLoP24H4jKkiwO_9wJU2taE7pJep2BvpR3nncXzXbxjBPUBkuiYffyBGCo6dEnaq-5bJswWwvgOwUlLCILr4AIWMsZKhdltNtKd8LV-tHtNGsjq8lgDR3qISU7S3YIwUuShEYr085FiLYYDJHFwWq1Gzk6OmEnEFHXv8yIAgPfJsQaLy0MiSKuz8fsk8ltUNgq0IfTo58pWkBC18_qsC6F30eLBK_D-U8iuXZny82Pzec8ul7T9Hk3tLXrUn84DbBnP85S0TQLwOD1D8wC_7ES6Y3kUbpU0X9SyUvo6XLBVhSzzg-l-9Hr8PzVAkrKDrOihSbaZswb6aCTl7zU7SgMcrLnd0a8wuFJalwfRUwl3noa90BYfmK06p_JijpNvXcH3NzLd1BORW-8TiTfkeM7QfPaqW-_hNEuG1357-OZ9MZ4QqZ45Rk4rBy4JdKgf4-5zH3KcrPHejVxMHgl9sJdj-HleZJz8rf9vRoLFM7QZ0ETNjESEv_SF1v6TaKfwUyrOQI4tzYfCQ=w431-h256-no?authuser=0",
     github_url: "http://github.com/jacqueline-lam/bolderer_sinatra_app",
     blog_url: "http://dev.to/jacquelinelam/sinatra-web-app-mvc-sessions-and-routes-52on",
-    demo_vid: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5xP86-lEm28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    demo_vid: "https://www.youtube.com/embed/5xP86-lEm28",
     stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'RESTful API', 'Ruby', 'Sinatra', 'SQLite3']
   },
   # Project 3
@@ -78,7 +78,7 @@ project_data = [
     image_url: "https://lh3.googleusercontent.com/ZJj2-sMNGVeALHxF-8131mvsNOq_MIwdKeyK11Ak7OnMAWCinkpYDA0G2NX2X814v0_cqfKJ-_vneAM_-zLRC5xhy2J5rCPMk0I9tvaJGHQkh-_3WyvxlZb8fDUgpj5oH99zCyyGlcQ4WZaDG2Q50ChTge5wjCJoDP_IA-KcJgisHYD7q9QicOEFq1WqWswZgdc9fuaCiuoEtY1g4sjqrI3eDaDDebU_F9aAysS7Wbb7SShvUxiDUV7T-ckzkS3Q-99cWQVTbiL2i33_yOCnXiRRAglpBv5duaWZP3hPrjO6bWZzV6yee00ppzfM8Lg8W7NAx1l6XcZz3pvdZAqMHUcCpE2-UBgX_K62a9fNOAvYqzX8KMYPJu2mnXz5P2dWAH0WIm4y7AHSQvtRPKHShTKbtStNRaJgfGnUTjRgH6JrGyZnL62pIeDX-9KVQldJLBaPuj98tmufkXLYWvs5wX2QgSQqDaPUXkTHvhc4Esr0ugVzmPTEfw_k4YtroSEvOc0v_TDJynrDcW0w_ZRrvhhNHLbOxBVJvHSeN3B2nReq5rGMNT6p_Xr8RL1gs1A_1PE7lElK3-blMB-bJOA3h4FObXVBWT_DVCyzGO0Z1mYojdPVng-2QICO-U8870qjh-2lc-0OLzW0DlcgGqhobK4voyKg-hIpIq18E5HWRxH9OZ-xuqCdaw=w2072-h1312-no?authuser=0",
     github_url: "http://github.com/jacqueline-lam/rails-bolderer-app",
     blog_url: "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i",
-    demo_vid: '<iframe width="560" height="315" src="https://www.youtube.com/embed/gKyGpzi5n5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    demo_vid: "https://www.youtube.com/embed/gKyGpzi5n5w",
     stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3']
   },
 
@@ -91,7 +91,7 @@ project_data = [
     image_url: "https://lh3.googleusercontent.com/tT4gD3Xolx6wVVgt6WCsuHjN8oQcT1z4ChE4JYBPOop3onPchVWWhvfLGHOr8QHhyTvG4T-L1-6Hk1fMK8nAWOQwb6PS-6rTDancTIi2Ya2ypeFmfVjMktXmejpelifZT9Gz9zg6Eawq5voayS545HIO99Otm4aA9UEdypHUl9JQ3EqX291lMzsYqMO2pT_CCqzYPD-OA002qy9X5RqrWroEUGG9-SQKOh-SVL89rfHh96Lz_rj7gMUaXT2Bns-DEJFcaTzIz8MD-Uykmcxjl1U-NsolvsZ6SOZW940ohnV-Vmfhgy4I7a0wuc_uCSBlWVU-QpOnX0cvTfB2egxdlHt9mJv1Xe0u6pmd12XKcUkMCWzMtzDiQH0fKb8dP6C8NzLSg9zKsQfTl_wxrScGzypHRZ7KvfMfyPhAG3o-1HcPee8R234uxA1owbjkagIwzu0idp9RSyKyAbxudJD_BWriJ6oyDEDPG4ns1SsrN-Wh4daUR-LbikgRLyi6cQ0hJvktZY3zjwbmVZ4XPJunPFB-7qwNz5Cs5j9K2CJ9G3_43_FBwQdv3Nq0iqsZj4cuyjRJ8rv2cODQxSfAJzSfwWoSPMCyvR7Moz4K81hloGaINA1pM_h9CbxmFEouMSQjCeHAOu3wBGn8vxzNENtQtaJl65bxqGsyuXnHszlMhGxVcsBm0mxnGg=w2072-h1554-no?authuser=0",
     github_url: "http://github.com/jacqueline-lam/umami-pantry",
     blog_url: "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke",
-    demo_vid: '<iframe width="560" height="315" src="https://www.youtube.com/embed/xL5mj8t-rMM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    demo_vid: "https://www.youtube.com/embed/xL5mj8t-rMM",
     stacks: ['ActiveRecord', 'Bootstrap', 'CRUD', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails'],
     comments: {
       author: "Jess .T",
