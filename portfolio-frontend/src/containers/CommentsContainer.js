@@ -5,28 +5,29 @@ import { connect } from 'react-redux';
 
 class CommentsContainer extends Component {
   render() {
-    console.log('test')
+    console.log(this.props.project.comments)
     return (
       <div>
         <Comments
-          comments={this.props.comments}
+          projectComments={this.props.project.comments}
           projectId={this.props.project.id}
         />
-        <CommentInput
+        {/* <CommentInput
           addComment={this.props.addComment}
           projectId={this.props.project.id}
-        />
+        /> */}
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return { comments: state.comments }
-}
+// const mapStateToProps = state => {
+//   return { comments: state.comments }
+// }
 
-const mapDispatchToProps = dispatch => ({
-  addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
-})
+// const mapDispatchToProps = dispatch => ({
+//   addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
+export default CommentsContainer;
+//  connect(null, mapDispatchToProps)(CommentsContainer);

@@ -26,8 +26,8 @@ const ProjectDetails = ({ match, projects }) => {
           <iframe width="560" height="315" src={project.demo_vid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </div>
         <hr />
+        <CommentsContainer project={project} />
       </div>
-      <CommentsContainer projet={project} />
     ]
   }
 
