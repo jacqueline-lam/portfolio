@@ -27,6 +27,7 @@ const ProjectDetails = ({ match, projects }) => {
         </div>
         <hr />
       </div>
+      <CommentsContainer projet={project} />
     ]
   }
 
@@ -34,7 +35,6 @@ const ProjectDetails = ({ match, projects }) => {
   return (
     < >
       {project ? renderProject() : null}
-      <CommentsContainer comments={project.comments} />
     </>
   )
 }
