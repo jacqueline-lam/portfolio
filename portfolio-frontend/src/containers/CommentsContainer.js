@@ -29,4 +29,4 @@ const mapDispatchToProps = dispatch => ({
   addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
 })
 
-export default (mapStateToProps, mapDispatchToProps)(CommentsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
