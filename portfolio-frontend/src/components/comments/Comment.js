@@ -10,7 +10,7 @@ class Comment extends Component {
     return (
       <Card>
         <Card.Title>{comment.author}</Card.Title>
-        <Card.Subtitle><Momment fromNow>{comment.created_at}</Momment></Card.Subtitle>
+        <Card.Subtitle><Moment fromNow>{comment.created_at}</Moment></Card.Subtitle>
         <Card.Text>{comment.content}</Card.Text>
         {/* <button onClick={() => deleteComment(comment.id)}> X </button> */}
       </Card >

@@ -12,10 +12,10 @@ class CommentsContainer extends Component {
           projectComments={this.props.project.comments}
           projectId={this.props.project.id}
         />
-        {/* <CommentInput
+        <CommentInput
           addComment={this.props.addComment}
           projectId={this.props.project.id}
-        /> */}
+        />
       </div>
     )
   }
@@ -25,9 +25,8 @@ class CommentsContainer extends Component {
 //   return { comments: state.comments }
 // }
 
-// const mapDispatchToProps = dispatch => ({
-//   addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
-// })
+const mapDispatchToProps = dispatch => ({
+  addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
+})
 
-export default CommentsContainer;
-//  connect(null, mapDispatchToProps)(CommentsContainer);
+export default connect(null, mapDispatchToProps)(CommentsContainer);
