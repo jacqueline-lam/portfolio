@@ -6,12 +6,12 @@ class Comment extends Component {
     const { comment } = this.props
 
     return (
-      <div>
-        <h6>{comment.author}</h6>
-        <i>{comment.created_at}</i>
-        <p>{comment.content}</p>
+      <Card>
+        <Card.Title>{comment.author}</Card.Title>
+        <Card.Subtitle>{comment.created_at}</Card.Subtitle>
+        <Card.Text>{comment.content}</Card.Text>
         {/* <button onClick={() => deleteComment(comment.id)}> X </button> */}
-      </div >
+      </Card >
     );
   }
 
