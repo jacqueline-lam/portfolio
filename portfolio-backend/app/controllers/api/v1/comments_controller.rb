@@ -14,6 +14,7 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
+    binding.pry
     comment = @project.comments.build(comment_params)
 
     if comment.save

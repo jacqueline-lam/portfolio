@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 class CommentInput extends Component {
   state = {
-    name: '',
+    author: '',
     email: '',
     content: '',
   }
@@ -22,15 +22,14 @@ class CommentInput extends Component {
     event.preventDefault()
     const comment = {
       ...this.state,
-      projectId: this.props.projectId,
-      date: new Date(),
+      project_id: this.props.projectId,
     }
-    console.log(comment)
     // Send State to our addComment action creator
+    console.log(comment)
     this.props.addComment(comment);
     // Update component state to return to default state
     // this.setState({
-    //   name: '',
+    //   author: '',
     //   email: '',
     //   content: '',
     // });
@@ -60,17 +59,17 @@ class CommentInput extends Component {
         //   <input type="submit" />
         // </form> */}
         <Card>
-          <Form role="form" className='clearfix' onSubmit={this.handleSubmit}>
+          <Form role="form" className='clearfix' onSubmit={this.handleOnSubmit}>
             <h5>Leave a comment</h5>
             <Form.Row>
               <Col>
-                <Form.Group controlId="formName">
+                <Form.Group controlId="formAuthor">
                   {/* <Form.Label>Name</Form.Label> */}
                   <Form.Control
-                    name="name"
+                    name="author"
                     type="text"
                     placeholder="Your name"
-                    value={this.state.name}
+                    value={this.state.author}
                     onChange={this.handleOnChange}
                   />
                 </Form.Group>
@@ -91,7 +90,7 @@ class CommentInput extends Component {
                 </Form.Group>
               </Col>
             </Form.Row>
-            <Form.Group controlId="formComment">
+            <Form.Group controlId="formContent">
               {/* <Form.Label>Enter your comment</Form.Label> */}
               <Form.Control
                 name="content"
