@@ -96,7 +96,7 @@ project_data = [
     comments: {
       author: "Jess .T",
       email: "jess.t@gmail.com",
-      content: "Searching recipes for pantry ingredients is an execellent idea and I love the design of the site 😍 Can't wait to see more recipes!"
+      content: "Searching recipes for pantry ingredients is an excellent idea and I love the design of the site 😍 Can't wait to see more recipes!"
     }
   }
 ]

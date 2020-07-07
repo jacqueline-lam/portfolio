@@ -13,5 +13,12 @@ export const addComment = comment => {
       // tell server to expect data as a JSON string
       body: JSON.stringify(comment)
     })
+      //immediately render the new data
+      .then(resp => resp.json())
+      .then(newComment => {
+        console.log(newComment)
+        debugger
+      })
+    // .then(newComment => dispatch({ type: 'ADD_COMMENT', comment: newComment }))
   }
 }

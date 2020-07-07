@@ -81,6 +81,16 @@ const projectsReducer = (state = {
         selectedStackIds: stackIds,
       }
 
+    case 'ADD_COMMENT':
+      console.log(action.comment)
+      debugger
+    // const project = state.projects.find(project => project.id === action.comment.project_id)
+    // const updatedProject = project.comments.concat(action.comments)
+    // return {
+    //   ...state,
+    //   projects: state.projects.splice(state.projects.indexOf(project), 1, updatedProject)
+    // }
+
     default:
       return state;
   }

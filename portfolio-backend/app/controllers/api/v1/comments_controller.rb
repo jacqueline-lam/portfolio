@@ -14,12 +14,11 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    binding.pry
     comment = @project.comments.build(comment_params)
 
     if comment.save
       # render json: CommentSerializer.new(comment).instance_to_serialized_json
-      render json: @comment
+      render json: comment
     else
       render json: { message: 'Error: Failed to add comment.'}
     end
