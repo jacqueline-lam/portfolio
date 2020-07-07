@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 
-
 class Comments extends Component {
   render() {
     const { projectComments, projectId } = this.props
     // const projectComments = comments.filter(comment => comment.projectId === projectId)
 
-    console.log(projectComments)
     const commentList = projectComments.map(comment => {
       return <Comment key={comment.id} comment={comment} />
     })

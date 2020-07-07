@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 import Comments from '../components/comments/Comments'
 import CommentInput from '../components/comments/CommentInput'
+import { addComment } from "../actions/addComment";
 import { connect } from 'react-redux';
 
 class CommentsContainer extends Component {
   render() {
-    console.log(this.props.project.comments)
     return (
       <div>
         <Comments
           projectComments={this.props.project.comments}
-          projectId={this.props.project.id}
         />
         <CommentInput
           addComment={this.props.addComment}
@@ -25,8 +24,5 @@ class CommentsContainer extends Component {
 //   return { comments: state.comments }
 // }
 
-const mapDispatchToProps = dispatch => ({
-  addComments: comment => dispatch({ type: 'ADD_COMMENT', comment })
-})
-
-export default connect(null, mapDispatchToProps)(CommentsContainer);
+// have access to dispatch fn inside addComment action to reducer
+export default connect(null, { addComment })(CommentsContainer);
