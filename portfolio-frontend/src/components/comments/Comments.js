@@ -3,7 +3,7 @@ import Comment from './Comment';
 
 class Comments extends Component {
   render() {
-    const { projectComments, projectId } = this.props
+    const { projectComments } = this.props
     // const projectComments = comments.filter(comment => comment.projectId === projectId)
 
     const commentList = projectComments.map(comment => {

@@ -25,14 +25,15 @@ class CommentInput extends Component {
       projectId: this.props.projectId,
       date: new Date(),
     }
+    console.log(comment)
     // Send State to our addComment action creator
     this.props.addComment(comment);
     // Update component state to return to default state
-    this.setState({
-      name: '',
-      email: '',
-      content: '',
-    });
+    // this.setState({
+    //   name: '',
+    //   email: '',
+    //   content: '',
+    // });
   }
 
 
