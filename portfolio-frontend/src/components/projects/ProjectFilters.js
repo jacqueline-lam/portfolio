@@ -19,7 +19,7 @@ class ProjectFilters extends Component {
     return (
       <div>
         <p>Filter projects by stacks</p>
-        <div className="btn-group-toggle" data-toggle="buttons" >
+        <div className="btn-group-toggle button-wrapper" data-toggle="buttons" >
           {/* <button
             id='0'
             type="button"

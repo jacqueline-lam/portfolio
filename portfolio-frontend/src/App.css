@@ -62,3 +62,12 @@ form {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
+.badge, .btn, .btn-group-toggle {
+  margin-left: 0.5%;
+  margin-bottom: 5px;
+}
+
+.button-wrapper .btn{
+margin-bottom: 3px;
+}

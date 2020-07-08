@@ -101,7 +101,7 @@ class CommentInput extends Component {
                 onChange={this.handleOnChange}
               />
             </Form.Group>
-            <Button className="float-md-right" type="submit">
+            <Button className="float-right" type="submit">
               Post
             </Button>
           </Form>
