@@ -6,15 +6,20 @@ import { connect } from 'react-redux';
 
 class CommentsContainer extends Component {
   render() {
+    console.log(this.props.project.comments)
     return (
       <div>
         <CommentInput
           addComment={this.props.addComment}
           projectId={this.props.project.id}
         />
-        <Comments
-          projectComments={this.props.project.comments}
-        />
+        {this.props.project.comments.length > 0 ?
+          <Comments
+            projectComments={this.props.project.comments}
+          />
+          :
+          null
+        }
       </div>
     )
   }

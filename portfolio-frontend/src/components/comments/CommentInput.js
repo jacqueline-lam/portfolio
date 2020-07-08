@@ -70,6 +70,7 @@ class CommentInput extends Component {
                     type="text"
                     placeholder="Your name"
                     value={this.state.author}
+                    required
                     onChange={this.handleOnChange}
                   />
                 </Form.Group>
@@ -82,6 +83,7 @@ class CommentInput extends Component {
                     type="email"
                     placeholder="Your email"
                     value={this.state.email}
+                    required
                     onChange={this.handleOnChange}
                   />
                   <Form.Text className="text-muted">
@@ -97,7 +99,8 @@ class CommentInput extends Component {
                 as="textarea"
                 rows="3"
                 placeholder="Enter your comment here..."
-                // value={this.state.content}
+                value={this.state.content}
+                required
                 onChange={this.handleOnChange}
               />
             </Form.Group>
