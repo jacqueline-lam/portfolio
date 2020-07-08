@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 
 class CommentsContainer extends Component {
   render() {
-    console.log(this.props.project.comments)
     return (
       <div>
         <CommentInput
