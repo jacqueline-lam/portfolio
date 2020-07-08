@@ -15,10 +15,6 @@ export const addComment = comment => {
     })
       //immediately render the new data
       .then(resp => resp.json())
-      .then(newComment => {
-        console.log(newComment)
-        debugger
-      })
-    // .then(newComment => dispatch({ type: 'ADD_COMMENT', comment: newComment }))
+      .then(newComment => dispatch({ type: 'ADD_COMMENT', comment: newComment }))
   }
 }

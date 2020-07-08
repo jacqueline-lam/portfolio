@@ -83,12 +83,26 @@ const projectsReducer = (state = {
 
     case 'ADD_COMMENT':
       console.log(action.comment)
+      // const project = state.projects.find(project => project.id === action.comment.project_id)
+      // const updatedProject = project.comments.concat(action.comment)
+
+      // projects = Object.assign({}, state.projects)
+      // projects.splice(state.projects.indexOf(project), 1, updatedProject)
+
+      let index = state.filteredProjects.findIndex(project => project.id === action.comment.project_id);
+      let project = state.filteredProjects[index];
       debugger
-    // const project = state.projects.find(project => project.id === action.comment.project_id)
-    // const updatedProject = project.comments.concat(action.comments)
+      return {
+        ...state,
+        filteredProjects: [
+          ...state.filteredProjects.slice(0, index),
+          { ...project, comments: project.comments.concat(action.comment) },
+          ...state.filteredProjects.slice(index + 1)
+        ]
+      }
     // return {
     //   ...state,
-    //   projects: state.projects.splice(state.projects.indexOf(project), 1, updatedProject)
+    //   filteredProjects: state.projects.splice(state.projects.indexOf(project), 1, updatedProject)
     // }
 
     default:
