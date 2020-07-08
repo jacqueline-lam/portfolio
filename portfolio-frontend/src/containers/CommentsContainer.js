@@ -8,12 +8,12 @@ class CommentsContainer extends Component {
   render() {
     return (
       <div>
-        <Comments
-          projectComments={this.props.project.comments}
-        />
         <CommentInput
           addComment={this.props.addComment}
           projectId={this.props.project.id}
+        />
+        <Comments
+          projectComments={this.props.project.comments}
         />
       </div>
     )

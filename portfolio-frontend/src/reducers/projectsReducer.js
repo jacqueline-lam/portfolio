@@ -91,7 +91,7 @@ const projectsReducer = (state = {
 
       let index = state.filteredProjects.findIndex(project => project.id === action.comment.project_id);
       let project = state.filteredProjects[index];
-      debugger
+
       return {
         ...state,
         filteredProjects: [
