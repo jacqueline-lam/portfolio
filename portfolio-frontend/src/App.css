@@ -71,3 +71,8 @@ form {
 .button-wrapper .btn{
 margin-bottom: 3px;
 }
+
+.blog .card, .comment-card .card {
+  margin-left: auto;
+  margin-right: auto;
+}

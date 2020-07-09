@@ -15,8 +15,7 @@ class ProjectFilters extends Component {
   // }
 
   render() {
-    console.log(this.props)
-    // const { stacks, addFilter, removeFilter } = this.props
+    const { stacks, addFilter, removeFilter } = this.props
     return (
       <div>
         <p>Filter projects by stacks</p>
@@ -30,7 +29,7 @@ class ProjectFilters extends Component {
           >
             All
           </button > */}
-          {/* {stacks.map((stack, idx) => <FilterButton key={idx} stack={stack} addFilter={addFilter} removeFilter={removeFilter} />)} */}
+          {stacks.map((stack, idx) => <FilterButton key={idx} stack={stack} addFilter={addFilter} removeFilter={removeFilter} />)}
         </div>
 
       </div>

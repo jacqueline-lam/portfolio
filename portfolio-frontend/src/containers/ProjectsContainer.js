@@ -12,13 +12,13 @@ import { addFilter, removeFilter } from '../actions/filterProjects';
 
 class ProjectsContainer extends Component {
   componentDidMount() {
-    console.log(this.props)
     this.props.fetchStacks()
     this.props.fetchProjects()
   }
 
   render() {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
+    console.log(filteredProjects)
     return (
       <div>
         {
@@ -35,7 +35,6 @@ class ProjectsContainer extends Component {
               } />
               {/* add `match` to the arguments so we can access the path information in `routerProps` that is passed from App.js */}
               {/* replace `component` prop with the `render` prop so we can pass the route information to the `ProjectDetails` component*/}
-
             </ >
         }
       </div>
@@ -46,10 +45,11 @@ class ProjectsContainer extends Component {
 //passing in the state from the Redux store
 // so we can acccess values in our stores as props
 const mapStateToProps = state => {
+  console.log(state)
   return {
-    stacks: state.stacks,
-    filteredProjects: state.filteredProjects,
-    loading: state.loading
+    stacks: state.projects.stacks,
+    filteredProjects: state.projects.filteredProjects,
+    loading: state.projects.loading
   }
 }
 
