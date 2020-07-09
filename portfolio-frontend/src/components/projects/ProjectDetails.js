@@ -27,6 +27,7 @@ const ProjectDetails = ({ match, projects }) => {
           <iframe title="Umami Pantry Demo" width="560" height="315" src={project.demo_vid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </div>
         <hr />
+        <img alt="test" src="../../../../portfolio-backend/app/assets/images/rails-bolderer-app_all-jackies-sends" />
         <CommentsContainer project={project} />
       </div>
     ]
