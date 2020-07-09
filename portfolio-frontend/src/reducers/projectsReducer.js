@@ -6,7 +6,6 @@ const projectsReducer = (state = {
   stacks: [],
   selectedStackIds: [],
   filteredProjects: [],
-  comments: [],
   loading: false,
 }, action) => {
   let stackIds = state.selectedStackIds

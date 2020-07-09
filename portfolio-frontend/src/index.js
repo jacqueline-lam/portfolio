@@ -11,7 +11,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import App from './App';
-import projectsReducer from './reducers/projectsReducer'
+import rootReducer from "./reducers/rootReducer";
 
 // enable Redux DevTools Extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -23,7 +23,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // and return new version of store
 // ACTIONS will be dispatched to our reducer
 const store = createStore(
-  projectsReducer,
+  rootReducer,
   composeEnhancers(applyMiddleware(thunk))
 )
 

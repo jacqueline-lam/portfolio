@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home'
 import ProjectsContainer from './containers/ProjectsContainer';
-// import BlogPostsContainer from './containers/BlogPostsContainer'
+import BlogPostsContainer from './containers/BlogPostsContainer'
 
 class App extends Component {
   render() {
