@@ -64,9 +64,9 @@ const projectsReducer = (state = {
       stackIds = state.selectedStackIds
       stackIds.splice(stackIds.indexOf(action.stackId), 1)
 
-      filteredProjects = state.projects
+      filteredProjects = state.allProjects
       if (stackIds.length > 0) {
-        filteredProjects = state.projects.filter(proj => {
+        filteredProjects = state.allProjects.filter(proj => {
           return proj.stacks.some(stack => stackIds.includes(stack.id.toString()))
         })
       }

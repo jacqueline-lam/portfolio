@@ -55,6 +55,12 @@ the Vue documentation at https://vuejs.org/v2/guide/components.html -->
 * When I'm not coding, you'll find me climbing at the local bouldering gym or testing new recipes like miso basil pasta!
 
 
+TO DO
+- Add NavBar + set up Links
+- change images to be hosted on backend (instead of google photos)
+- Design home page and draft A Little About Me page
+- fix bug when unselecting stack tag
+
 {/* <form onSubmit={this.handleOnSubmit}>
           <fieldset>
             <label className="btn btn-outline-secondary active">
