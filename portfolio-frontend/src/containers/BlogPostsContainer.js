@@ -6,12 +6,11 @@ import Blog from '../components/blog/Blog'
 class BlogPostsContainer extends Component {
   componentDidMount() {
     this.props.fetchBlogPosts()
-    console.log(this.props.fetchBlogPosts)
   }
 
   render() {
     return (
-      <div>
+      <div className='component'>
         {
           this.props.loadingBlog ?
             <h2>Loading...</h2>
@@ -26,8 +25,6 @@ class BlogPostsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-
-  console.log(state)
   return {
     blogPosts: state.blog.blogPosts,
     loadingBlog: state.blog.loading

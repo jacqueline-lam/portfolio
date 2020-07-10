@@ -20,7 +20,7 @@ const ProjectDetails = ({ match, projects }) => {
     let img = images('./' + fileName)
 
     return [
-      <div>
+      <div className='component'>
         <h3>{project.name}</h3>
         {/* <img className='project-thumbnail' alt='project thumbnail' src={projectPic} /> */}
         {<img className='project-thumbnail' alt='project thumbnail' src={img} />}

@@ -20,7 +20,7 @@ class ProjectsContainer extends Component {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
     console.log(filteredProjects)
     return (
-      <div>
+      <div className='component'>
         {
           loading ?
             <h2>Loading...</h2>
@@ -28,7 +28,9 @@ class ProjectsContainer extends Component {
             < >
               <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} />
               <Route exact path='/projects' render={routerProps =>
-                <div>
+                <div id='portfolio'>
+                  <h2>PORTFOLIO</h2>
+                  <h5>My Latest Projects</h5>
                   <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
                   <ProjectList filteredProjects={filteredProjects} match={match} />
                 </div>
@@ -45,7 +47,6 @@ class ProjectsContainer extends Component {
 //passing in the state from the Redux store
 // so we can acccess values in our stores as props
 const mapStateToProps = state => {
-  console.log(state)
   return {
     stacks: state.projects.stacks,
     filteredProjects: state.projects.filteredProjects,
