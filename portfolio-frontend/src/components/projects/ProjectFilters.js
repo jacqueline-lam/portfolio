@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FilterButton from './FilterButton'
+import FilterButton from './FilterButton';
+
 
 class ProjectFilters extends Component {
   // state = {

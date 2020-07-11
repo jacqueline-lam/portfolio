@@ -8,6 +8,8 @@ import About from './components/About'
 import Contact from './components/Contact'
 import ProjectsContainer from './containers/ProjectsContainer';
 import BlogPostsContainer from './containers/BlogPostsContainer'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootswatch/dist/litera/bootstrap.min.css';
 
 class App extends Component {
   render() {
