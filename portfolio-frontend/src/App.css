@@ -55,6 +55,13 @@ body {
   padding: 10px;
 }
 
+.text{
+  display: inline-block;
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 img.project-thumbnail {
   /* width: auto; */
   display: block;

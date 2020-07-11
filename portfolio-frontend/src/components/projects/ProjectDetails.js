@@ -27,13 +27,16 @@ const ProjectDetails = ({ match, projects }) => {
           {<img className='project-thumbnail' alt='project thumbnail' src={img} />}
           <h5>Stacks</h5>
           {projectStacks}
-          <p>{project.description}</p>
-          <h6>Why did I decide to build this app?</h6>
-          <p>{project.reason}</p>
-          <h6>Features</h6>
-          <Markup content={project.features} allowElements='true' />
-          {project.blog_url ? <button className="btn btn-outline-warning" onClick={() => window.open(project.blog_url, "_blank")}>Blog Post</button> : null}
-          {project.github_url ? <button className="btn btn-outline-warning" onClick={() => window.open(project.github_url, "_blank")}>Source Code</button> : null}
+          <div className='text' id='project-text'>
+            <h6>What is it?</h6>
+            <p>{project.description}</p>
+            <h6>Why did I decide to build this app?</h6>
+            <p>{project.reason}</p>
+            <h6>Features</h6>
+            <Markup content={project.features} allowElements='true' />
+          </div>
+          {project.blog_url ? <button className="btn btn-outline-warning btn-lg" onClick={() => window.open(project.blog_url, "_blank")}>Blog Post</button> : null}
+          {project.github_url ? <button className="btn btn-outline-warning btn-lg" onClick={() => window.open(project.github_url, "_blank")}>Source Code</button> : null}
           {project.demo_vid ?
             <div>
               <h5>Project Demo</h5>
