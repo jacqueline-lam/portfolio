@@ -27,14 +27,17 @@ const ProjectDetails = ({ match, projects }) => {
         <h5>Stacks</h5>
         {projectStacks}
         <p>{project.description}</p>
-        <button className="btn btn-outline-warning" onClick={() => window.open(project.github_url, "_blank")}>Source Code</button>
-        <button className="btn btn-outline-warning" onClick={() => window.open(project.blog_url, "_blank")}>Blog Post</button><br /><br />
-        <div>
-          <h5>Project Demo</h5>
-          <iframe title="Umami Pantry Demo" width="560" height="315" src={project.demo_vid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-        </div>
+        {project.blog_url ? <button className="btn btn-outline-warning" onClick={() => window.open(project.blog_url, "_blank")}>Blog Post</button> : null}
+        {project.github_url ? <button className="btn btn-outline-warning" onClick={() => window.open(project.github_url, "_blank")}>Source Code</button> : null}
+        {project.demo_vid ?
+          <div>
+            <h5>Project Demo</h5>
+            <iframe title="Umami Pantry Demo" width="560" height="315" src={project.demo_vid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          </div>
+          :
+          null
+        }
         <hr />
-
         <CommentsContainer project={project} />
       </div>
     ]
