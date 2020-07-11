@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import About from './components/About'
+import Contact from './components/Contact'
 import ProjectsContainer from './containers/ProjectsContainer';
 import BlogPostsContainer from './containers/BlogPostsContainer'
 
@@ -16,6 +17,7 @@ class App extends Component {
         <Route path='/about' component={About} />
         <Route exact path='/' component={Home} />
         <Route path='/blog' component={BlogPostsContainer} />
+        <Route path='/contact' component={Contact} />
         < ProjectsContainer />
       </div>
     );
