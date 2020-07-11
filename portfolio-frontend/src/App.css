@@ -45,6 +45,16 @@ body {
   margin-bottom: 4%;
 }
 
+.component {
+  margin-top: 10%;
+  /* display:'inline-block';
+  text-align: 'left'; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 10px;
+}
+
 img.project-thumbnail {
   /* width: auto; */
   display: block;
@@ -77,9 +87,6 @@ margin-bottom: 3px;
   margin-right: auto;
 }
 
-.component {
-  margin-top: 10%;
-}
 
 
 /*--------------------------------------------------------------

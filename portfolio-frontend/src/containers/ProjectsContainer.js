@@ -18,9 +18,8 @@ class ProjectsContainer extends Component {
 
   render() {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
-    console.log(filteredProjects)
     return (
-      <div className='component'>
+      <div id='projects'>
         {
           loading ?
             <h2>Loading...</h2>
@@ -39,7 +38,7 @@ class ProjectsContainer extends Component {
               {/* replace `component` prop with the `render` prop so we can pass the route information to the `ProjectDetails` component*/}
             </ >
         }
-      </div>
+      </div >
     )
   }
 }
