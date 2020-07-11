@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import { Markup } from 'interweave';
 import CommentsContainer from '../../containers/CommentsContainer'
@@ -21,6 +22,9 @@ const ProjectDetails = ({ match, projects }) => {
 
     return [
       <Container>
+        <Link to={'/projects'}>
+          <button className='btn btn-outline-secondary'>&laquo; BACK</button>
+        </Link>
         <div className='component'>
           <h3>{project.name}</h3>
           {/* <img className='project-thumbnail' alt='project thumbnail' src={projectPic} /> */}

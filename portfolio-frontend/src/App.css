@@ -46,7 +46,7 @@ body {
 }
 
 .component {
-  margin-top: 10%;
+  margin-top: 8%;
   /* display:'inline-block';
   text-align: 'left'; */
   margin-left: auto;
@@ -82,7 +82,7 @@ form {
 
 .badge, .btn, .btn-group-toggle {
   margin-left: 0.5%;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .button-wrapper .btn{

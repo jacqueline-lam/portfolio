@@ -19,7 +19,7 @@ class ProjectsContainer extends Component {
   render() {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
     return (
-      <div id='projects'>
+      <div id='projects' className='component'>
         {
           loading ?
             <h2>Loading...</h2>
