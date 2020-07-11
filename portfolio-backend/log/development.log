@@ -38615,3 +38615,241 @@ Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2258)
 Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 10.2ms | Allocations: 16377)
 
 
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:46:54 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:46:54 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mStack Load (3.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 3220)
+
+
+  [1m[36mStack Load (2.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (13.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (13.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 41.0ms | Allocations: 16608)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:47:11 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:47:11 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2262)
+
+
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (13.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.2ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (2.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 18.9ms | Allocations: 16374)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:47:55 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:47:55 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2275)
+
+
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (14.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 22.9ms | Allocations: 16374)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:48:02 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:48:02 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (6.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 6.7ms | Allocations: 2747)
+
+
+  [1m[36mProject Load (29.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (36.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (23.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (8.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (7.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 145ms (Views: 0.1ms | ActiveRecord: 106.6ms | Allocations: 16378)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:48:04 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:48:04 -0400
+Processing by Api::V1::StacksController#index as */*
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2275)
+
+
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (18.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (19.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.0ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (9.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.7ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (15.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 105ms (Views: 0.2ms | ActiveRecord: 69.7ms | Allocations: 16375)
+
+
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:48:05 -0400
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:48:05 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mStack Load (6.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (23.9ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (51.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  [1m[36mComment Load (18.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 56ms (Views: 0.1ms | ActiveRecord: 51.5ms | Allocations: 5786)
+
+
+  [1m[36mStack Load (7.6ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (13.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 106ms (Views: 0.1ms | ActiveRecord: 73.0ms | Allocations: 16955)
+
+
+Started GET "/api/v1/stacks" for ::1 at 2020-07-11 03:49:36 -0400
+Started GET "/api/v1/projects" for ::1 at 2020-07-11 03:49:36 -0400
+Processing by Api::V1::StacksController#index as */*
+  [1m[36mStack Load (0.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks"[0m
+  ↳ app/controllers/api/v1/stacks_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 2158)
+
+
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (3.4ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (19.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 1]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (1.5ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 2]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (26.1ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 3]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 4]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mStack Load (0.3ms)[0m  [1m[34mSELECT "stacks".* FROM "stacks" INNER JOIN "project_stacks" ON "stacks"."id" = "project_stacks"."stack_id" WHERE "project_stacks"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."project_id" = $1[0m  [["project_id", 5]]
+  ↳ app/services/project_serializer.rb:19:in `to_serialized_json'
+Completed 200 OK in 107ms (Views: 0.1ms | ActiveRecord: 53.0ms | Allocations: 14076)
+
+
