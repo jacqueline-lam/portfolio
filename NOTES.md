@@ -56,10 +56,10 @@ the Vue documentation at https://vuejs.org/v2/guide/components.html -->
 
 
 TO DO
-- Add NavBar + set up Links
-- change images to be hosted on backend (instead of google photos)
+- Fix NavBar + set up Links
 - Design home page and draft A Little About Me page
-- fix bug when unselecting stack tag
+- Light/ Dark mode
+
 
 {/* <form onSubmit={this.handleOnSubmit}>
           <fieldset>
