@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { NavLink } from 'react-router-dom';
 // import { Navbar, Form, FormControl, Button, Nav } from 'react-bootstrap';
 // NavLink = superset of Link, adding styling attrs to rendered ele
-import 'bootswatch/dist/litera/bootstrap.min.css';
+// import 'bootswatch/dist/litera/bootstrap.min.css';
 
 const NavBar = () => {
   const link = {
@@ -33,9 +33,8 @@ const NavBar = () => {
                 // style={{ marginRight: '10px' }}
                 to="/"
                 exact
-                // style={link}
                 activeStyle={{
-                  color: 'darkblue'
+                  color: '#bda38f'
                 }}
               >Home</NavLink>
             </li>
@@ -46,7 +45,7 @@ const NavBar = () => {
                 exact
                 // style={link}
                 activeStyle={{
-                  color: 'darkblue'
+                  color: '#bda38f'
                 }}
               >About</NavLink>
             </li>
@@ -57,7 +56,7 @@ const NavBar = () => {
                 exact
                 // style={link}
                 activeStyle={{
-                  color: 'darkblue'
+                  color: '#e2c044'
                 }}
               >Portfolio</NavLink>
             </li>
@@ -68,7 +67,7 @@ const NavBar = () => {
                 exact
                 // style={link}
                 activeStyle={{
-                  color: 'darkblue'
+                  color: '#101935'
                 }}
               >Blog</NavLink>
             </li>

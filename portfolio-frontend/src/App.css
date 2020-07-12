@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); */
+
 .App {
   text-align: center;
   /* background-color: #EBEBF3; */
@@ -16,19 +18,6 @@
 }
 .navbar {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-}
-
-@media only screen and (max-width:767px){
-  nav#mainNav {
-    background-color: transparent;
-  }
-  li .nav-link.js-scroll {
-     font-size: smaller;
-     /* text-align: right; */
-  }
-  div.component {
-    padding-top: 23%;
-  }
 }
 
 .App-header {
@@ -61,17 +50,18 @@ body {
   margin-right  : 2%;
   margin-top: 3%;
   margin-bottom: 4%;
-  background-color: #EEEEF5;
+  background-color: #EBEBF3;
 }
 
 .title-with-icon {
-  color:#8fbda3;
-
+  color:#8fbd9a;
 }
 
-#home {
-  background: url('images/home.jpg');
+.title-with-icon img{
+  height: 60px;
+  width: 60px;
 }
+
 #about {
   position: relative;
   width: 100%;
@@ -136,10 +126,23 @@ margin-bottom: 3px;
 }
 
 
-
 /*--------------------------------------------------------------
 # Nav Bar
 --------------------------------------------------------------*/
+@media only screen and (max-width:767px){
+  nav#mainNav {
+    background-color: transparent;
+  }
+  li .nav-link.js-scroll {
+     font-size: smaller;
+     /* text-align: right; */
+  }
+  div.component {
+    padding-top: 15%;
+  }
+}
+
+
 nav#mainNav {
   background-color: white;
   text-align: left;

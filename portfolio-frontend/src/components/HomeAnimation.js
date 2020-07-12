@@ -8,7 +8,8 @@ class HomeAnimation extends Component {
       <div>
         <div className="title-block">
           <h1 className="title"> JACQUELINE LAM </h1>
-          <h3>Full-stack Software Engineer</h3>
+          <h3 className="title">Full-stack Software Engineer</h3>
+
         </div>
         {/*?xml version="1.0" encoding="utf-8"?*/}
         {/* Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  */}
@@ -144,7 +145,7 @@ class HomeAnimation extends Component {
           .st43{'{'}opacity:0.14;fill:#42B0A3;{'}'}
           .st44{'{'}opacity:0.3;fill:#128172;{'}'}
           .st45{'{'}opacity:0.15;fill:none;stroke:#24898E;stroke-miterlimit:10;{'}'}
-          .st46{'{'}opacity:0.3;fill:#24898E;{'}'}
+          .st46{'{'}opacity:0.3</text>;fill:#24898E;{'}'}
           .st47{'{'}opacity:0.1;fill:#6CC0BA;{'}'}
           .st48{'{'}opacity:0.1;fill:#3896BA;{'}'}
           .st49{'{'}opacity:0.3;fill:#086A73;{'}'}

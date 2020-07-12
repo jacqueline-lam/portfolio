@@ -1,10 +1,40 @@
-body #home {
-  background: #FFFFFF;
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,800&family=Poppins:wght@500&family=Roboto&display=swap');
+
+// body {
+//   // background: lightblue;
+// }
+
+// svg {
+//   height: 140%;
+//   height: 100vh;
+//   display: block;
+//   position: absolute;
+//   left: 0;
+//   top: -100px;
+//   // background-color: #333;
+// }
+
+// .title-block {
+//   position: absolute;
+//   left: 50%;
+//   top: 45%;
+//   .title {
+//     position: relative;
+//     left: -50%;
+//     color: #242039;
+//     text-align: center;
+//     font-family: 'Poppins', sans-serif;
+//     // font-weight: 300;
+//     letter-spacing: 5px;
+//   }
+// }
+body {
+  // background-color: black;
 }
 
 svg {
   height: 140%;
-  // height: 100vh;
+  height: 100vh;
   display: block;
   position: absolute;
   left: 0;
@@ -19,11 +49,18 @@ svg {
   .title {
     position: relative;
     left: -50%;
-    color: #black;
+    color: #242039;
     text-align: center;
-    font-family: 'Lato';
-    // font-weight: 300;
-    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: 200%;
+  }
+  h1 {
+    font-size: 5.1vw;
+  }
+  h3{
+    font-size: 2vw;
   }
 }
 
