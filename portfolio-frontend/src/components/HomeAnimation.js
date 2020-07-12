@@ -1,3 +1,4 @@
+// CSS Animation by Lindsay Grizzard (source: freefrontend.com)
 import React, { Component } from 'react';
 import '../HomeAnimation.scss'
 
@@ -7,6 +8,7 @@ class HomeAnimation extends Component {
       <div>
         <div className="title-block">
           <h1 className="title"> JACQUELINE LAM </h1>
+          <h3>Full-stack Software Engineer</h3>
         </div>
         {/*?xml version="1.0" encoding="utf-8"?*/}
         {/* Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  */}
