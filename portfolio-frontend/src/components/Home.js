@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import HomeAnimation from './HomeAnimation';
 
-const Home = () => {
-  return (
-    <div id='home' className='component'>
-      <h1>Hello, I'm Jacqueline. I'm a Full-stack Software Engineer.</h1>
-    </div>
-  )
+class Home extends Component {
+  render() {
+    return (
+      <div id='home'>
+        <HomeAnimation />
+      </div>
+    )
+  }
 }
 
 export default Home

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #EBEBF3;
+  /* background-color: #EBEBF3; */
   padding-top: 10%
 }
 
@@ -192,7 +192,7 @@ nav#mainNav {
 }
 
 .navbar-b.navbar-trans .nav-link:hover, .navbar-b.navbar-reduce .nav-link:hover {
-  color: #  1B1B1B;
+  color: #1B1B1B;
 }
 
 .navbar-b.navbar-trans .nav-link:hover:before, .navbar-b.navbar-reduce .nav-link:hover:before {
