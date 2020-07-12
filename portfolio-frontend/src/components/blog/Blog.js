@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import BlogPost from './BlogPost'
+import BlogPost from './BlogPost';
+import icon from '../../images/blog-icon.png';
 
 class Blog extends Component {
   render() {
@@ -9,8 +10,11 @@ class Blog extends Component {
     })
 
     return (
-      <div>
-        <h3>BLOG</h3>
+      <div className='component'>
+        <div class='title-with-icon'>
+          <img src={icon} alt='blog icon' />
+          <h1>BLOG</h1>
+        </div>
         {blogPostList}
       </div>
     );
