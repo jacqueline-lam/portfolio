@@ -44,7 +44,7 @@ class ProjectsContainer extends Component {
 }
 
 //passing in the state from the Redux store
-// so we can acccess values in our stores as props
+// so we can access values in our stores as props
 const mapStateToProps = state => {
   return {
     stacks: state.projects.stacks,

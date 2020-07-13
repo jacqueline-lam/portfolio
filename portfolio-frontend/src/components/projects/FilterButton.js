@@ -28,23 +28,22 @@ class FilterButton extends Component {
 
   handleOnClick = event => {
     let pressed = (event.target.getAttribute("aria-pressed") === "true");
-    console.log(this.state.selected)
     const stackClicked = event.target.id
 
     if (!pressed) {
+      this.props.addFilter(stackClicked)
       this.setState({
         selected: true
       });
-      event.target.setAttribute("aria-pressed", "true")
+      // event.target.setAttribute("aria-pressed", "true")
       // event.target.classList.add('active')
-      this.props.addFilter(stackClicked)
     } else {
+      this.props.removeFilter(stackClicked)
       this.setState({
         selected: false
       })
-      event.target.setAttribute("aria-pressed", "false")
+      // event.target.setAttribute("aria-pressed", "false")
       // event.target.classList.remove('active')
-      this.props.removeFilter(stackClicked)
     }
   }
 

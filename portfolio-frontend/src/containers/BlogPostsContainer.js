@@ -28,7 +28,6 @@ const mapStateToProps = state => {
   return {
     blogPosts: state.blog.blogPosts,
     loadingBlog: state.blog.loading
-
   }
 }
 
