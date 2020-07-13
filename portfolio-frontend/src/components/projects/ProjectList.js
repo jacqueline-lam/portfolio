@@ -8,7 +8,7 @@ const ProjectList = ({ filteredProjects }) => {
 
   return (
     < >
-      {renderProjects}
+      {(filteredProjects.length > 0) ? renderProjects : <i>There are no matching results.</i>}
     </ >
   )
 }
