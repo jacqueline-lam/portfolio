@@ -8,7 +8,7 @@ const projectsReducer = (state = {
   filteredProjects: [],
   loading: false,
 }, action) => {
-  let stackIds = state.selectedStackIds
+  let stackIds;
   let filteredProjects = []
 
   switch (action.type) {
@@ -46,7 +46,7 @@ const projectsReducer = (state = {
         return proj.stacks.some(stack => stack.id.toString() === action.stackId)
       })
 
-      stackIds.push(action.stackId)
+      stackIds = state.selectedStackIds.concat(action.stackId)
       // Set store unique stackIds
       stackIds = [...new Set(stackIds)]
 

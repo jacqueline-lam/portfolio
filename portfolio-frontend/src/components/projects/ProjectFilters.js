@@ -30,7 +30,17 @@ class ProjectFilters extends Component {
           >
             All
           </button > */}
-          {stacks.map((stack, idx) => <FilterButton key={idx} stack={stack} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />)}
+          {
+            stacks.map(
+              (stack) => <FilterButton
+                key={stack.id}
+                stack={stack}
+                selectedStackIds={selectedStackIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
+            )
+          }
         </div>
 
       </div>

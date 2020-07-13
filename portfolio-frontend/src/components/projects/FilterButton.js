@@ -7,36 +7,49 @@ class FilterButton extends Component {
     selected: undefined
   }
 
+  componentDidMount() {
+    const { selectedStackIds, stack } = this.props;
+    const myStackId = stack.id;
+
+    this.setState({
+      selected: selectedStackIds.includes(myStackId.toString())
+    });
+  }
+
+  getButtonClassnames = () => {
+    const { selected } = this.state;
+
+    let renderClasses = "btn btn-outline-primary btn-sm";
+    if (selected) {
+      renderClasses = "btn btn-outline-primary btn-sm active"
+    }
+
+    return renderClasses;
+  }
+
   handleOnClick = event => {
     let pressed = (event.target.getAttribute("aria-pressed") === "true");
     const stackClicked = event.target.id
 
     if (!pressed) {
-      this.props.addFilter(stackClicked)
-
       this.setState({
         selected: true
       });
       event.target.setAttribute("aria-pressed", "true")
       event.target.classList.add('active')
+      this.props.addFilter(stackClicked)
     } else {
-      this.props.removeFilter(stackClicked)
-
       this.setState({
         selected: false
       })
       event.target.setAttribute("aria-pressed", "false")
       event.target.classList.remove('active')
+      this.props.removeFilter(stackClicked)
     }
   }
 
   render() {
-    console.log(this.props.selectedStackIds)
-    console.log(this.props.selectedStackIds.includes(this.props.stack.id))
-    const renderClasses = this.props.selectedStackIds.includes(this.props.stack.id) ?
-      "btn btn-outline-primary btn-sm active"
-      :
-      "btn btn-outline-primary btn-sm"
+    const renderClasses = this.getButtonClassnames();
 
     return (
       // <label className="btn btn-outline-secondary" >
