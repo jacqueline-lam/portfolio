@@ -28,6 +28,7 @@ class FilterButton extends Component {
 
   handleOnClick = event => {
     let pressed = (event.target.getAttribute("aria-pressed") === "true");
+    console.log(this.state.selected)
     const stackClicked = event.target.id
 
     if (!pressed) {

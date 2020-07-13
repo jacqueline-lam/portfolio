@@ -56,7 +56,7 @@ const NavBar = () => {
                 exact
                 // style={link}
                 activeStyle={{
-                  color: '#e2c044'
+                  color: '#bda38f'
                 }}
               >Portfolio</NavLink>
             </li>
@@ -67,7 +67,7 @@ const NavBar = () => {
                 exact
                 // style={link}
                 activeStyle={{
-                  color: '#101935'
+                  color: '#bda38f'
                 }}
               >Blog</NavLink>
             </li>
