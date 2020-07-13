@@ -25,6 +25,7 @@ const ProjectDetails = ({ match, projects }) => {
         <Link to={'/projects'}>
           <button className='btn btn-outline-secondary'>&laquo; BACK</button>
         </Link>
+
         <div className='component'>
           <h3>{project.name}</h3>
           {/* <img className='project-thumbnail' alt='project thumbnail' src={projectPic} /> */}

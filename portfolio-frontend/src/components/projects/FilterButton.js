@@ -4,7 +4,7 @@ import 'bootswatch/dist/litera/bootstrap.min.css';
 
 class FilterButton extends Component {
   state = {
-    selected: false
+    selected: undefined
   }
 
   handleOnClick = event => {
@@ -31,6 +31,13 @@ class FilterButton extends Component {
   }
 
   render() {
+    console.log(this.props.selectedStackIds)
+    console.log(this.props.selectedStackIds.includes(this.props.stack.id))
+    const renderClasses = this.props.selectedStackIds.includes(this.props.stack.id) ?
+      "btn btn-outline-primary btn-sm active"
+      :
+      "btn btn-outline-primary btn-sm"
+
     return (
       // <label className="btn btn-outline-secondary" >
       //   <input type="checkbox" autocomplete="off" value={stack} aria-pressed="false" onClick={this.handleOnClick} /> {stack}
@@ -38,10 +45,10 @@ class FilterButton extends Component {
       <button
         id={this.props.stack.id}
         type="button"
-        className="btn btn-outline-primary btn-sm"
-        aria-pressed='false'
+        className={renderClasses}
+        aria-pressed={this.state.selected}
         value={this.props.stack}
-        onClick={this.handleOnClick} >
+        onClick={this.handleOnClick}>
         {this.props.stack.name}
       </button >
     );

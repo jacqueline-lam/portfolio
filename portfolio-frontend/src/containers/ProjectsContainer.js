@@ -48,6 +48,7 @@ class ProjectsContainer extends Component {
 const mapStateToProps = state => {
   return {
     stacks: state.projects.stacks,
+    selectedStackIds: state.projects.selectedStackIds,
     filteredProjects: state.projects.filteredProjects,
     loading: state.projects.loading
   }

@@ -1,14 +1,21 @@
 // CSS Animation by Lindsay Grizzard (source: freefrontend.com)
 import React, { Component } from 'react';
 import '../HomeAnimation.scss'
+// import '../HomeButton.scss' // for future use
 
 class HomeAnimation extends Component {
   render() {
     return (
-      <div>
+      <>
         <div className="title-block">
           <h1 className="title"> JACQUELINE LAM </h1>
           <h3 className="title">Full-stack Software Engineer</h3>
+          {/* for future use:
+            <div class="button-container title">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div> */}
 
         </div>
         {/*?xml version="1.0" encoding="utf-8"?*/}
@@ -279,7 +286,7 @@ class HomeAnimation extends Component {
                     <polygon className="st51" points="684.5,551.8 860,659.7 739.4,692.4 	">
                       <polygon className="st51" points="517.3,483.1 610.1,424.4 522.9,616.5 	">
                       </polygon></polygon></polygon></polygon></polygon></polygon></polygon></g>
-      </div>
+      </>
     );
   }
 }
