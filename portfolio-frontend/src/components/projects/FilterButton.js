@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootswatch/dist/litera/bootstrap.min.css';
 
 class FilterButton extends Component {
@@ -36,33 +35,31 @@ class FilterButton extends Component {
         selected: true
       });
       event.target.setAttribute("aria-pressed", "true")
-      event.target.classList.add('active')
+      // event.target.classList.add('active')
       this.props.addFilter(stackClicked)
     } else {
       this.setState({
         selected: false
       })
       event.target.setAttribute("aria-pressed", "false")
-      event.target.classList.remove('active')
+      // event.target.classList.remove('active')
       this.props.removeFilter(stackClicked)
     }
   }
 
   render() {
+    const { stack } = this.props
     const renderClasses = this.getButtonClassnames();
 
     return (
-      // <label className="btn btn-outline-secondary" >
-      //   <input type="checkbox" autocomplete="off" value={stack} aria-pressed="false" onClick={this.handleOnClick} /> {stack}
-      // </label>
       <button
-        id={this.props.stack.id}
+        id={stack.id}
         type="button"
         className={renderClasses}
         aria-pressed={this.state.selected}
-        value={this.props.stack}
+        value={stack}
         onClick={this.handleOnClick}>
-        {this.props.stack.name}
+        {stack.name}
       </button >
     );
   }

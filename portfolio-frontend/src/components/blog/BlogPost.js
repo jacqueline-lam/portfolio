@@ -29,7 +29,7 @@ const BlogPost = ({ blogPost }) => {
           </Card.Footer>
         </Card>
       </div>
-      <div class='post-block-color'></div>
+      <div className='post-block-color'></div>
       {/* <img className='blog-post-thumbnail' alt='blog post thumbnail' src={blogPost.cover_image} />
       <h6>{blogPost.title}</h6>
       <i><Moment format='MMM DD, YYYY'>{blogPost.published_timestamp}</Moment></i>
