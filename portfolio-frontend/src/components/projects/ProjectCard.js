@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
   let img = images('./' + fileName)
 
   return (
-    <div>
+    <div id='project-list'>
       <Link key={project.id} to={`/projects/${project.id}`}>
         <h4>{project.name}</h4>
       </Link>

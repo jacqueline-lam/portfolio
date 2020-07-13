@@ -18,9 +18,9 @@ class FilterButton extends Component {
   getButtonClassnames = () => {
     const { selected } = this.state;
 
-    let renderClasses = "btn btn-outline-primary btn-sm";
+    let renderClasses = "btn btn-outline-info btn-sm";
     if (selected) {
-      renderClasses = "btn btn-outline-primary btn-sm active"
+      renderClasses = "btn btn-outline-info btn-sm active"
     }
 
     return renderClasses;
