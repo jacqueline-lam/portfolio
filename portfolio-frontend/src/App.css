@@ -106,7 +106,7 @@ body {
 #about-text h1{
   background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #8fbdba 65%);
   display: inline;
-  font-size: 5vw;
+  font-size: 4rem;
 }
 
 #about-text h2{
@@ -116,11 +116,11 @@ body {
 
 #about-text h6{
   display: block;
-  font-size: 1.33vw;
+  font-size: 1.1em;
 }
 
 .text-section {
-  padding-top: 3%;
+  padding-top: 4%;
 }
 
 .text-section#skills {
@@ -129,7 +129,7 @@ body {
 
 #skills i{
   background-color: black;
-  font-size: 1.4vw;
+  font-size: 1.2em;
 }
 
 img.project-thumbnail {
@@ -164,6 +164,19 @@ margin-bottom: 3px;
   margin-right: auto;
 }
 
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+#portfolio h1{
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #8fbdba 65%);
+  display: inline;
+  font-size: 4rem;
+}
+
+#filters-container {
+  padding: 2% 0;
+}
+
 
 /*--------------------------------------------------------------
 # Nav Bar
@@ -178,6 +191,9 @@ margin-bottom: 3px;
   }
   div.component {
     padding-top: 15%;
+  }
+  div#about{
+    margin-top: 0rem;
   }
 }
 

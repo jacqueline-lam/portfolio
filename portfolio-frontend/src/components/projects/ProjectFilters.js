@@ -18,7 +18,7 @@ class ProjectFilters extends Component {
   render() {
     const { stacks, selectedStackIds, addFilter, removeFilter } = this.props
     return (
-      <div>
+      <div id='filters-container'>
         <p>Filter projects by stacks</p>
         <div className="btn-group-toggle button-wrapper" data-toggle="buttons" >
           {/* <button
