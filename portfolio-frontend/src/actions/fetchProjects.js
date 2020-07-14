@@ -1,4 +1,4 @@
-// Action Creator creates an action object and then
+// Action Creator creates an action object
 // action obj will be dispatched to reducer ->
 // then return new ver. of our state based on sent action
 
