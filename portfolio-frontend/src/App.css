@@ -57,7 +57,7 @@ body {
   color:#8fbd9a;
 }
 
-.title-with-icon img{
+.title-with-icon img {
   height: 60px;
   width: 60px;
 }
@@ -70,6 +70,10 @@ div.component {
   margin-right: auto;
   width: 80%;
   /* padding: 10px; */
+}
+
+#project-text li {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif
 }
 
 .text{
@@ -86,7 +90,6 @@ div.component {
 .text-section#skills {
   padding-top: 5%;
 }
-
 
 form {
   margin: 2%;
@@ -197,9 +200,13 @@ img.project-thumbnail {
   /* text-decoration: none; */
 }
 
-button #projects {
-  margin-bottom: 30px;
+#projects button {
+  margin-bottom: 25px;
   margin-left: 20px;
+}
+#filters-container button {
+  margin-bottom: 5px;
+  margin-left: 8px;
 }
 
 #project-list img {
