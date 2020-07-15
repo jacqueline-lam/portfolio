@@ -11,11 +11,13 @@ class Comment extends Component {
       <div className='comment-card'>
         <Card
           bg='light'
-          style={{ width: '50%' }}
+          // mb='3'
+          // border='warning'
+          style={{ width: '100%' }}
 
         >
           <Card.Header>
-            {comment.author}
+            <b>{comment.author}</b>
             <br />
             <i><Moment fromNow>{comment.created_at}</Moment></i>
           </Card.Header>

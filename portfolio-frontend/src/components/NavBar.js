@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
       <div className="container">
-        <a className="navbar-brand js-scroll" href="#page-top">Jacqueline Lam</a>
+        <a className="navbar-brand" href="#page-top">Jacqueline Lam</a>
         {/* <button className="navbar-toggler collapsed " type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -29,7 +29,7 @@ const NavBar = () => {
           <ul className="navbar-nav">
             <li className='nav-item'>
               <NavLink
-                className='nav-link js-scroll'
+                className='nav-link'
                 // style={{ marginRight: '10px' }}
                 to="/"
                 exact
@@ -40,7 +40,7 @@ const NavBar = () => {
             </li>
             <li className='nav-item'>
               <NavLink
-                className='nav-link js-scroll'
+                className='nav-link'
                 to="/about"
                 exact
                 // style={link}
@@ -51,7 +51,7 @@ const NavBar = () => {
             </li>
             <li className='nav-item'>
               <NavLink
-                className='nav-link js-scroll'
+                className='nav-link'
                 to="/projects"
                 exact
                 // style={link}
@@ -62,7 +62,7 @@ const NavBar = () => {
             </li>
             <li className='nav-item'>
               <NavLink
-                className='nav-link js-scroll'
+                className='nav-link'
                 to="/blog"
                 exact
                 // style={link}

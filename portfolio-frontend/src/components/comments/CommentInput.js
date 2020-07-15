@@ -38,7 +38,7 @@ class CommentInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className='comment-form'>
 
         {/* // <form onSubmit={this.handleOnSubmit}>
         //   <label>Name</label>

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class CommentsContainer extends Component {
   render() {
     return (
-      <div>
+      <div id='comments-container'>
         <CommentInput
           addComment={this.props.addComment}
           projectId={this.props.project.id}

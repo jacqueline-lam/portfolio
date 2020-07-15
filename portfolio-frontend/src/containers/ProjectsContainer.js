@@ -25,8 +25,8 @@ class ProjectsContainer extends Component {
             <h2>Loading...</h2>
             :
             < >
-              <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} />
-              <Route exact path='/projects' render={routerProps =>
+              <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} onUpdate={() => window.scrollTo(0, 0)} />
+              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={routerProps =>
                 <div id='portfolio'>
                   <h1>PORTFOLIO</h1>
                   <h3>My Latest Projects</h3>
@@ -43,7 +43,7 @@ class ProjectsContainer extends Component {
   }
 }
 
-//passing in the state from the Redux store
+// passing in the state from the Redux store
 // so we can access values in our stores as props
 const mapStateToProps = state => {
   return {

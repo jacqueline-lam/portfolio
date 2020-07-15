@@ -92,11 +92,6 @@ form {
   margin: 2%;
 }
 
-.card {
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
 .badge, .btn, .btn-group-toggle {
   margin-left: 0.5%;
   margin-bottom: 10px;
@@ -106,9 +101,22 @@ form {
   margin-bottom: 6px;
 }
 
-.blog .card, .comment-card .card {
+.blog .card, .comment-card {
   margin-left: auto;
   margin-right: auto;
+}
+
+.comment-card {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.comment-form .card {
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+input#formAuthor, input#formEmail, textarea#formContent {
+  background-color: transparent;
 }
 
 /*--------------------------------------------------------------

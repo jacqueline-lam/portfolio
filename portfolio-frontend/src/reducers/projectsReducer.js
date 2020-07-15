@@ -69,7 +69,9 @@ const projectsReducer = (state = {
       if (stackIds.length > 0) {
         filteredProjects = state.allProjects.filter(proj => {
           const projectStacks = proj.stacks.map(proj => proj['id'].toString())
-          const includesSelectedStacks = stackIds.every(selectedStack => projectStacks.includes(selectedStack))
+          const includesSelectedStacks = stackIds.every(selectedStack =>
+            projectStacks.includes(selectedStack)
+          )
           return includesSelectedStacks
         })
       }

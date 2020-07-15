@@ -16,10 +16,10 @@ class App extends Component {
     return (
       <div className='App' id='page-top' >
         <NavBar />
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/blog' component={BlogPostsContainer} />
-        <Route path='/contact' component={Contact} />
+        <Route exact path='/' component={Home} onUpdate={() => window.scrollTo(0, 0)} />
+        <Route path='/about' component={About} onUpdate={() => window.scrollTo(0, 0)} />
+        <Route path='/blog' component={BlogPostsContainer} onUpdate={() => window.scrollTo(0, 0)} />
+        <Route path='/contact' component={Contact} onUpdate={() => window.scrollTo(0, 0)} />
         < ProjectsContainer />
       </div>
     );
