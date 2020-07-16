@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap'
+// import { LinkContainer } from 'react-router-bootstrap'
 import { NavLink } from 'react-router-dom';
 // import { Navbar, Form, FormControl, Button, Nav } from 'react-bootstrap';
 // NavLink = superset of Link, adding styling attrs to rendered ele
