@@ -6,15 +6,6 @@ import { NavLink } from 'react-router-dom';
 // import 'bootswatch/dist/litera/bootstrap.min.css';
 
 const NavBar = () => {
-  const link = {
-    width: '100px',
-    padding: '12px',
-    margin: '0 6px 6px',
-    background: 'blue',
-    textDecoration: 'none',
-    color: 'white',
-  }
-
   return (
     <nav className="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
       <div className="container">
@@ -30,7 +21,6 @@ const NavBar = () => {
             <li className='nav-item'>
               <NavLink
                 className='nav-link'
-                // style={{ marginRight: '10px' }}
                 to="/"
                 exact
                 activeStyle={{
@@ -43,7 +33,6 @@ const NavBar = () => {
                 className='nav-link'
                 to="/about"
                 exact
-                // style={link}
                 activeStyle={{
                   color: '#bda38f'
                 }}
@@ -54,7 +43,6 @@ const NavBar = () => {
                 className='nav-link'
                 to="/projects"
                 exact
-                // style={link}
                 activeStyle={{
                   color: '#bda38f'
                 }}
@@ -65,7 +53,6 @@ const NavBar = () => {
                 className='nav-link'
                 to="/blog"
                 exact
-                // style={link}
                 activeStyle={{
                   color: '#bda38f'
                 }}
