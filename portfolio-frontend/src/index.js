@@ -5,10 +5,9 @@ import './index.css';
 // Any component wrapped in Provider will have access to redux store
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-// Compose combine diff middlewares into 1 - so we can pass in all middleware as one argument in createStore
+// Compose combine diff middlewares into 1 - to pass in all middleware as 1 argument in createStore
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-
 import App from './App';
 import rootReducer from "./reducers/rootReducer";
 
@@ -18,7 +17,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // Pass reducer into createStore, assigning return value to store
 // configure thunk by passing in thunk as part of the composeEnhancer
 // STORE = where you store data globally
-// REDUCER = responsible for taking in action and deciding what to update about current store
+// REDUCER = responsible for taking in action & deciding what to update about current store
 // and return new version of store
 // ACTIONS will be dispatched to our reducer
 const store = createStore(

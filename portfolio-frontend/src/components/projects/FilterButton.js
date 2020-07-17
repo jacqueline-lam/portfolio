@@ -33,6 +33,7 @@ class FilterButton extends Component {
     const stackClicked = event.target.id
 
     if (!pressed) {
+      // dispatch will be called with the action type 'ADD_FILTER'
       this.props.addFilter(stackClicked)
       this.setState({
         selected: true

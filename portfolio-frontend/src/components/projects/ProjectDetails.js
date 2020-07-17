@@ -20,6 +20,7 @@ const ProjectDetails = ({ match, projects }) => {
     const images = require.context('../../images', true)
     let img = images('./' + fileName)
 
+    // return multiple JSX elements in an array
     return [
       <Container>
         <Link to={'/projects'}>
@@ -62,5 +63,9 @@ const ProjectDetails = ({ match, projects }) => {
       {project ? renderProject() : null}
     </>
   )
+}
+
+ProjectDetails.defaultProps = {
+
 }
 export default ProjectDetails
