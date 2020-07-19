@@ -12,6 +12,7 @@ import App from './App';
 import rootReducer from "./reducers/rootReducer";
 
 // enable Redux DevTools Extension
+// to view store state and each action dispatched
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Pass reducer into createStore, assigning return value to store
