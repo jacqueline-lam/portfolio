@@ -176,12 +176,12 @@ img.project-thumbnail {
   /* width: auto; */
   border-radius: 8px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 5px;
   padding-bottom: 30px;
   height: auto;
-  width: 40em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #projects a{

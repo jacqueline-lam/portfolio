@@ -3,7 +3,7 @@ import 'bootswatch/dist/litera/bootstrap.min.css';
 
 class FilterButton extends Component {
   state = {
-    selected: undefined
+    selected: false
   }
 
   componentDidMount() {
@@ -17,7 +17,6 @@ class FilterButton extends Component {
 
   getButtonClassnames = () => {
     const { selected } = this.state;
-
     let renderClasses = "btn btn-outline-info btn-sm";
     if (selected) {
       renderClasses = "btn btn-outline-info btn-sm active"
@@ -31,6 +30,11 @@ class FilterButton extends Component {
     let pressed = this.state.selected
     console.log(this.state.selected)
     const stackClicked = event.target.id
+
+    // // setState will update state so that selected is reversed
+    // this.setState(prevState => ({
+    //   selected: !prevState.selected
+    // }));
 
     if (!pressed) {
       // dispatch will be called with the action type 'ADD_FILTER'

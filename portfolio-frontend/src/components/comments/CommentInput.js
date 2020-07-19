@@ -13,6 +13,8 @@ class CommentInput extends Component {
   // sets a property of projectId on the comment input
   // from the parent components id
   handleOnChange = event => {
+    // Abstracting `setState` When `onChange` is triggered
+    // name attributes matching keys in our state
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -28,11 +30,11 @@ class CommentInput extends Component {
     console.log(comment)
     this.props.addComment(comment);
     // Update component state to return to default state
-    // this.setState({
-    //   author: '',
-    //   email: '',
-    //   content: '',
-    // });
+    this.setState({
+      author: '',
+      email: '',
+      content: '',
+    });
   }
 
 

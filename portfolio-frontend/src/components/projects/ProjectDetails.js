@@ -65,7 +65,4 @@ const ProjectDetails = ({ match, projects }) => {
   )
 }
 
-ProjectDetails.defaultProps = {
-
-}
 export default ProjectDetails
