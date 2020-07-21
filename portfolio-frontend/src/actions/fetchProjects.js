@@ -3,6 +3,7 @@
 // then return new ver. of our state based on sent action
 
 export const fetchProjects = () => {
+  // Thunk allows us to return fn + fn receives store's dispatch as its arg
   return (dispatch) => {
     // action dispatched before to fetch() request is called
     dispatch({ type: 'LOADING_PROJECTS' });
