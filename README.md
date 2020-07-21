@@ -1,10 +1,30 @@
-# React Redux Project - Personal Portfolio
+# Personal Portfolio
+## Overview
 This is a personal portfolio that showcases Jacqueline Lam's projects, software engineering journey, blog posts and more.
 
 The app is composed of backend rails API and front-end React Redux clients, which use asynchronous Javascript (with the help of redux-thunk middleware) to make HTTP requests to the API and render them to the user interface.
 
-## Installation
+![portfolio demo](https://photos.app.goo.gl/BfTaZgr8do4X8aPR9)
 
+[Video Demo](https://www.youtube.com/watch?v=cTw0wAnVo1c&t=16s)
+[Blog Post pt.1](https://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-1-522k)
+[Blog Post pt.2](https://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-2-3f7o)
+
+## Features
+1. User can navigate between home, about, portfolio and blog pages
+2. User can filter projects by stacks
+3. User can add comments to speciic projects
+4. User will have access to the real time blog posts that have been published on dev.to
+
+## Technologies Implmented
+1. React.js
+2. Redux to manage state
+3. Redux-thunk to make use of async actions to send data and receive data from the server
+4. react-router with proper RESTful routing
+5. Postgres for data persistence
+6. Rails API backend to persist data for the application
+
+## Installation
 Download zip from my project repository: https://github.com/jacqueline-lam/portfolio
 
 Go to your terminal and change directory:
@@ -43,7 +63,9 @@ And then run:
     $ rails s
 
 Lastly, open another tab and `cd` into `portfolio-frontend`, then run:
+
     $ npm install && npm start
+
 to browse the application in your browser at your localhost.
 
 ## Contributing
