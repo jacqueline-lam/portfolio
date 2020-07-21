@@ -26,7 +26,7 @@ class ProjectsContainer extends Component {
             :
             < >
               <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} onUpdate={() => window.scrollTo(0, 0)} />
-              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={routerProps =>
+              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={() =>
                 <div id='portfolio'>
                   <h1>PORTFOLIO</h1>
                   <h3>My Latest Projects</h3>
