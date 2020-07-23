@@ -10,24 +10,26 @@ class CommentInput extends Component {
     email: '',
     content: '',
   }
-  // sets a property of projectId on the comment input
-  // from the parent components id
+
+  // Fired everytime form changes
   handleOnChange = event => {
-    // Abstracting `setState` When `onChange` is triggered
-    // name attributes matching keys in our state
+    // Abstracting `setState` - name attrs matching keys in state
+    // new state values used to set value attrs of inputs
+    // component re-renders the input w/ new updated value
     this.setState({
       [event.target.name]: event.target.value,
     });
   }
 
   handleOnSubmit = event => {
+    // Prevent submit event to redirect browser to new URL
     event.preventDefault()
+    // Sets property of projectId on comment input from parent components id
     const comment = {
       ...this.state,
       project_id: this.props.projectId,
     }
     // Send State to our addComment action creator
-    console.log(comment)
     this.props.addComment(comment);
     // Update component state to return to default state
     this.setState({
@@ -37,36 +39,17 @@ class CommentInput extends Component {
     });
   }
 
-
   render() {
     return (
+      // Controlled form - form dervives its input values from state
+      // explicitly set value of component using state + update value in resp to changes
       <div className='comment-form'>
-
-        {/* // <form onSubmit={this.handleOnSubmit}>
-        //   <label>Name</label>
-        //   <input
-        //     type="text"
-        //     value={this.state.name}
-        //     onChange={this.handleOnChange} />
-        //   <label>Email</label>
-        //   <input
-        //     type="text"
-        //     value={this.state.email}
-        //     onChange={this.handleOnChange} />
-        //   <label>Comment here</label>
-        //   <input
-        //     type="text"
-        //     value={this.state.content}
-        //     onChange={this.handleOnChange} />
-        //   <input type="submit" />
-        // </form> */}
         <Card>
           <Form role="form" className='clearfix' onSubmit={this.handleOnSubmit}>
             <h5>Leave a comment</h5>
             <Form.Row>
               <Col>
                 <Form.Group controlId="formAuthor">
-                  {/* <Form.Label>Name</Form.Label> */}
                   <Form.Control
                     name="author"
                     type="text"
@@ -79,7 +62,6 @@ class CommentInput extends Component {
               </Col>
               <Col>
                 <Form.Group controlId="formEmail">
-                  {/* <Form.Label>Email address</Form.Label> */}
                   <Form.Control
                     name="email"
                     type="email"
@@ -95,7 +77,6 @@ class CommentInput extends Component {
               </Col>
             </Form.Row>
             <Form.Group controlId="formContent">
-              {/* <Form.Label>Enter your comment</Form.Label> */}
               <Form.Control
                 name="content"
                 as="textarea"

@@ -5,6 +5,7 @@ const Contact = () => {
   const linkedinImg = images('./linkedin.png')
   const githubImg = images('./github.png')
   const blogImg = images('./blog.png')
+  const emailImg = images('./email.png')
 
   return (
     // <div id='contact' className='component'>
@@ -34,6 +35,9 @@ const Contact = () => {
       </a>
       <a href="https://dev.to/jacquelinelam" target="_blank" rel="noopener noreferrer">
         <img alt="linkedin_icon" src={blogImg} />
+      </a>
+      <a href='mailto:jacqueline.karin.lam@gmail.com'>
+        <img alt="email_icon" src={emailImg} />
       </a>
     </div>
   )

@@ -3,7 +3,6 @@ import React from 'react';
 const About = () => {
   return (
     <div id='about' className='component'>
-      {/* <img className="img-fluid" src={about} alt="about me" />' */}
       <div className='text' id='about-text'>
         <h1>ABOUT ME</h1>
         <h2>Digital Marketer Turned Software Engineer</h2>
@@ -15,7 +14,6 @@ const About = () => {
         <div className='text-section' id='skills'>
           <h4> // Technical Skills</h4>
           <i>&raquo; Ruby, Rails, Sinatra, React, Redux, Javascript, PostgreSQL, SQL, HTML & CSS.</i>
-          {/* <div className='text-section'></div> */}
         </div>
       </div>
     </div>
