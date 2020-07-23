@@ -1,6 +1,6 @@
 // when action is dispatched to reducer,
-// reducer is automatically passed previous state as 1st arg
-// Everytime we update sth in our store, this reducer will be returning the updated state
+// reducer is passed current state and dispatched action
+// Everytime we update sth in our store, this reducer will return updated state
 const projectsReducer = (state = {
   allProjects: [],
   stacks: [],
@@ -79,7 +79,6 @@ const projectsReducer = (state = {
       console.log('action.stackId', typeof action.stackId, action.stackId)
       console.log('stackIds', typeof stackIds, stackIds)
       console.log('filteredProjects', typeof filteredProjects, filteredProjects)
-
 
       return {
         ...state,

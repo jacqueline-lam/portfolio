@@ -32,4 +32,5 @@ const mapStateToProps = state => {
   }
 }
 
+// pass in objec containing k-v pairs for action creator `fetchBlogPosts`
 export default connect(mapStateToProps, { fetchBlogPosts })(BlogPostsContainer)

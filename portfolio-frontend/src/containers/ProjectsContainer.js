@@ -56,6 +56,8 @@ const mapStateToProps = state => {
 // gives us ability to dispatch new actions to our store directly from this component
 const mapDispatchToProps = dispatch => {
   return {
+    // wrap actions in a dispatch & anonymous fn to pass them as callback props
+    // when called, dispstch fn will invoke reducer and result in new updated state
     fetchStacks: () => dispatch(fetchStacks()),
     fetchProjects: () => dispatch(fetchProjects()),
     addFilter: stackId => dispatch(addFilter(stackId)),

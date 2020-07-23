@@ -17,7 +17,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Pass reducer into createStore, assigning return value to store
 // configure thunk by passing in thunk as part of the composeEnhancer
-// STORE = where you store data globally
+// STORE holding the application data
 // REDUCER = responsible for taking in action & deciding what to update about current store
 // and return new version of store
 // ACTIONS will be dispatched to our reducer

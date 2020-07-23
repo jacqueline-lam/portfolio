@@ -27,7 +27,6 @@ class FilterButton extends Component {
   handleOnClick = event => {
     // let pressed = (event.target.getAttribute("aria-pressed") === "true");
     let pressed = this.state.selected
-    console.log(this.state.selected)
     const stackClicked = event.target.id
 
     // // setState will update state so that selected is reversed
@@ -37,6 +36,7 @@ class FilterButton extends Component {
 
     if (!pressed) {
       // dispatch will be called with the action type 'ADD_FILTER'
+      // execute action creator by redferencing it as a prop
       this.props.addFilter(stackClicked)
       this.setState({
         selected: true

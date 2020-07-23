@@ -7,7 +7,6 @@ import CommentsContainer from '../../containers/CommentsContainer'
 
 // add `match` to arguments to access the path info in `routerProps` passed from ProjectsContainer
 const ProjectDetails = ({ match, projects }) => {
-  console.log(match)
   const project = projects.find(proj => proj.id.toString() === match.params.projectId)
   const renderProject = () => {
     const projectStacks = (
