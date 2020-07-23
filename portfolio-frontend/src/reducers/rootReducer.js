@@ -18,7 +18,7 @@ import blogPostsReducer from './blogPostsReducer'
 // }
 
 
-// delegate diff pieces of state to separate reducer functions
+// Delegate diff pieces of state to separate reducer functions
 // keep reducers separated to organize code + separate concerns
 const rootReducer = combineReducers({
   projects: projectsReducer,

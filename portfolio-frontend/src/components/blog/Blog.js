@@ -2,6 +2,10 @@ import React from 'react';
 import BlogPost from './BlogPost';
 import icon from '../../images/blog-icon.png';
 
+// Presentational component
+// receive props from blogPostsContainer and display content
+// update based on prop changes or if parent component re-renders
+// obj destructuring used to extract out values from props
 const Blog = ({ blogPosts }) => {
   const blogPostList = blogPosts.map(blogPost => {
     return <BlogPost key={blogPost.id} blogPost={blogPost} />

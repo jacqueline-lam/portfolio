@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchBlogPosts } from '../actions/fetchBlogPosts';
 import Blog from '../components/blog/Blog'
 
+// Container component deal with managing blog state and class methods
 class BlogPostsContainer extends Component {
   componentDidMount() {
     this.props.fetchBlogPosts()
