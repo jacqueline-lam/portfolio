@@ -8,7 +8,6 @@ import ProjectDetails from '../components/projects/ProjectDetails'
 import { fetchStacks } from "../actions/fetchStacks";
 import { fetchProjects } from "../actions/fetchProjects";
 import { addFilter, removeFilter } from '../actions/filterProjects';
-// import { filterProjects } from "../actions/filterProjects";
 
 class ProjectsContainer extends Component {
   componentDidMount() {
@@ -17,10 +16,9 @@ class ProjectsContainer extends Component {
   }
 
   render() {
-    const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
+    const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter } = this.props
     return (
       <div id='projects' className='component'>
-        {console.log(match)}
         {
           loading ?
             <h2>Loading...</h2>
@@ -33,7 +31,7 @@ class ProjectsContainer extends Component {
                   <h1>PORTFOLIO</h1>
                   <h3>My Latest Projects</h3>
                   <ProjectFilters stacks={stacks} selectedStackIds={selectedStackIds} addFilter={addFilter} removeFilter={removeFilter} />
-                  <ProjectList filteredProjects={filteredProjects} match={match} />
+                  <ProjectList filteredProjects={filteredProjects} />
                 </div>
               } />
               {/* add `match` to the arguments so we can access the path information in `routerProps` that is passed from App.js */}

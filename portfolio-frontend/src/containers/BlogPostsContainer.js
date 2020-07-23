@@ -9,7 +9,6 @@ class BlogPostsContainer extends Component {
   }
 
   render() {
-    console.log(this.props.loadingBlog)
     return (
       <div className='component'>
         {
