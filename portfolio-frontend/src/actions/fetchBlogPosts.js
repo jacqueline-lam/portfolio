@@ -20,6 +20,6 @@ export const fetchBlogPosts = () => {
       // call dispatch + send project JSON data to your store
       // action dispatched along with a payload of the projects JSON collection
       .then(respJSON => dispatch({ type: 'ADD_BLOG', blog: respJSON }))
-      .catch(() => alert.message("Can’t access response from dev.to API. Blocked by browser?"))
+      .catch(() => alert("Can’t access response from dev.to API. Blocked by browser?"))
   }
 }

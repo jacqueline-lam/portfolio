@@ -11,15 +11,13 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div id='project-list'>
+      {/* render React Router LInks for each project */}
       <Link key={project.id} to={`/projects/${project.id}`}>
         <h4>{project.name}</h4>
       </Link>
-      {/* <h3><a href="#">{project.name}</a></h3> */}
       <img className='project-thumbnail' alt='project thumbnail' src={img} />
       <i>{projectStacks}</i>
       <hr />
-      {/* <iframe src="https://drive.google.com/file/d/1WwtgDcBwrXa-tJ1pXbyBwBBkClDNdvst/preview" width="640" height="480"></iframe> */}
-      {/* <CommentsContainer comments={project.comments} /> */}
     </div >
   );
 };

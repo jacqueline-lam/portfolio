@@ -16,11 +16,12 @@ class App extends Component {
     return (
       <div className='App' id='page-top' >
         <NavBar />
+        <Contact />
         <Route exact path='/' component={Home} onUpdate={() => window.scrollTo(0, 0)} />
         <Route path='/about' component={About} onUpdate={() => window.scrollTo(0, 0)} />
         <Route path='/blog' component={BlogPostsContainer} onUpdate={() => window.scrollTo(0, 0)} />
-        <Route path='/contact' component={Contact} onUpdate={() => window.scrollTo(0, 0)} />
-        < ProjectsContainer />
+        {/* <Route path='/contact' component={Contact} onUpdate={() => window.scrollTo(0, 0)} /> */}
+        <ProjectsContainer />
       </div>
     );
   }

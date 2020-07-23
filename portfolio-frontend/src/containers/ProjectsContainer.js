@@ -20,13 +20,15 @@ class ProjectsContainer extends Component {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter, match } = this.props
     return (
       <div id='projects' className='component'>
+        {console.log(match)}
         {
           loading ?
             <h2>Loading...</h2>
             :
             < >
+              {/* define parameter name in route path - show up in match.params */}
               <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} onUpdate={() => window.scrollTo(0, 0)} />
-              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={() =>
+              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={(routerProps) =>
                 <div id='portfolio'>
                   <h1>PORTFOLIO</h1>
                   <h3>My Latest Projects</h3>

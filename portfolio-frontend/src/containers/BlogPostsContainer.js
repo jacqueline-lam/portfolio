@@ -9,6 +9,7 @@ class BlogPostsContainer extends Component {
   }
 
   render() {
+    console.log(this.props.loadingBlog)
     return (
       <div className='component'>
         {
@@ -27,7 +28,7 @@ class BlogPostsContainer extends Component {
 const mapStateToProps = state => {
   return {
     blogPosts: state.blog.blogPosts,
-    loadingBlog: state.blog.loading
+    loadingBlog: state.blog.loadingBlog
   }
 }
 

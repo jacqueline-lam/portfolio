@@ -58,6 +58,16 @@ const NavBar = () => {
                 }}
               >Blog</NavLink>
             </li>
+            {/* <li className='nav-item'>
+              <NavLink
+                className='nav-link'
+                to="/contact"
+                exact
+                activeStyle={{
+                  color: '#bda38f'
+                }}
+              >Contact</NavLink>
+            </li> */}
           </ul>
         </div>
       </div>
