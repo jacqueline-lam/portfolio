@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # add in api before every route
+  # add in api/v1 before every route
   namespace :api do
     namespace :v1 do
       resources :projects, only: [:index, :show] do
@@ -11,5 +11,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
-# http://localhost:3000/api/v1/projects
