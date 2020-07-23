@@ -1,8 +1,8 @@
 class Api::V1::CommentsController < ApplicationController
   before_action :get_project, only: [:index, :create]
-  before_action :get_comment, only: [:show, :destroy]
-  # api/v1/projects/:id/comments
+  before_action :get_comment, only: [:show]
 
+  # api/v1/projects/:id/comments
   def index
     comments = @project.comments
     render json: comments
@@ -22,11 +22,6 @@ class Api::V1::CommentsController < ApplicationController
     else
       render json: { message: 'Error: Failed to add comment.'}
     end
-  end
-
-  def destroy
-    # comment = Comment.find(params[:id])
-    @comment.destroy
   end
 
   private
