@@ -28,7 +28,7 @@ const store = createStore(
 
 ReactDOM.render(
   // any component in App can now set up routes and links
-  // pass store into Provider - allow access when we connect our components
+  // pass store into Provider as a prop - allow access when we connect our components
   <Provider store={store}>
     <Router>
       <App />
