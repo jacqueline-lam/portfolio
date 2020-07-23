@@ -1,26 +1,24 @@
 import React from 'react';
+import Linkedin from '../images/linkedin.png'
+import Github from '../images/github.png'
+import Blog from '../images/blog.png'
+import Email from '../images/email.png'
 
 const Contact = () => {
-  const images = require.context('../images', true)
-  const linkedinImg = images('./linkedin.png')
-  const githubImg = images('./github.png')
-  const blogImg = images('./blog.png')
-  const emailImg = images('./email.png')
-
   return (
     <div id='contact' className='sidenav'>
       <div className='decoration-line'>CONTACT</div>
       <a href="https://www.linkedin.com/in/jacquelineklam/" target="_blank" rel="noopener noreferrer">
-        <img alt="linkedin_icon" src={linkedinImg} />
+        <img alt="linkedin_icon" src={Linkedin} />
       </a>
       <a href="https://github.com/jacqueline-lam" target="_blank" rel="noopener noreferrer">
-        <img alt="linkedin_icon" src={githubImg} />
+        <img alt="linkedin_icon" src={Github} />
       </a>
       <a href="https://dev.to/jacquelinelam" target="_blank" rel="noopener noreferrer">
-        <img alt="linkedin_icon" src={blogImg} />
+        <img alt="linkedin_icon" src={Blog} />
       </a>
       <a href='mailto:jacqueline.karin.lam@gmail.com'>
-        <img alt="email_icon" src={emailImg} />
+        <img alt="email_icon" src={Email} />
       </a>
     </div>
   )
