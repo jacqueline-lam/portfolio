@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootswatch/dist/litera/bootstrap.min.css';
 
 class FilterButton extends Component {
   state = {

@@ -8,8 +8,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // Compose combine diff middlewares into 1 - to pass in all middleware as 1 argument in createStore
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import App from './App';
 import rootReducer from "./reducers/rootReducer";
+import App from './App';
 
 // enable Redux DevTools Extension
 // to view store state and each action dispatched
