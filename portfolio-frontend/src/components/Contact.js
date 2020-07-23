@@ -26,14 +26,14 @@ const Contact = () => {
 
     <div id='contact' className='sidenav'>
       <div className='decoration-line'>CONTACT</div>
-      <a alt="linkedin_icon" href="https://www.linkedin.com/in/jacquelineklam/" target="_blank">
-        <img src={linkedinImg} />
+      <a href="https://www.linkedin.com/in/jacquelineklam/" target="_blank" rel="noopener noreferrer">
+        <img alt="linkedin_icon" src={linkedinImg} />
       </a>
-      <a alt="github_icon" href="https://github.com/jacqueline-lam" target="_blank">
-        <img src={githubImg} />
+      <a href="https://github.com/jacqueline-lam" target="_blank" rel="noopener noreferrer">
+        <img alt="linkedin_icon" src={githubImg} />
       </a>
-      <a alt="blog_icon" href="https://dev.to/jacquelinelam" target="_blank">
-        <img src={blogImg} />
+      <a href="https://dev.to/jacquelinelam" target="_blank" rel="noopener noreferrer">
+        <img alt="linkedin_icon" src={blogImg} />
       </a>
     </div>
   )
