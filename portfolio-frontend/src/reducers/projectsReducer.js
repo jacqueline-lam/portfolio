@@ -42,18 +42,19 @@ const projectsReducer = (state = {
       }
 
     case 'ADD_FILTER':
-      // filter projects with the chosen stack
+      // Filter projects with the chosen stack
       filteredProjects = state.filteredProjects.filter(proj => {
         return proj.stacks.some(stack => stack.id.toString() === action.stackId)
       })
 
+      // Concatnenating new values when stack filterbutton is pressed
       stackIds = state.selectedStackIds.concat(action.stackId)
       // Set store unique stackIds
       stackIds = [...new Set(stackIds)]
 
-      console.log('action.stackId', typeof action.stackId, action.stackId)
-      console.log('stackIds', typeof stackIds, stackIds)
-      console.log('filteredProjects', typeof filteredProjects, filteredProjects)
+      console.log('action.stackId = ', typeof action.stackId, action.stackId)
+      console.log('stackIds = ', typeof stackIds, stackIds)
+      console.log('filteredProjects = ', typeof filteredProjects, filteredProjects)
 
       return {
         ...state,
@@ -62,11 +63,12 @@ const projectsReducer = (state = {
       }
 
     case 'REMOVE_FILTER':
-      stackIds = state.selectedStackIds
+      // Copy selectedStackIds array to allow removal w/o mutation
+      stackIds = [...state.selectedStackIds]
       stackIds.splice(stackIds.indexOf(action.stackId), 1)
 
       filteredProjects = state.allProjects
-      // only include projects that have all the selected stacks
+      // Only include projects that have all the selected stacks
       if (stackIds.length > 0) {
         filteredProjects = state.allProjects.filter(proj => {
           const projectStacks = proj.stacks.map(proj => proj['id'].toString())
@@ -76,7 +78,6 @@ const projectsReducer = (state = {
           return includesSelectedStacks
         })
       }
-
       console.log('action.stackId', typeof action.stackId, action.stackId)
       console.log('stackIds', typeof stackIds, stackIds)
       console.log('filteredProjects', typeof filteredProjects, filteredProjects)
@@ -95,7 +96,6 @@ const projectsReducer = (state = {
         ...state,
         filteredProjects: [
           ...state.filteredProjects.slice(0, index),
-          // concatnenating new values when comment form is submitted
           { ...project, comments: project.comments.concat(action.comment) },
           ...state.filteredProjects.slice(index + 1)
         ]
@@ -105,6 +105,5 @@ const projectsReducer = (state = {
       return state;
   }
 }
-
 
 export default projectsReducer;
