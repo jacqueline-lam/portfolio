@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :projects, only: [:index, :show] do
         # only access comments routes nested inside of project
         resources :project_stacks, only: [:index]
-        resources :comments, only: [:index, :show, :create]
+        resources :comments, only: [:index, :create]
       end
       # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     end
