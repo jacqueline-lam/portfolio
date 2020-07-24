@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchBlogPosts } from '../actions/fetchBlogPosts';
 import Blog from '../components/blog/Blog'
+import Loading from '../images/loading.gif'
 
 // Container component deal with managing blog state and class methods
 class BlogPostsContainer extends Component {
@@ -16,7 +17,7 @@ class BlogPostsContainer extends Component {
       <div id='blog-container' className='component'>
         {
           this.props.loadingBlog ?
-            <h2>Loading...</h2>
+            <img src={Loading} alt='loading' />
             :
             < >
               <Blog blogPosts={this.props.blogPosts} />

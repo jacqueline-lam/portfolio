@@ -8,6 +8,7 @@ import ProjectDetails from '../components/projects/ProjectDetails'
 import { fetchStacks } from "../actions/fetchStacks";
 import { fetchProjects } from "../actions/fetchProjects";
 import { addFilter, removeFilter } from '../actions/filterProjects';
+import Loading from '../images/loading.gif'
 
 class ProjectsContainer extends Component {
   componentDidMount() {
@@ -21,7 +22,7 @@ class ProjectsContainer extends Component {
       <div id='projects-container' className='component'>
         {
           loading ?
-            <h2>Loading...</h2>
+            <img src={Loading} alt='loading' />
             :
             < >
               {/* define parameter name in route path - show up in match.params */}
