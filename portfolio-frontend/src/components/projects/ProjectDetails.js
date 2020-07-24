@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import { Markup } from 'interweave';
 import CommentsContainer from '../../containers/CommentsContainer'
 
-
 // add `match` to arguments to access the path info in `routerProps` passed from ProjectsContainer
 const ProjectDetails = ({ match, projects }) => {
   const project = projects.find(proj => proj.id.toString() === match.params.projectId)
@@ -61,7 +60,7 @@ const ProjectDetails = ({ match, projects }) => {
 
   return (
     < >
-      {project ? renderProject() : null}
+      {project ? renderProject() : <i>This project does not exist. See all projects on Portfolio page.</i>}
     </>
   )
 }
