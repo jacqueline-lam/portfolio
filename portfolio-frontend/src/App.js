@@ -18,10 +18,10 @@ class App extends Component {
         <NavBar />
         <Contact />
         {/* When URL matches specified path, render component */}
-        <Route exact path='/' component={Home} onUpdate={() => window.scrollTo(0, 0)} />
-        <Route path='/about' component={About} onUpdate={() => window.scrollTo(0, 0)} />
-        <Route path='/blog' component={BlogPostsContainer} onUpdate={() => window.scrollTo(0, 0)} />
-        {/* <Route path='/contact' component={Contact} onUpdate={() => window.scrollTo(0, 0)} /> */}
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/blog' component={BlogPostsContainer} />
+        {/* <Route path='/contact' component={Contact} /> */}
         <ProjectsContainer />
       </div>
     );
