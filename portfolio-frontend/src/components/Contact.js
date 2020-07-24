@@ -17,7 +17,7 @@ const Contact = () => {
       <a href="https://dev.to/jacquelinelam" target="_blank" rel="noopener noreferrer">
         <img alt="linkedin_icon" src={Blog} />
       </a>
-      <a href='mailto:jacqueline.karin.lam@gmail.com'>
+      <a href="mailto:jacqueline.karin.lam@gmail.com" target="_blank" rel="noopener noreferrer">
         <img alt="email_icon" src={Email} />
       </a>
     </div>

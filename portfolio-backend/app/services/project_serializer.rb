@@ -15,7 +15,7 @@ class ProjectSerializer
       },
       except: [:created_at, :updated_at]
     }
-    # call to_json on this instance variable
+    # call to_json on this instance variable to convert hash to JSON
     @project_collection.to_json(options)
   end
 
