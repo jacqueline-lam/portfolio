@@ -1,7 +1,6 @@
 export const fetchBlogPosts = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_BLOG' });
-    // call fetch, dispatching returned data
     // add CORs proxy to avoid no 'Access-Control-Allow-Origin' header error
     // prefixing URL with proxy URL causes the request to get made through that proxy
     // 1. Forwards request to url
@@ -11,7 +10,6 @@ export const fetchBlogPosts = () => {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = 'http://dev.to/api/articles?username=jacquelinelam'
     fetch(proxyurl + url)
-      // we won't do anything with this data until we get resp back
       // take resp and turn into JS object notation
       // .then() fn to parse JSON of response to this request
       .then(resp => resp.json())
