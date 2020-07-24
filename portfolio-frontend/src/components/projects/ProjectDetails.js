@@ -42,8 +42,8 @@ const ProjectDetails = ({ match, projects }) => {
             <h6>Features</h6>
             <Markup content={project.features} allowElements='true' />
           </div>
-          {project.blog_url ? <button className="btn btn-outline-warning btn-lg" onClick={() => window.open(project.blog_url, "_blank")}>BLOG POST</button> : null}
-          {project.github_url ? <button className="btn btn-outline-warning btn-lg" onClick={() => window.open(project.github_url, "_blank")}>SOURCE CODE</button> : null}
+          {project.blog_url ? <button className="btn btn-outline-danger btn-lg" onClick={() => window.open(project.blog_url, "_blank")}>BLOG POST</button> : null}
+          {project.github_url ? <button className="btn btn-outline-danger btn-lg" onClick={() => window.open(project.github_url, "_blank")}>SOURCE CODE</button> : null}
           {project.demo_vid ?
             <div>
               <h5>Project Demo</h5>

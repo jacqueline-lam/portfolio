@@ -11,7 +11,7 @@ class BlogPostsContainer extends Component {
 
   render() {
     return (
-      <div className='component'>
+      <div id='blog-container' className='component'>
         {
           this.props.loadingBlog ?
             <h2>Loading...</h2>

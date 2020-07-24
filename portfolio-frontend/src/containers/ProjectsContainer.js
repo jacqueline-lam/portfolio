@@ -18,7 +18,7 @@ class ProjectsContainer extends Component {
   render() {
     const { filteredProjects, stacks, selectedStackIds, loading, addFilter, removeFilter } = this.props
     return (
-      <div id='projects' className='component'>
+      <div id='projects-container' className='component'>
         {
           loading ?
             <h2>Loading...</h2>
