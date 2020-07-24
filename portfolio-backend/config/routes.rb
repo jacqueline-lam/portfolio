@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # add in api/v1 before every route
   namespace :api do
     namespace :v1 do
+      resources :stacks, only: [:index]
       resources :projects, only: [:index, :show] do
         # only access comments routes nested inside of project
         resources :project_stacks, only: [:index]

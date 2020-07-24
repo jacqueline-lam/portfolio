@@ -42,6 +42,7 @@ const projectsReducer = (state = {
       }
 
     case 'ADD_FILTER':
+      // filter projects with the chosen stack
       filteredProjects = state.filteredProjects.filter(proj => {
         return proj.stacks.some(stack => stack.id.toString() === action.stackId)
       })
@@ -94,6 +95,7 @@ const projectsReducer = (state = {
         ...state,
         filteredProjects: [
           ...state.filteredProjects.slice(0, index),
+          // concatnenating new values when comment form is submitted
           { ...project, comments: project.comments.concat(action.comment) },
           ...state.filteredProjects.slice(index + 1)
         ]
