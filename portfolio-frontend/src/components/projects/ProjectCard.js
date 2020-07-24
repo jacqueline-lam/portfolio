@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   const projectStacks = project.stacks.map(stack => stack.name).join(' | ');
 
   const fileName = project.image_url
-  // special feature supported by webpack's compiler - allows you to get all matching modules starting from some base directory
+  // special feature supported by webpack's compiler - to get all matching modules starting from some base directory
   const images = require.context('../../images', true)
   let img = images('./' + fileName)
 

@@ -18,7 +18,6 @@ const ProjectFilters = ({ stacks, selectedStackIds, addFilter, removeFilter }) =
           )
         }
       </div>
-
     </div>
   );
 }

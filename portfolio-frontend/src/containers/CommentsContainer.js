@@ -17,16 +17,11 @@ class CommentsContainer extends Component {
             projectComments={this.props.project.comments}
           />
           :
-          null
+          <i>This project does not have any comments yet.</i>
         }
       </div>
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return { comments: state.comments }
-// }
-
 // have access to dispatch fn inside addComment action to reducer
 export default connect(null, { addComment })(CommentsContainer);

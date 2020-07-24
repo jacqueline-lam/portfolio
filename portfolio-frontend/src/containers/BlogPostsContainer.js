@@ -5,6 +5,8 @@ import Blog from '../components/blog/Blog'
 
 // Container component deal with managing blog state and class methods
 class BlogPostsContainer extends Component {
+  // blog data requested after React has mounted its component
+  // once data is ready, React will re-render and use the API content
   componentDidMount() {
     this.props.fetchBlogPosts()
   }
