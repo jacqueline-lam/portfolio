@@ -81,3 +81,7 @@ The code is available as open source under the terms of the [MIT License](https:
 ## Code of Conduct
 
 Everyone interacting in the project’s codebases is expected to follow the [code of conduct](https://github.com/jacqueline-lam/bolderer_sinatra_app/blob/master/CODE_OF_CONDUCT.md).
+
+## Attributions
+* Ellipsis/ Spinner loading gif is provided by loading.io
+* Homepage SCSS Animation by Lindsay Grizzard (source: freefrontend.com)
