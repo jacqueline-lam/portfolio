@@ -4,10 +4,11 @@ import './index.css';
 
 // Any component wrapped in Provider will have access to redux store
 import { Provider } from 'react-redux';
+// React-router to link to specific URLs then show/hide various components
 import { BrowserRouter as Router } from 'react-router-dom';
 // Compose combine diff middlewares into 1 - to pass in all middleware as 1 argument in createStore
 import { createStore, applyMiddleware, compose } from 'redux';
-// thunk to incorporate async code with out Redux actions
+// Thunk to incorporate async code with out Redux actions
 import thunk from 'redux-thunk';
 import rootReducer from "./reducers/rootReducer";
 import App from './App';
@@ -28,7 +29,7 @@ const store = createStore(
 )
 
 ReactDOM.render(
-  // any component in App can now set up routes and links
+  // Any component in App can now set up routes and links - Router as base for app's routing
   // pass store into Provider as a prop - allow access when we connect our components
   <Provider store={store}>
     <Router>

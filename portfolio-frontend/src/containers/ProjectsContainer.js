@@ -26,8 +26,8 @@ class ProjectsContainer extends Component {
             < >
               {/* define parameter name in route path - show up in match.params */}
               {/* replace `component` prop w/ `render` prop so we can pass route info to `ProjectDetails` component*/}
-              <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} onUpdate={() => window.scrollTo(0, 0)} />
-              <Route exact path='/projects' onUpdate={() => window.scrollTo(0, 0)} render={() =>
+              <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={filteredProjects} />} />
+              <Route exact path='/projects' render={() =>
                 <div id='portfolio'>
                   <h1>PORTFOLIO</h1>
                   <h3>My Latest Projects</h3>

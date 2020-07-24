@@ -17,6 +17,7 @@ class App extends Component {
       <div className='App' id='page-top' >
         <NavBar />
         <Contact />
+        {/* When URL matches specified path, render component */}
         <Route exact path='/' component={Home} onUpdate={() => window.scrollTo(0, 0)} />
         <Route path='/about' component={About} onUpdate={() => window.scrollTo(0, 0)} />
         <Route path='/blog' component={BlogPostsContainer} onUpdate={() => window.scrollTo(0, 0)} />
