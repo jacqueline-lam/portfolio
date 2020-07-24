@@ -129,7 +129,7 @@ project_data = [
       github_url: "http://github.com/jacqueline-lam/portfolio",
       blog_url: "http://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-1-522k",
       demo_vid: "https://www.youtube.com/embed/cTw0wAnVo1c",
-      stacks: ['ActiveRecord', 'Bootstrap', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'React.JS', 'React Router', 'Redux', 'RESTful API', 'Ruby', 'Ruby on Rails'],
+      stacks: ['ActiveRecord', 'Bootstrap', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'React.JS', 'React Router', 'Redux', 'Redux Thunk', 'RESTful API', 'Ruby', 'Ruby on Rails'],
     }
 ]
 
