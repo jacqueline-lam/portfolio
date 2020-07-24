@@ -13,7 +13,7 @@ const About = () => {
         </div>
         <div className='text-section' id='skills'>
           <h4> // Technical Skills</h4>
-          <i>&raquo; Ruby, Rails, Sinatra, React, Redux, Javascript, PostgreSQL, SQL, HTML & CSS.</i>
+          <i>&raquo; Ruby, Rails, Sinatra, React, Redux, Javascript, PostgreSQL, SQLite3, HTML & CSS.</i>
         </div>
       </div>
     </div>

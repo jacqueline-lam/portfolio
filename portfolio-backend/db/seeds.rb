@@ -96,7 +96,7 @@ project_data = [
     github_url: "http://github.com/jacqueline-lam/rails-bolderer-app",
     blog_url: "http://dev.to/jacquelinelam/ruby-on-rails-app-domain-with-many-to-many-relationships-3f5i",
     demo_vid: "https://www.youtube.com/embed/gKyGpzi5n5w",
-    stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Object Oriented Design', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3']
+    stacks: ['ActiveRecord', 'Bootstrap', 'BCrypt', 'CRUD', 'HTML & CSS', 'MVC', 'Omniauth', 'RESTful API', 'Ruby', 'Ruby on Rails', 'SQLite3']
   },
 
   # Project 5
@@ -111,13 +111,26 @@ project_data = [
     github_url: "http://github.com/jacqueline-lam/umami-pantry",
     blog_url: "http://dev.to/jacquelinelam/building-a-single-page-cooking-app-for-covid-19-lockdown-28ke",
     demo_vid: "https://www.youtube.com/embed/xL5mj8t-rMM",
-    stacks: ['ActiveRecord', 'Bootstrap', 'CRUD', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails'],
+    stacks: ['ActiveRecord', 'Bootstrap', 'CRUD', 'Fetch API', 'HTML & CSS', 'JavaScript', 'Object Oriented Design', 'PostgreSQL', 'RESTful API', 'Ruby', 'Ruby on Rails'],
     comments: {
       author: "Jess .T",
       email: "jess.t@gmail.com",
       content: "Searching recipes for pantry ingredients is an excellent idea and I love the design of the site 😍 Can't wait to see more recipes!"
     }
-  }
+  },
+
+    # Project 6
+    {
+      name: "React/ Redux Personal Portfolio",
+      description: "The updated personal portfolio is designed to showcase my projects completed before and during Flatiron School's software engineering bootcamp. The target audience is recruiters and prospective employers.",
+      reason: "Building my personal website with a Rails API backend and React/ Redux frontend allows me to dynamically render updated project data and blog posts by updating my database directly.",
+      features: "<li>About page: a quick overview of my journey through software engineering</li><li>Portfolio page: User can filter projects by stacks (feature designed for recruiters)</li><li>Project page: User can leave comments under each project demo</li><li>Blog page: User can see the real-time blog updates</li><li>Contact Navbar: User can choose to conenct with me on social media anytime by clicking on the social icons on the fixed side navbar</li>",
+      image_url: "portfolio.gif",
+      github_url: "http://github.com/jacqueline-lam/portfolio",
+      blog_url: "http://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-1-522k",
+      demo_vid: "https://www.youtube.com/embed/cTw0wAnVo1c",
+      stacks: ['ActiveRecord', 'Bootstrap', 'Fetch API', 'HTML & CSS', 'JavaScript', 'PostgreSQL', 'React.JS', 'React Router', 'Redux', 'RESTful API', 'Ruby', 'Ruby on Rails'],
+    }
 ]
 
 puts "Creating projects..."
