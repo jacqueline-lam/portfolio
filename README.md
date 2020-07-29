@@ -16,7 +16,7 @@ The app is composed of backend rails API and front-end React Redux clients, whic
 3. User can add comments to speciic projects
 4. User will have access to the real time blog posts that have been published on dev.to
 
-## Technologies Implmented
+## Technologies Implemented
 1. React.js
 2. Redux to manage state
 3. Redux-thunk to make use of async actions to send data and receive data from the server

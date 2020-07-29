@@ -28,11 +28,6 @@ class FilterButton extends Component {
     let pressed = this.state.selected
     const stackClicked = event.target.id
 
-    // // setState will update state so that selected is reversed
-    // this.setState(prevState => ({
-    //   selected: !prevState.selected
-    // }));
-
     if (!pressed) {
       // dispatch will be called with the action type 'ADD_FILTER'
       // execute action creator by redferencing it as a prop

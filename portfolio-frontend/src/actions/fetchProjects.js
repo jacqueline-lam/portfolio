@@ -10,10 +10,9 @@ export const fetchProjects = () => {
     fetch('http://localhost:3000/api/v1/projects')
       // we won't do anything with this data until we get resp back
       // fetch returns Promise - data becomes available when promise resolves
-      // .then method to run once our Promise has been fulfilled - parse response data into JSON
+      // .then() method to run once our Promise has been fulfilled - parse response data into JSON
       .then(resp => resp.json())
       // execute asynchronous code, once resolved, we can use dispatch to update our store
-      // call dispatch + send project JSON data to your store
       // action dispatched along with a payload of the projects JSON collection
       .then(respJSON => dispatch({ type: 'ADD_PROJECTS', projects: respJSON }));
   }

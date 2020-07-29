@@ -13,13 +13,11 @@ import thunk from 'redux-thunk';
 import rootReducer from "./reducers/rootReducer";
 import App from './App';
 
-// enable Redux DevTools Extension
-// to view store state and each action dispatched
+// Enable Redux DevTools Extension to view store state + each action dispatched
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Pass reducer into createStore, assigning return value to store
 // configure thunk by passing in thunk as part of the composeEnhancer
-// STORE holding the application data
 // REDUCER = responsible for taking in action & deciding what to update about current store
 // and return new version of store
 // ACTIONS will be dispatched to our reducer
