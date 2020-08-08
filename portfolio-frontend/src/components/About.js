@@ -13,7 +13,9 @@ const About = () => {
         </div>
         <div className='text-section' id='skills'>
           <h4> // Technical Skills</h4>
-          <i>&raquo; Ruby, Rails, Sinatra, React, Redux, Javascript, PostgreSQL, SQLite3, HTML & CSS.</i>
+          <i>&raquo; Programming Languages: Ruby, Javascript, HTML & CSS</i><br />
+          <i>&raquo; Frameworks: Rails, Sinatra, React, Redux</i><br />
+          <i>&raquo; Databases: PostgreSQL, SQL</i>
         </div>
       </div>
     </div>
