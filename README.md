@@ -15,6 +15,12 @@ The app is composed of backend rails API and front-end React Redux clients, whic
 2. User can filter projects by stacks
 3. User can add comments to speciic projects
 4. User will have access to the real time blog posts that have been published on dev.to
+## Other Features (coming soon)
+1. Featured project available on homepage/ about page
+2. About page - technical skills to be divided into languages, libraries/ frameworks, databases
+3. Project page: project to be displayed as div cards - hover to see description; sort project by date, featured projects (default setting)
+4. Blog: sort by date
+
 
 ## Technologies Implemented
 1. React.js
