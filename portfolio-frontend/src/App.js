@@ -9,7 +9,6 @@ import About from './components/About'
 import Contact from './components/Contact'
 import ProjectsContainer from './containers/ProjectsContainer';
 import BlogPostsContainer from './containers/BlogPostsContainer'
-// import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
   render() {
@@ -21,7 +20,6 @@ class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/blog' component={BlogPostsContainer} />
-        {/* <Route path='/contact' component={Contact} /> */}
         <ProjectsContainer />
       </div>
     );

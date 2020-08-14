@@ -1,7 +1,6 @@
 // CSS Animation by Lindsay Grizzard (source: freefrontend.com)
 import React, { Component } from 'react';
 import '../HomeAnimation.scss'
-// import '../HomeButton.scss' // for future use
 
 class HomeAnimation extends Component {
   render() {

@@ -2,8 +2,7 @@ import React from 'react';
 import BlogPost from './BlogPost';
 import icon from '../../images/blog-icon.png';
 
-// Presentational component
-// receive props from blogPostsContainer and display content
+// Presentational component to receive props from blogPostsContainer
 // update based on prop changes or if parent component re-renders
 // obj destructuring used to extract out values from props
 const Blog = ({ blogPosts }) => {

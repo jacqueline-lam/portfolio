@@ -15,9 +15,7 @@ const Comment = ({ comment }) => {
           <i><Moment fromNow>{comment.created_at}</Moment></i>
         </Card.Header>
         <Card.Body>
-
           <Card.Text>{comment.content}</Card.Text>
-          {/* <button onClick={() => deleteComment(comment.id)}> X </button> */}
         </Card.Body>
       </Card >
     </div>
