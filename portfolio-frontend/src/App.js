@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import { Route } from 'react-router-dom';
 import 'bootswatch/dist/litera/bootstrap.min.css';
 import './App.css';
